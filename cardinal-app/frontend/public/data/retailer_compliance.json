@@ -1,0 +1,53 @@
+{
+  "generated_at": "2026-05-20T08:00:00Z",
+  "retailers": [
+    { "rank": 1,  "id": "RTL-001", "alias": "MegaMart Stores",       "channel": "Mass",         "otif_pct": 92.1, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 14200000, "sla_perf_pct": 88.4, "fines_per_1000_cases_usd": 6.20, "trend": "down" },
+    { "rank": 2,  "id": "RTL-002", "alias": "RiverGrove Grocers",    "channel": "Grocery",      "otif_pct": 94.6, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 5800000,  "sla_perf_pct": 92.1, "fines_per_1000_cases_usd": 3.40, "trend": "flat" },
+    { "rank": 3,  "id": "RTL-003", "alias": "Beacon Club Warehouse", "channel": "Club",         "otif_pct": 96.7, "otif_target_pct": 97.0, "chargebacks_ytd_usd": 1900000,  "sla_perf_pct": 95.8, "fines_per_1000_cases_usd": 1.10, "trend": "up" },
+    { "rank": 4,  "id": "RTL-004", "alias": "Bullseye Retail",       "channel": "Mass",         "otif_pct": 93.8, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 4100000,  "sla_perf_pct": 90.7, "fines_per_1000_cases_usd": 2.90, "trend": "down" },
+    { "rank": 5,  "id": "RTL-005", "alias": "BoxBin Wholesale",      "channel": "Club",         "otif_pct": 95.3, "otif_target_pct": 96.0, "chargebacks_ytd_usd": 2400000,  "sla_perf_pct": 93.2, "fines_per_1000_cases_usd": 1.60, "trend": "flat" },
+    { "rank": 6,  "id": "RTL-006", "alias": "PineRow Foods",         "channel": "Grocery",      "otif_pct": 94.9, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 2100000,  "sla_perf_pct": 92.6, "fines_per_1000_cases_usd": 1.80, "trend": "up" },
+    { "rank": 7,  "id": "RTL-007", "alias": "AzureCart (online)",    "channel": "Ecommerce",    "otif_pct": 91.7, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 3300000,  "sla_perf_pct": 87.9, "fines_per_1000_cases_usd": 4.50, "trend": "down" },
+    { "rank": 8,  "id": "RTL-008", "alias": "Harvest Cellar",        "channel": "Grocery",      "otif_pct": 93.4, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 1600000,  "sla_perf_pct": 90.2, "fines_per_1000_cases_usd": 2.20, "trend": "flat" },
+    { "rank": 9,  "id": "RTL-009", "alias": "PlainsRow Markets",     "channel": "Grocery",      "otif_pct": 95.1, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 980000,   "sla_perf_pct": 93.4, "fines_per_1000_cases_usd": 1.30, "trend": "up" },
+    { "rank": 10, "id": "RTL-010", "alias": "CoastWay Foods",        "channel": "Grocery",      "otif_pct": 92.9, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 1400000,  "sla_perf_pct": 90.0, "fines_per_1000_cases_usd": 2.40, "trend": "down" },
+    { "rank": 11, "id": "RTL-011", "alias": "ValuePoint",            "channel": "Dollar",       "otif_pct": 91.2, "otif_target_pct": 94.0, "chargebacks_ytd_usd": 1100000,  "sla_perf_pct": 88.4, "fines_per_1000_cases_usd": 2.80, "trend": "down" },
+    { "rank": 12, "id": "RTL-012", "alias": "Penny Lane Stores",     "channel": "Dollar",       "otif_pct": 90.6, "otif_target_pct": 94.0, "chargebacks_ytd_usd": 980000,   "sla_perf_pct": 87.6, "fines_per_1000_cases_usd": 3.10, "trend": "down" },
+    { "rank": 13, "id": "RTL-013", "alias": "GreenLeaf Co-op",       "channel": "Natural",      "otif_pct": 94.2, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 410000,   "sla_perf_pct": 91.8, "fines_per_1000_cases_usd": 1.40, "trend": "flat" },
+    { "rank": 14, "id": "RTL-014", "alias": "Foothill Pharmacy",     "channel": "Drug",         "otif_pct": 95.6, "otif_target_pct": 96.0, "chargebacks_ytd_usd": 620000,   "sla_perf_pct": 94.0, "fines_per_1000_cases_usd": 1.00, "trend": "up" },
+    { "rank": 15, "id": "RTL-015", "alias": "Lighthouse Drug",       "channel": "Drug",         "otif_pct": 94.8, "otif_target_pct": 96.0, "chargebacks_ytd_usd": 540000,   "sla_perf_pct": 93.1, "fines_per_1000_cases_usd": 1.20, "trend": "flat" },
+    { "rank": 16, "id": "RTL-016", "alias": "Linden Markets",        "channel": "Grocery",      "otif_pct": 93.0, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 820000,   "sla_perf_pct": 90.5, "fines_per_1000_cases_usd": 1.90, "trend": "down" },
+    { "rank": 17, "id": "RTL-017", "alias": "Cobalt Pantry",         "channel": "Grocery",      "otif_pct": 94.4, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 700000,   "sla_perf_pct": 91.9, "fines_per_1000_cases_usd": 1.60, "trend": "flat" },
+    { "rank": 18, "id": "RTL-018", "alias": "SteepleRow Foods",      "channel": "Grocery",      "otif_pct": 92.2, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 760000,   "sla_perf_pct": 89.6, "fines_per_1000_cases_usd": 2.30, "trend": "down" },
+    { "rank": 19, "id": "RTL-019", "alias": "Plateau Mart",          "channel": "Mass",         "otif_pct": 93.6, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 1200000,  "sla_perf_pct": 90.8, "fines_per_1000_cases_usd": 2.00, "trend": "flat" },
+    { "rank": 20, "id": "RTL-020", "alias": "Quarry Foods",          "channel": "Grocery",      "otif_pct": 94.1, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 530000,   "sla_perf_pct": 91.4, "fines_per_1000_cases_usd": 1.50, "trend": "up" },
+    { "rank": 21, "id": "RTL-021", "alias": "Glenmark Foods",        "channel": "Grocery",      "otif_pct": 93.7, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 480000,   "sla_perf_pct": 90.9, "fines_per_1000_cases_usd": 1.70, "trend": "flat" },
+    { "rank": 22, "id": "RTL-022", "alias": "Aspen Pantry",          "channel": "Natural",      "otif_pct": 94.5, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 320000,   "sla_perf_pct": 92.3, "fines_per_1000_cases_usd": 1.30, "trend": "up" },
+    { "rank": 23, "id": "RTL-023", "alias": "Harborline Drug",       "channel": "Drug",         "otif_pct": 95.0, "otif_target_pct": 96.0, "chargebacks_ytd_usd": 380000,   "sla_perf_pct": 93.5, "fines_per_1000_cases_usd": 1.10, "trend": "flat" },
+    { "rank": 24, "id": "RTL-024", "alias": "TrailRiver Markets",    "channel": "Grocery",      "otif_pct": 92.5, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 460000,   "sla_perf_pct": 90.0, "fines_per_1000_cases_usd": 2.10, "trend": "down" },
+    { "rank": 25, "id": "RTL-025", "alias": "Lantern Foods",         "channel": "Grocery",      "otif_pct": 93.9, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 420000,   "sla_perf_pct": 91.0, "fines_per_1000_cases_usd": 1.60, "trend": "flat" },
+    { "rank": 26, "id": "RTL-026", "alias": "Cordwood Convenience",  "channel": "Convenience",  "otif_pct": 91.1, "otif_target_pct": 93.0, "chargebacks_ytd_usd": 290000,   "sla_perf_pct": 88.7, "fines_per_1000_cases_usd": 2.40, "trend": "down" },
+    { "rank": 27, "id": "RTL-027", "alias": "Skyway Convenience",    "channel": "Convenience",  "otif_pct": 90.8, "otif_target_pct": 93.0, "chargebacks_ytd_usd": 260000,   "sla_perf_pct": 88.1, "fines_per_1000_cases_usd": 2.60, "trend": "flat" },
+    { "rank": 28, "id": "RTL-028", "alias": "Hearthstone Markets",   "channel": "Grocery",      "otif_pct": 93.3, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 360000,   "sla_perf_pct": 90.4, "fines_per_1000_cases_usd": 1.80, "trend": "flat" },
+    { "rank": 29, "id": "RTL-029", "alias": "Brick Lane Wholesale",  "channel": "Club",         "otif_pct": 95.8, "otif_target_pct": 96.0, "chargebacks_ytd_usd": 240000,   "sla_perf_pct": 94.3, "fines_per_1000_cases_usd": 0.90, "trend": "up" },
+    { "rank": 30, "id": "RTL-030", "alias": "Granite Foods",         "channel": "Grocery",      "otif_pct": 93.5, "otif_target_pct": 95.0, "chargebacks_ytd_usd": 330000,   "sla_perf_pct": 90.6, "fines_per_1000_cases_usd": 1.70, "trend": "flat" }
+  ],
+  "chargeback_reasons": [
+    { "reason": "Late delivery (window missed)",         "pct_of_dollars": 41, "ytd_usd": 15700000 },
+    { "reason": "Short ship (units below PO)",           "pct_of_dollars": 24, "ytd_usd": 9200000 },
+    { "reason": "Wrong product / GTIN mismatch",         "pct_of_dollars": 14, "ytd_usd": 5400000 },
+    { "reason": "Damage / pallet integrity",             "pct_of_dollars": 11, "ytd_usd": 4200000 },
+    { "reason": "Paperwork / EDI 856 ASN errors",        "pct_of_dollars": 10, "ytd_usd": 3900000 }
+  ],
+  "compliance_agent": {
+    "title": "Retailer-compliance agent",
+    "summary": "Joins SAP outbound orders, OTM tender events, WMS pick confirms, and retailer EDI 824/812 chargeback feeds. Flags shipments at risk of breaching the OTIF window 36-72 hours before pickup.",
+    "at_risk_shipments": [
+      { "id": "SHP-22841", "retailer": "MegaMart Stores",      "dc": "DC-GL", "pickup_in_hours": 28, "risk": "high",   "reason": "Carrier capacity short on Joliet → Bentonville lane; OTM showing zero accepted tenders.", "action": "Re-tender to backup carrier or route via DC-SC; estimated chargeback avoidance $48K." },
+      { "id": "SHP-22894", "retailer": "Bullseye Retail",      "dc": "DC-SE", "pickup_in_hours": 42, "risk": "high",   "reason": "Order 1.4M cases short due to Lakeland fill-rate gap on Citrus 88.",                       "action": "Cross-dock from DC-PW to backfill 220K cases; partial chargeback exposure $26K." },
+      { "id": "SHP-22907", "retailer": "AzureCart (online)",   "dc": "DC-MA", "pickup_in_hours": 36, "risk": "medium", "reason": "ASN 856 timestamp drift outside Vendor Central tolerance.",                              "action": "Auto-correct ASN payload via integration tier; chargeback risk $11K." },
+      { "id": "SHP-22922", "retailer": "ValuePoint",           "dc": "DC-SC", "pickup_in_hours": 52, "risk": "medium", "reason": "GTIN reassignment on AeroFresh 12oz; old code still on master PO.",                      "action": "Push corrected item master to retailer 832; flag PO for manual override." },
+      { "id": "SHP-22941", "retailer": "RiverGrove Grocers",   "dc": "DC-NE", "pickup_in_hours": 60, "risk": "low",    "reason": "Forecast pull-up on Morning Field cereal trending 4% above plan.",                      "action": "Pre-position 80K cases from DC-MA via floor-load; chargeback risk $7K." }
+    ]
+  }
+}

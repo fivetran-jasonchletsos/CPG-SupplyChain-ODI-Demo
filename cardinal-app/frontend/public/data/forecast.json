@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-05-20T08:00:00Z",
+  "horizon_weeks": 13,
+  "weekly_by_category": [
+    { "week": "2026-W08", "label": "Wk08", "food_bev_forecast": 12.4, "food_bev_actual": 12.1, "household_forecast": 6.2, "household_actual": 6.0, "personal_care_forecast": 4.3, "personal_care_actual": 4.4 },
+    { "week": "2026-W09", "label": "Wk09", "food_bev_forecast": 12.6, "food_bev_actual": 13.0, "household_forecast": 6.3, "household_actual": 6.1, "personal_care_forecast": 4.3, "personal_care_actual": 4.5 },
+    { "week": "2026-W10", "label": "Wk10", "food_bev_forecast": 12.8, "food_bev_actual": 12.5, "household_forecast": 6.4, "household_actual": 6.3, "personal_care_forecast": 4.4, "personal_care_actual": 4.4 },
+    { "week": "2026-W11", "label": "Wk11", "food_bev_forecast": 12.9, "food_bev_actual": 13.4, "household_forecast": 6.4, "household_actual": 6.2, "personal_care_forecast": 4.4, "personal_care_actual": 4.6 },
+    { "week": "2026-W12", "label": "Wk12", "food_bev_forecast": 13.1, "food_bev_actual": 13.7, "household_forecast": 6.5, "household_actual": 6.4, "personal_care_forecast": 4.5, "personal_care_actual": 4.7 },
+    { "week": "2026-W13", "label": "Wk13", "food_bev_forecast": 13.3, "food_bev_actual": 13.6, "household_forecast": 6.5, "household_actual": 6.3, "personal_care_forecast": 4.5, "personal_care_actual": 4.5 },
+    { "week": "2026-W14", "label": "Wk14", "food_bev_forecast": 13.4, "food_bev_actual": 14.0, "household_forecast": 6.6, "household_actual": 6.4, "personal_care_forecast": 4.6, "personal_care_actual": 4.8 },
+    { "week": "2026-W15", "label": "Wk15", "food_bev_forecast": 13.5, "food_bev_actual": 13.9, "household_forecast": 6.6, "household_actual": 6.5, "personal_care_forecast": 4.6, "personal_care_actual": 4.7 },
+    { "week": "2026-W16", "label": "Wk16", "food_bev_forecast": 13.6, "food_bev_actual": 13.4, "household_forecast": 6.7, "household_actual": 6.6, "personal_care_forecast": 4.7, "personal_care_actual": 4.6 },
+    { "week": "2026-W17", "label": "Wk17", "food_bev_forecast": 13.7, "food_bev_actual": 13.8, "household_forecast": 6.7, "household_actual": 6.5, "personal_care_forecast": 4.7, "personal_care_actual": 4.8 },
+    { "week": "2026-W18", "label": "Wk18", "food_bev_forecast": 13.8, "food_bev_actual": 14.3, "household_forecast": 6.8, "household_actual": 6.7, "personal_care_forecast": 4.8, "personal_care_actual": 4.9 },
+    { "week": "2026-W19", "label": "Wk19", "food_bev_forecast": 13.9, "food_bev_actual": 14.1, "household_forecast": 6.8, "household_actual": 6.6, "personal_care_forecast": 4.8, "personal_care_actual": 4.8 },
+    { "week": "2026-W20", "label": "Wk20", "food_bev_forecast": 14.0, "food_bev_actual": 14.6, "household_forecast": 6.9, "household_actual": 6.7, "personal_care_forecast": 4.9, "personal_care_actual": 5.0 },
+    { "week": "2026-W21", "label": "Wk21", "food_bev_forecast": 14.1, "food_bev_actual": null, "household_forecast": 6.9, "household_actual": null, "personal_care_forecast": 4.9, "personal_care_actual": null },
+    { "week": "2026-W22", "label": "Wk22", "food_bev_forecast": 14.2, "food_bev_actual": null, "household_forecast": 7.0, "household_actual": null, "personal_care_forecast": 5.0, "personal_care_actual": null },
+    { "week": "2026-W23", "label": "Wk23", "food_bev_forecast": 14.3, "food_bev_actual": null, "household_forecast": 7.0, "household_actual": null, "personal_care_forecast": 5.0, "personal_care_actual": null },
+    { "week": "2026-W24", "label": "Wk24", "food_bev_forecast": 14.4, "food_bev_actual": null, "household_forecast": 7.1, "household_actual": null, "personal_care_forecast": 5.1, "personal_care_actual": null },
+    { "week": "2026-W25", "label": "Wk25", "food_bev_forecast": 14.5, "food_bev_actual": null, "household_forecast": 7.1, "household_actual": null, "personal_care_forecast": 5.1, "personal_care_actual": null },
+    { "week": "2026-W26", "label": "Wk26", "food_bev_forecast": 14.6, "food_bev_actual": null, "household_forecast": 7.2, "household_actual": null, "personal_care_forecast": 5.2, "personal_care_actual": null },
+    { "week": "2026-W27", "label": "Wk27", "food_bev_forecast": 14.7, "food_bev_actual": null, "household_forecast": 7.2, "household_actual": null, "personal_care_forecast": 5.2, "personal_care_actual": null }
+  ],
+  "mape_trend": [
+    { "week": "2026-W08", "mape_pct": 21.4 },
+    { "week": "2026-W09", "mape_pct": 20.8 },
+    { "week": "2026-W10", "mape_pct": 20.1 },
+    { "week": "2026-W11", "mape_pct": 19.6 },
+    { "week": "2026-W12", "mape_pct": 19.2 },
+    { "week": "2026-W13", "mape_pct": 19.0 },
+    { "week": "2026-W14", "mape_pct": 18.5 },
+    { "week": "2026-W15", "mape_pct": 18.3 },
+    { "week": "2026-W16", "mape_pct": 18.1 },
+    { "week": "2026-W17", "mape_pct": 18.0 },
+    { "week": "2026-W18", "mape_pct": 18.4 },
+    { "week": "2026-W19", "mape_pct": 18.6 },
+    { "week": "2026-W20", "mape_pct": 18.7 }
+  ],
+  "worst_skus": [
+    { "sku": "CRH-1042", "brand": "Crunch Hollow",  "description": "Honey Oat Clusters 12ct",      "category": "Food and Beverage", "mape_pct": 38.4, "weekly_avg_units": 184000, "driver": "Q2 cross-promotion at RTL-001 not in plan" },
+    { "sku": "AER-2018", "brand": "AeroFresh",      "description": "Linen Mist 8oz",                "category": "Household Care",    "mape_pct": 34.1, "weekly_avg_units": 96000,  "driver": "Persistent demand spike — new viral SKU" },
+    { "sku": "LUM-3301", "brand": "Lumen",           "description": "Vit-C Daily Serum 30ml",        "category": "Personal Care",     "mape_pct": 32.7, "weekly_avg_units": 41000,  "driver": "Influencer surge picked up in syndicated" },
+    { "sku": "MOR-1108", "brand": "Morning Field",   "description": "Almond Granola 16oz",           "category": "Food and Beverage", "mape_pct": 31.6, "weekly_avg_units": 122000, "driver": "Distribution gain at RTL-013 mid-March" },
+    { "sku": "MAR-3422", "brand": "Marquee",         "description": "Argan Shampoo 12oz",            "category": "Personal Care",     "mape_pct": 29.8, "weekly_avg_units": 78000,  "driver": "Promotion lift over-modeled" },
+    { "sku": "GLM-2210", "brand": "GleamPath",       "description": "Multi-Surface Spray 24oz",      "category": "Household Care",    "mape_pct": 28.9, "weekly_avg_units": 142000, "driver": "Cannibalization from new EverSoft launch" },
+    { "sku": "SUN-1502", "brand": "Sunbarrel",       "description": "Diced Tomatoes 14oz",           "category": "Food and Beverage", "mape_pct": 27.4, "weekly_avg_units": 210000, "driver": "Weather-driven canned demand pull" },
+    { "sku": "ORC-1611", "brand": "Orchard 23",      "description": "Apple Juice 64oz",              "category": "Food and Beverage", "mape_pct": 26.8, "weekly_avg_units": 154000, "driver": "School calendar shift" },
+    { "sku": "WAS-2107", "brand": "WashWorks",       "description": "HE Detergent 92oz",             "category": "Household Care",    "mape_pct": 26.1, "weekly_avg_units": 98000,  "driver": "Trade-down trend visible in POS" },
+    { "sku": "EVR-3550", "brand": "EverSoft",        "description": "Body Wash 18oz",                "category": "Personal Care",     "mape_pct": 25.3, "weekly_avg_units": 64000,  "driver": "New SKU still in launch curve" },
+    { "sku": "TID-3677", "brand": "Tideway",         "description": "Sunscreen SPF50 6oz",           "category": "Personal Care",     "mape_pct": 24.7, "weekly_avg_units": 52000,  "driver": "Seasonal pull-forward by 2 weeks" },
+    { "sku": "BRZ-2333", "brand": "BreezeBox",       "description": "Air Sanitizer 7oz",             "category": "Household Care",    "mape_pct": 24.0, "weekly_avg_units": 71000,  "driver": "Promotion lift over-modeled" },
+    { "sku": "CIT-1722", "brand": "Citrus 88",       "description": "Orange Juice 59oz",             "category": "Food and Beverage", "mape_pct": 23.5, "weekly_avg_units": 188000, "driver": "Cold snap in Northeast" },
+    { "sku": "MTN-1840", "brand": "Mountain Mill",   "description": "Whole Wheat Pasta 16oz",        "category": "Food and Beverage", "mape_pct": 22.9, "weekly_avg_units": 112000, "driver": "Trade-down trend visible in POS" },
+    { "sku": "CST-1900", "brand": "Coastline",       "description": "Sparkling Water 12pk",          "category": "Food and Beverage", "mape_pct": 22.4, "weekly_avg_units": 246000, "driver": "Heat dome forecast for South" },
+    { "sku": "WAS-2110", "brand": "WashWorks",       "description": "Fabric Softener 64oz",          "category": "Household Care",    "mape_pct": 21.8, "weekly_avg_units": 88000,  "driver": "Promotion calendar mismatch" },
+    { "sku": "GLM-2215", "brand": "GleamPath",       "description": "Glass Cleaner 32oz",            "category": "Household Care",    "mape_pct": 21.0, "weekly_avg_units": 116000, "driver": "Distribution gain at RTL-002" },
+    { "sku": "MOR-1112", "brand": "Morning Field",   "description": "Cinnamon Squares 14oz",         "category": "Food and Beverage", "mape_pct": 20.6, "weekly_avg_units": 134000, "driver": "Cannibalization from Honey Oat" },
+    { "sku": "LUM-3304", "brand": "Lumen",           "description": "Retinol Night Cream 50ml",      "category": "Personal Care",     "mape_pct": 20.1, "weekly_avg_units": 33000,  "driver": "Influencer surge picked up in syndicated" },
+    { "sku": "MAR-3429", "brand": "Marquee",         "description": "Conditioner Hydration 12oz",    "category": "Personal Care",     "mape_pct": 19.7, "weekly_avg_units": 68000,  "driver": "Promotion lift over-modeled" }
+  ],
+  "demand_sensing_agent": {
+    "title": "Demand-sensing agent",
+    "summary": "Reads weekly POS from Retail Link and Vendor Central, syndicated panel from Nielsen/IRI/Circana, the promotion calendar from Salesforce, and short-range weather. Rewrites the rolling 13-week forecast every six hours and surfaces signals that the deterministic statistical engine has not yet absorbed.",
+    "signals": [
+      { "sku": "AER-2018", "signal": "+34% POS velocity in last 2 weeks at MegaMart, BoxBin, and AzureCart", "recommendation": "Lift baseline forecast +28% through Wk-26; pre-position 1.4M cases in DC-GL and DC-SC.", "confidence_pct": 91 },
+      { "sku": "CST-1900", "signal": "South Region heat-dome forecast Wk-21 through Wk-23, syndicated panel showing +12% category lift in prior heat events", "recommendation": "Increase Coastline 12pk forecast +18% in DC-SE, DC-SC, DC-SW; alert PLT-011 Houston for additional run.", "confidence_pct": 88 },
+      { "sku": "LUM-3301", "signal": "Circana scanner data shows +47% velocity at drug channel vs. forecast +8%", "recommendation": "Raise Vit-C Serum forecast +32% nationally; flag to brand team for supply contingency.", "confidence_pct": 84 },
+      { "sku": "GLM-2210", "signal": "EverSoft launch cannibalizing 9% of GleamPath Multi-Surface volume", "recommendation": "Lower GleamPath forecast -7% and rebalance against EverSoft.", "confidence_pct": 79 }
+    ]
+  }
+}

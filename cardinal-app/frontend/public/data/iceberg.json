@@ -1,0 +1,32 @@
+{
+  "generated_at": "2026-05-20T08:00:00Z",
+  "lake_bucket": "cardinal-odi-lake",
+  "catalog": "AWS Glue Data Catalog (Iceberg REST)",
+  "format": "Apache Iceberg v2 · Parquet · ZSTD",
+  "tables": [
+    { "layer": "bronze", "name": "bronze.sap_sales_order_line",          "rows": 4280000000, "size_gb": 2840, "partitions": "ingest_date", "last_snapshot": "2026-05-20T07:46:00Z" },
+    { "layer": "bronze", "name": "bronze.wms_inventory_position",        "rows": 6120000000, "size_gb": 1620, "partitions": "ingest_date, dc_id",       "last_snapshot": "2026-05-20T07:49:00Z" },
+    { "layer": "bronze", "name": "bronze.otm_shipment_event",            "rows": 920000000,  "size_gb": 580,  "partitions": "ingest_date",              "last_snapshot": "2026-05-20T07:50:00Z" },
+    { "layer": "bronze", "name": "bronze.retail_link_pos_weekly",        "rows": 2840000000, "size_gb": 740,  "partitions": "week_ending, retailer_id", "last_snapshot": "2026-05-20T05:02:00Z" },
+    { "layer": "bronze", "name": "bronze.vendor_central_pos",            "rows": 980000000,  "size_gb": 310,  "partitions": "week_ending",              "last_snapshot": "2026-05-20T07:01:00Z" },
+    { "layer": "bronze", "name": "bronze.syndicated_panel_scan",         "rows": 3420000000, "size_gb": 890,  "partitions": "week_ending, category",    "last_snapshot": "2026-05-20T06:04:00Z" },
+    { "layer": "bronze", "name": "bronze.commodity_quote",               "rows": 18400000,   "size_gb": 12,   "partitions": "trade_date",               "last_snapshot": "2026-05-20T07:56:00Z" },
+    { "layer": "silver", "name": "silver.fact_shipment",                 "rows": 412000000,  "size_gb": 280,  "partitions": "ship_date, retailer_id",   "last_snapshot": "2026-05-20T07:58:00Z" },
+    { "layer": "silver", "name": "silver.fact_inventory_daily",          "rows": 1840000000, "size_gb": 460,  "partitions": "snapshot_date, dc_id",     "last_snapshot": "2026-05-20T07:55:00Z" },
+    { "layer": "silver", "name": "silver.fact_pos_weekly",               "rows": 1180000000, "size_gb": 290,  "partitions": "week_ending, retailer_id", "last_snapshot": "2026-05-20T05:18:00Z" },
+    { "layer": "silver", "name": "silver.dim_sku",                       "rows": 86000,      "size_gb": 1,    "partitions": null,                       "last_snapshot": "2026-05-20T07:58:00Z" },
+    { "layer": "silver", "name": "silver.dim_retailer",                  "rows": 280000,     "size_gb": 1,    "partitions": null,                       "last_snapshot": "2026-05-20T07:58:00Z" },
+    { "layer": "gold",   "name": "gold.kpi_otif_daily",                  "rows": 96000,      "size_gb": 4,    "partitions": "as_of_date",               "last_snapshot": "2026-05-20T07:59:00Z" },
+    { "layer": "gold",   "name": "gold.kpi_forecast_accuracy_weekly",    "rows": 1240000,    "size_gb": 12,   "partitions": "week_ending",              "last_snapshot": "2026-05-20T07:59:00Z" },
+    { "layer": "gold",   "name": "gold.kpi_plant_utilization",           "rows": 18000,      "size_gb": 2,    "partitions": "as_of_date",               "last_snapshot": "2026-05-20T07:59:00Z" },
+    { "layer": "gold",   "name": "gold.kpi_chargebacks_by_retailer",     "rows": 24000,      "size_gb": 1,    "partitions": "as_of_date",               "last_snapshot": "2026-05-20T07:59:00Z" },
+    { "layer": "gold",   "name": "gold.kpi_trade_promotion_roi",         "rows": 84000,      "size_gb": 3,    "partitions": "promo_id",                 "last_snapshot": "2026-05-20T07:59:00Z" },
+    { "layer": "gold",   "name": "gold.kpi_scope3_intensity_monthly",    "rows": 4800,       "size_gb": 1,    "partitions": "month",                    "last_snapshot": "2026-05-20T07:59:00Z" }
+  ],
+  "compute_engines": [
+    { "name": "Snowflake",        "role": "BI workloads, planner workbench" },
+    { "name": "AWS Athena",       "role": "Ad-hoc Iceberg queries by data engineering" },
+    { "name": "Trino on EKS",     "role": "Data-science notebooks, demand-sensing model training" },
+    { "name": "DuckDB",           "role": "Analyst desktop, ODI agents in low-latency loops" }
+  ]
+}

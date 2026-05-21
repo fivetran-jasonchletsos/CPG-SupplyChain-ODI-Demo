@@ -1,0 +1,34 @@
+{
+  "generated_at": "2026-05-20T08:00:00Z",
+  "top_skus_by_retailer": [
+    { "sku": "CST-1900", "brand": "Coastline",      "retailer": "MegaMart Stores",   "weekly_pos_units": 412000, "weekly_pos_dollars_usd": 1980000, "void_stores_pct": 2.4, "promo_lift_vs_base_pct": 22.4 },
+    { "sku": "MOR-1108", "brand": "Morning Field",  "retailer": "MegaMart Stores",   "weekly_pos_units": 318000, "weekly_pos_dollars_usd": 1431000, "void_stores_pct": 1.1, "promo_lift_vs_base_pct": 14.8 },
+    { "sku": "CRH-1042", "brand": "Crunch Hollow",  "retailer": "MegaMart Stores",   "weekly_pos_units": 281000, "weekly_pos_dollars_usd": 1264000, "void_stores_pct": 3.0, "promo_lift_vs_base_pct": 36.1 },
+    { "sku": "GLM-2210", "brand": "GleamPath",      "retailer": "MegaMart Stores",   "weekly_pos_units": 233000, "weekly_pos_dollars_usd": 1048000, "void_stores_pct": 0.9, "promo_lift_vs_base_pct": 11.2 },
+    { "sku": "AER-2018", "brand": "AeroFresh",      "retailer": "MegaMart Stores",   "weekly_pos_units": 174000, "weekly_pos_dollars_usd": 870000,  "void_stores_pct": 5.7, "promo_lift_vs_base_pct": 8.4 },
+    { "sku": "CST-1900", "brand": "Coastline",      "retailer": "Bullseye Retail",   "weekly_pos_units": 248000, "weekly_pos_dollars_usd": 1190000, "void_stores_pct": 1.8, "promo_lift_vs_base_pct": 19.6 },
+    { "sku": "LUM-3301", "brand": "Lumen",           "retailer": "Bullseye Retail",   "weekly_pos_units": 88000,  "weekly_pos_dollars_usd": 1320000, "void_stores_pct": 2.2, "promo_lift_vs_base_pct": 41.3 },
+    { "sku": "MAR-3422", "brand": "Marquee",         "retailer": "Bullseye Retail",   "weekly_pos_units": 124000, "weekly_pos_dollars_usd": 868000,  "void_stores_pct": 1.6, "promo_lift_vs_base_pct": 18.7 },
+    { "sku": "WAS-2107", "brand": "WashWorks",       "retailer": "RiverGrove Grocers","weekly_pos_units": 162000, "weekly_pos_dollars_usd": 1134000, "void_stores_pct": 0.8, "promo_lift_vs_base_pct": 12.4 },
+    { "sku": "SUN-1502", "brand": "Sunbarrel",       "retailer": "RiverGrove Grocers","weekly_pos_units": 198000, "weekly_pos_dollars_usd": 396000,  "void_stores_pct": 1.4, "promo_lift_vs_base_pct": 9.6 },
+    { "sku": "ORC-1611", "brand": "Orchard 23",      "retailer": "RiverGrove Grocers","weekly_pos_units": 144000, "weekly_pos_dollars_usd": 720000,  "void_stores_pct": 1.1, "promo_lift_vs_base_pct": 7.8 },
+    { "sku": "CIT-1722", "brand": "Citrus 88",       "retailer": "Beacon Club Warehouse","weekly_pos_units": 102000,"weekly_pos_dollars_usd": 612000, "void_stores_pct": 0.3, "promo_lift_vs_base_pct": 6.4 },
+    { "sku": "GLM-2210", "brand": "GleamPath",      "retailer": "Beacon Club Warehouse","weekly_pos_units": 88000, "weekly_pos_dollars_usd": 528000, "void_stores_pct": 0.2, "promo_lift_vs_base_pct": 4.7 },
+    { "sku": "EVR-3550", "brand": "EverSoft",        "retailer": "AzureCart (online)","weekly_pos_units": 71000,  "weekly_pos_dollars_usd": 568000,  "void_stores_pct": 0.0, "promo_lift_vs_base_pct": 33.2 },
+    { "sku": "LUM-3301", "brand": "Lumen",           "retailer": "AzureCart (online)","weekly_pos_units": 96000,  "weekly_pos_dollars_usd": 1440000, "void_stores_pct": 0.0, "promo_lift_vs_base_pct": 47.1 },
+    { "sku": "MAR-3429", "brand": "Marquee",         "retailer": "AzureCart (online)","weekly_pos_units": 81000,  "weekly_pos_dollars_usd": 648000,  "void_stores_pct": 0.0, "promo_lift_vs_base_pct": 22.5 },
+    { "sku": "MTN-1840", "brand": "Mountain Mill",   "retailer": "PineRow Foods",     "weekly_pos_units": 104000, "weekly_pos_dollars_usd": 312000,  "void_stores_pct": 1.7, "promo_lift_vs_base_pct": 8.9 },
+    { "sku": "BRZ-2333", "brand": "BreezeBox",       "retailer": "PineRow Foods",     "weekly_pos_units": 67000,  "weekly_pos_dollars_usd": 268000,  "void_stores_pct": 2.1, "promo_lift_vs_base_pct": 14.6 },
+    { "sku": "TID-3677", "brand": "Tideway",         "retailer": "Lighthouse Drug",   "weekly_pos_units": 48000,  "weekly_pos_dollars_usd": 432000,  "void_stores_pct": 1.3, "promo_lift_vs_base_pct": 26.4 },
+    { "sku": "LUM-3304", "brand": "Lumen",           "retailer": "Foothill Pharmacy", "weekly_pos_units": 31000,  "weekly_pos_dollars_usd": 558000,  "void_stores_pct": 0.7, "promo_lift_vs_base_pct": 19.3 }
+  ],
+  "distribution_voids": {
+    "headline": "Distribution voids costing an estimated $2.4M weekly across top 50 SKUs",
+    "top_void_examples": [
+      { "sku": "AER-2018", "retailer": "MegaMart Stores",  "stores_void": 412, "estimated_lost_sales_weekly_usd": 247000 },
+      { "sku": "CRH-1042", "retailer": "MegaMart Stores",  "stores_void": 218, "estimated_lost_sales_weekly_usd": 168000 },
+      { "sku": "BRZ-2333", "retailer": "PineRow Foods",    "stores_void": 96,  "estimated_lost_sales_weekly_usd": 71000 },
+      { "sku": "LUM-3301", "retailer": "Bullseye Retail",  "stores_void": 64,  "estimated_lost_sales_weekly_usd": 144000 }
+    ]
+  }
+}

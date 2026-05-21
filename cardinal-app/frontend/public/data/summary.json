@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-05-20T08:00:00Z",
+  "source": "demo",
+  "fiscal_year": "FY26",
+  "as_of_week": "2026-W20",
+  "kpis": {
+    "net_sales_ytd_usd": 12840000000,
+    "net_sales_ytd_yoy_pct": 4.2,
+    "gross_margin_pct": 38.6,
+    "gross_margin_yoy_pct_pts": -0.9,
+    "otif_score_pct": 93.4,
+    "otif_target_pct": 96.0,
+    "otif_yoy_pct_pts": -1.8,
+    "fill_rate_pct": 97.1,
+    "fill_rate_target_pct": 98.5,
+    "days_of_supply": 41,
+    "days_of_supply_target": 35,
+    "forecast_accuracy_mape_pct": 18.7,
+    "forecast_accuracy_target_mape_pct": 15.0,
+    "retailer_chargebacks_ytd_usd": 38400000,
+    "retailer_chargebacks_yoy_pct": 22.6,
+    "scope3_intensity_kg_per_case": 1.43,
+    "scope3_intensity_yoy_pct": -3.1
+  },
+  "categories": [
+    { "category": "Food and Beverage", "net_sales_usd": 6940000000, "share_pct": 54.0, "growth_yoy_pct": 5.8 },
+    { "category": "Household Care",    "net_sales_usd": 3470000000, "share_pct": 27.0, "growth_yoy_pct": 2.1 },
+    { "category": "Personal Care",     "net_sales_usd": 2430000000, "share_pct": 19.0, "growth_yoy_pct": 3.9 }
+  ],
+  "top_issues": [
+    {
+      "id": "issue-walmart-otif",
+      "severity": "high",
+      "title": "Walmart OTIF dropped to 92.1% in Q1",
+      "detail": "Chargeback exposure tracking to $14.2M for the quarter against a $9.0M plan. Driver mix: 41% late-delivery, 28% short-ship, 18% paperwork. Retailer-compliance agent has flagged 318 at-risk shipments in the next 14 days.",
+      "owner": "VP Customer Logistics",
+      "link": "/#/retailers"
+    },
+    {
+      "id": "issue-cincy-aerosol",
+      "severity": "high",
+      "title": "Aerosol line at Cincinnati at 96% utilization",
+      "detail": "Sole bottleneck for Household Care aerosols; six-week order book exceeds capacity by 7.4M cases. Production-scheduling agent recommends shifting two SKUs to co-packer COP-104 (Springfield, MO) at a $0.11 per case premium.",
+      "owner": "Plant Director, Cincinnati",
+      "link": "/#/plants"
+    },
+    {
+      "id": "issue-palm-oil",
+      "severity": "medium",
+      "title": "Palm oil spot up 18% over 60 days",
+      "detail": "Indonesian export curbs lifting RBD palm-olein spot. Hedge coverage is 52% through end of Q3. Unrealized mark-to-market on existing positions is +$8.9M but unhedged exposure threatens $22M of Q3 gross margin if spot holds.",
+      "owner": "Director, Commodity Risk",
+      "link": "/#/commodities"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "generated_at": "2026-05-20T08:00:00Z",
+  "dcs": [
+    { "id": "DC-NE", "name": "Northeast DC — Carlisle, PA",        "lat": 40.20, "lon": -77.20, "throughput_cases_per_day": 412000, "dos_food_bev": 38, "dos_household": 44, "dos_personal_care": 41, "slow_mover_dollars_usd": 4200000,  "dock_to_stock_hours": 8.4,  "weekly_receipts_cases": 2120000, "fill_rate_pct": 97.6 },
+    { "id": "DC-MA", "name": "Mid-Atlantic DC — Mechanicsburg, PA","lat": 40.21, "lon": -76.99, "throughput_cases_per_day": 388000, "dos_food_bev": 40, "dos_household": 42, "dos_personal_care": 39, "slow_mover_dollars_usd": 3600000,  "dock_to_stock_hours": 9.1,  "weekly_receipts_cases": 1980000, "fill_rate_pct": 96.9 },
+    { "id": "DC-SE", "name": "Southeast DC — Lakeland, FL",        "lat": 28.04, "lon": -81.95, "throughput_cases_per_day": 365000, "dos_food_bev": 35, "dos_household": 40, "dos_personal_care": 38, "slow_mover_dollars_usd": 2900000,  "dock_to_stock_hours": 7.8,  "weekly_receipts_cases": 1840000, "fill_rate_pct": 97.9 },
+    { "id": "DC-GL", "name": "Great Lakes DC — Joliet, IL",        "lat": 41.52, "lon": -88.08, "throughput_cases_per_day": 441000, "dos_food_bev": 42, "dos_household": 46, "dos_personal_care": 44, "slow_mover_dollars_usd": 5100000,  "dock_to_stock_hours": 9.6,  "weekly_receipts_cases": 2270000, "fill_rate_pct": 96.4 },
+    { "id": "DC-SC", "name": "South Central DC — Dallas, TX",      "lat": 32.78, "lon": -96.80, "throughput_cases_per_day": 396000, "dos_food_bev": 39, "dos_household": 43, "dos_personal_care": 40, "slow_mover_dollars_usd": 3300000,  "dock_to_stock_hours": 8.1,  "weekly_receipts_cases": 1990000, "fill_rate_pct": 97.3 },
+    { "id": "DC-MW", "name": "Midwest DC — Kansas City, MO",       "lat": 39.10, "lon": -94.58, "throughput_cases_per_day": 322000, "dos_food_bev": 41, "dos_household": 45, "dos_personal_care": 42, "slow_mover_dollars_usd": 3700000,  "dock_to_stock_hours": 8.9,  "weekly_receipts_cases": 1660000, "fill_rate_pct": 96.7 },
+    { "id": "DC-SW", "name": "Southwest DC — Phoenix, AZ",         "lat": 33.45, "lon": -112.07, "throughput_cases_per_day": 281000, "dos_food_bev": 36, "dos_household": 41, "dos_personal_care": 39, "slow_mover_dollars_usd": 2400000,  "dock_to_stock_hours": 7.4,  "weekly_receipts_cases": 1450000, "fill_rate_pct": 97.8 },
+    { "id": "DC-PW", "name": "Pacific West DC — Stockton, CA",     "lat": 37.96, "lon": -121.30, "throughput_cases_per_day": 418000, "dos_food_bev": 37, "dos_household": 39, "dos_personal_care": 37, "slow_mover_dollars_usd": 3100000,  "dock_to_stock_hours": 8.2,  "weekly_receipts_cases": 2160000, "fill_rate_pct": 97.5 },
+    { "id": "DC-PN", "name": "Pacific Northwest DC — Auburn, WA",  "lat": 47.31, "lon": -122.23, "throughput_cases_per_day": 244000, "dos_food_bev": 39, "dos_household": 41, "dos_personal_care": 38, "slow_mover_dollars_usd": 2100000,  "dock_to_stock_hours": 7.9,  "weekly_receipts_cases": 1270000, "fill_rate_pct": 97.4 }
+  ],
+  "network_totals": {
+    "avg_dos_days": 40.4,
+    "total_slow_mover_dollars_usd": 30400000,
+    "avg_fill_rate_pct": 97.3,
+    "total_daily_throughput_cases": 3267000
+  }
+}

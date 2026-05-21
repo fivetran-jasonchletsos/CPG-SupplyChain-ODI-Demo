@@ -1,0 +1,37 @@
+{
+  "generated_at": "2026-05-20T08:00:00Z",
+  "total_trade_spend_ytd_usd": 612000000,
+  "total_incremental_volume_ytd_cases": 18400000,
+  "blended_roi": 1.34,
+  "promotions": [
+    { "id": "PROMO-2241", "brand": "Coastline",      "sku": "CST-1900", "retailer": "MegaMart Stores",   "status": "running", "planned_spend_usd": 4200000, "actual_spend_usd": 4180000, "incremental_lift_cases": 412000, "cannibalization_cases": 38000, "roi": 2.18, "recommendation": "Extend through Wk-24" },
+    { "id": "PROMO-2242", "brand": "Crunch Hollow",  "sku": "CRH-1042", "retailer": "MegaMart Stores",   "status": "running", "planned_spend_usd": 2600000, "actual_spend_usd": 2740000, "incremental_lift_cases": 226000, "cannibalization_cases": 41000, "roi": 1.61, "recommendation": "Hold" },
+    { "id": "PROMO-2243", "brand": "Lumen",           "sku": "LUM-3301", "retailer": "Bullseye Retail",   "status": "running", "planned_spend_usd": 1800000, "actual_spend_usd": 1840000, "incremental_lift_cases": 38000,  "cannibalization_cases": 4200, "roi": 3.42, "recommendation": "Extend through Wk-26 and add depth" },
+    { "id": "PROMO-2244", "brand": "GleamPath",       "sku": "GLM-2210", "retailer": "RiverGrove Grocers","status": "running", "planned_spend_usd": 2100000, "actual_spend_usd": 1980000, "incremental_lift_cases": 92000,  "cannibalization_cases": 24000,"roi": 0.81, "recommendation": "Cut — underperforming; redirect funds to PROMO-2241" },
+    { "id": "PROMO-2245", "brand": "Marquee",         "sku": "MAR-3422", "retailer": "Bullseye Retail",   "status": "running", "planned_spend_usd": 1400000, "actual_spend_usd": 1410000, "incremental_lift_cases": 64000,  "cannibalization_cases": 11000,"roi": 1.92, "recommendation": "Hold" },
+    { "id": "PROMO-2246", "brand": "Morning Field",   "sku": "MOR-1108", "retailer": "RiverGrove Grocers","status": "ended",   "planned_spend_usd": 1900000, "actual_spend_usd": 1920000, "incremental_lift_cases": 148000, "cannibalization_cases": 22000,"roi": 1.74, "recommendation": "Reorder in Q4 with shorter depth" },
+    { "id": "PROMO-2247", "brand": "WashWorks",       "sku": "WAS-2107", "retailer": "Beacon Club Warehouse","status": "running","planned_spend_usd": 1200000, "actual_spend_usd": 1180000, "incremental_lift_cases": 71000,  "cannibalization_cases": 12000,"roi": 1.38, "recommendation": "Hold" },
+    { "id": "PROMO-2248", "brand": "Sunbarrel",       "sku": "SUN-1502", "retailer": "PineRow Foods",     "status": "running", "planned_spend_usd": 980000,  "actual_spend_usd": 1010000, "incremental_lift_cases": 124000, "cannibalization_cases": 18000,"roi": 1.46, "recommendation": "Hold" },
+    { "id": "PROMO-2249", "brand": "EverSoft",        "sku": "EVR-3550", "retailer": "AzureCart (online)","status": "running", "planned_spend_usd": 800000,  "actual_spend_usd": 820000,  "incremental_lift_cases": 46000,  "cannibalization_cases": 6000, "roi": 2.61, "recommendation": "Extend through Wk-26" },
+    { "id": "PROMO-2250", "brand": "BreezeBox",       "sku": "BRZ-2333", "retailer": "PineRow Foods",     "status": "running", "planned_spend_usd": 700000,  "actual_spend_usd": 690000,  "incremental_lift_cases": 38000,  "cannibalization_cases": 9000, "roi": 0.94, "recommendation": "Cut — ROI below floor" },
+    { "id": "PROMO-2251", "brand": "Citrus 88",       "sku": "CIT-1722", "retailer": "Beacon Club Warehouse","status": "ended", "planned_spend_usd": 1100000, "actual_spend_usd": 1080000, "incremental_lift_cases": 88000,  "cannibalization_cases": 11000,"roi": 1.82, "recommendation": "Reorder in Q3" },
+    { "id": "PROMO-2252", "brand": "Mountain Mill",   "sku": "MTN-1840", "retailer": "Linden Markets",     "status": "running", "planned_spend_usd": 520000,  "actual_spend_usd": 540000,  "incremental_lift_cases": 41000,  "cannibalization_cases": 8000, "roi": 1.18, "recommendation": "Cut after Wk-22" },
+    { "id": "PROMO-2253", "brand": "Tideway",         "sku": "TID-3677", "retailer": "Lighthouse Drug",   "status": "running", "planned_spend_usd": 410000,  "actual_spend_usd": 420000,  "incremental_lift_cases": 21000,  "cannibalization_cases": 2000, "roi": 2.04, "recommendation": "Extend into Q3 peak" },
+    { "id": "PROMO-2254", "brand": "Orchard 23",      "sku": "ORC-1611", "retailer": "MegaMart Stores",   "status": "ended",   "planned_spend_usd": 1500000, "actual_spend_usd": 1530000, "incremental_lift_cases": 102000, "cannibalization_cases": 19000,"roi": 1.41, "recommendation": "Hold for back-to-school" },
+    { "id": "PROMO-2255", "brand": "GleamPath",       "sku": "GLM-2215", "retailer": "MegaMart Stores",   "status": "ended",   "planned_spend_usd": 900000,  "actual_spend_usd": 890000,  "incremental_lift_cases": 64000,  "cannibalization_cases": 11000,"roi": 1.36, "recommendation": "Reorder Q4" },
+    { "id": "PROMO-2256", "brand": "Lumen",           "sku": "LUM-3304", "retailer": "Foothill Pharmacy", "status": "running", "planned_spend_usd": 380000,  "actual_spend_usd": 390000,  "incremental_lift_cases": 14000,  "cannibalization_cases": 1500, "roi": 2.31, "recommendation": "Extend" },
+    { "id": "PROMO-2257", "brand": "Marquee",         "sku": "MAR-3429", "retailer": "AzureCart (online)","status": "running", "planned_spend_usd": 350000,  "actual_spend_usd": 360000,  "incremental_lift_cases": 22000,  "cannibalization_cases": 3000, "roi": 1.78, "recommendation": "Hold" },
+    { "id": "PROMO-2258", "brand": "AeroFresh",       "sku": "AER-2018", "retailer": "BoxBin Wholesale",  "status": "running", "planned_spend_usd": 280000,  "actual_spend_usd": 270000,  "incremental_lift_cases": 18000,  "cannibalization_cases": 2400, "roi": 1.89, "recommendation": "Extend" },
+    { "id": "PROMO-2259", "brand": "WashWorks",       "sku": "WAS-2110", "retailer": "Quarry Foods",      "status": "running", "planned_spend_usd": 220000,  "actual_spend_usd": 230000,  "incremental_lift_cases": 11000,  "cannibalization_cases": 2200, "roi": 0.88, "recommendation": "Cut" },
+    { "id": "PROMO-2260", "brand": "BreezeBox",       "sku": "BRZ-2333", "retailer": "Plateau Mart",      "status": "ended",   "planned_spend_usd": 480000,  "actual_spend_usd": 470000,  "incremental_lift_cases": 32000,  "cannibalization_cases": 7000, "roi": 1.21, "recommendation": "Skip in Q3" }
+  ],
+  "trade_spend_agent": {
+    "title": "Trade-spend optimization agent",
+    "summary": "Joins Salesforce promotion calendar with retailer POS and the dbt-built incrementality gold table. Flags promos whose realized ROI deviates more than 25% from plan and recommends rebalancing within the trade-funds envelope.",
+    "decisions": [
+      { "action": "Cut PROMO-2244 (GleamPath Multi-Surface at RiverGrove)", "rationale": "Realized ROI 0.81 vs. plan 1.65. Funds available: $0.6M.", "redirect_to": "PROMO-2241 (Coastline 12pk at MegaMart) — incremental $1.2M lift expected." },
+      { "action": "Extend PROMO-2243 (Lumen Vit-C Serum at Bullseye) by 4 weeks", "rationale": "Realized ROI 3.42; demand-sensing agent flags continued velocity surge.", "redirect_to": "Pull $0.3M from PROMO-2250 (BreezeBox) and PROMO-2259 (WashWorks softener)." },
+      { "action": "Cut PROMO-2259 (WashWorks Softener at Quarry)", "rationale": "ROI 0.88, below 1.0 floor, no scheduled depth optimization opportunity.", "redirect_to": "Hold funds in Q3 reserve." }
+    ]
+  }
+}

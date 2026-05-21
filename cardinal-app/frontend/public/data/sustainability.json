@@ -1,0 +1,45 @@
+{
+  "generated_at": "2026-05-20T08:00:00Z",
+  "emissions": {
+    "scope1_mt_co2e_ytd": 218000,
+    "scope1_yoy_pct": -2.4,
+    "scope2_mt_co2e_ytd": 184000,
+    "scope2_yoy_pct": -6.8,
+    "scope3_mt_co2e_ytd": 2410000,
+    "scope3_yoy_pct": -3.1,
+    "scope3_intensity_kg_per_case": 1.43,
+    "intensity_target_2030_kg_per_case": 1.05
+  },
+  "scope3_breakdown": [
+    { "category": "Purchased goods (ingredients)", "share_pct": 41, "mt_co2e": 988000 },
+    { "category": "Purchased goods (packaging)",   "share_pct": 18, "mt_co2e": 434000 },
+    { "category": "Upstream transport",            "share_pct": 14, "mt_co2e": 337000 },
+    { "category": "Downstream transport",          "share_pct": 9,  "mt_co2e": 217000 },
+    { "category": "End-of-life packaging",         "share_pct": 7,  "mt_co2e": 169000 },
+    { "category": "Capital goods",                 "share_pct": 6,  "mt_co2e": 145000 },
+    { "category": "Other",                         "share_pct": 5,  "mt_co2e": 120000 }
+  ],
+  "packaging": {
+    "recyclable_share_pct": 74,
+    "recyclable_target_2030_pct": 95,
+    "recycled_content_pct": 31,
+    "recycled_content_target_2030_pct": 50,
+    "compostable_share_pct": 6
+  },
+  "water": {
+    "withdrawal_megaliters_ytd": 5640,
+    "withdrawal_intensity_l_per_case": 18.6,
+    "intensity_yoy_pct": -4.4,
+    "high_stress_basin_share_pct": 22
+  },
+  "epr_state_compliance": [
+    { "state": "CA", "law": "SB 54 (Packaging EPR)",              "status": "compliant",       "next_filing": "2026-07-31", "risk_note": "Quarterly fee filing on track" },
+    { "state": "CO", "law": "Producer Responsibility Program",    "status": "compliant",       "next_filing": "2026-08-15", "risk_note": "Reporting cadence aligned" },
+    { "state": "ME", "law": "LD 1541 EPR for Packaging",          "status": "compliant",       "next_filing": "2026-06-30", "risk_note": null },
+    { "state": "OR", "law": "Plastic Pollution and Recycling Act","status": "compliant",       "next_filing": "2026-09-01", "risk_note": null },
+    { "state": "MN", "law": "Packaging Waste Reduction Act",      "status": "at_risk",         "next_filing": "2026-06-01", "risk_note": "PCR content data gap on 14 SKUs; sourcing in flight" },
+    { "state": "WA", "law": "Recycling Reform Act",               "status": "in_progress",     "next_filing": "2026-10-15", "risk_note": "Producer registration in process" },
+    { "state": "NJ", "law": "Packaging Product Stewardship",      "status": "in_progress",     "next_filing": "2026-11-30", "risk_note": "Rule clarifications pending" },
+    { "state": "MD", "law": "Producer Responsibility for Packaging","status": "in_progress",   "next_filing": "2026-12-31", "risk_note": "Implementation guidance forthcoming" }
+  ]
+}
