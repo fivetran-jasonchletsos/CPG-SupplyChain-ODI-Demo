@@ -21,6 +21,11 @@ export interface Summary {
     forecast_accuracy_target_mape_pct: number;
     retailer_chargebacks_ytd_usd: number;
     retailer_chargebacks_yoy_pct: number;
+    jbp_attainment_pct: number;
+    jbp_attainment_target_pct: number;
+    top10_revenue_concentration_pct: number;
+    carrier_otd_pct: number;
+    carrier_otd_target_pct: number;
     scope3_intensity_kg_per_case: number;
     scope3_intensity_yoy_pct: number;
   };
@@ -172,27 +177,122 @@ export interface TradePromotionData {
   trade_spend_agent: AgentBlock;
 }
 
-export interface Commodity {
-  id: string;
-  name: string;
-  unit: string;
-  spot: number;
-  spot_60d_change_pct: number;
-  hedged_pct_12mo: number;
-  mtm_unrealized_usd: number;
-  exposure_usd: number;
-  drivers: string;
+export interface CustomerOtifWeek {
+  week: string;
+  label: string;
+  otif_pct: number;
 }
 
-export interface CommodityData {
+export interface ChargebackReasonBreakdown {
+  reason: string;
+  ytd_usd: number;
+  pct_of_dollars: number;
+}
+
+export interface JbpCommitment {
+  pillar: string;
+  commitment: string;
+  target: number;
+  actual: number;
+  unit: string;
+  status: 'green' | 'yellow' | 'red';
+}
+
+export interface PosWeekBySku {
+  sku: string;
+  brand: string;
+  week_label: string;
+  pos_units: number;
+  forecast_units: number;
+}
+
+export interface CustomerPromo {
+  id: string;
+  sku: string;
+  brand: string;
+  status: 'running' | 'ended';
+  lift_pct: number;
+  cannibalization_pct: number;
+  end_week: string;
+}
+
+export interface NewItemLaunch {
+  sku: string;
+  brand: string;
+  launched_week: string;
+  doors_distributed: number;
+  doors_target: number;
+  weekly_velocity_units: number;
+}
+
+export interface Customer {
+  rank: number;
+  id: string;
+  alias: string;
+  channel: string;
+  banner_type: string;
+  customer_team_lead: string;
+  ytd_revenue_usd: number;
+  ytd_otif_pct: number;
+  ytd_chargebacks_usd: number;
+  jbp_status: 'green' | 'yellow' | 'red';
+  jbp_commitment_attainment_pct: number;
+  last_week_pos_units: number;
+  active_promos: number;
+  hq_lat: number;
+  hq_lon: number;
+  primary_dc: string;
+  otif_trend_8wk: CustomerOtifWeek[];
+  chargeback_breakdown: ChargebackReasonBreakdown[];
+  jbp_commitments: JbpCommitment[];
+  pos_by_sku_last_4wk: PosWeekBySku[];
+  active_promo_detail: CustomerPromo[];
+  carrier_otd_to_dc_pct: number;
+  new_item_launches: NewItemLaunch[];
+}
+
+export interface CustomerTeamRoll {
+  lead: string;
+  retailers: string[];
+  portfolio_revenue_usd: number;
+  portfolio_otif_pct: number;
+  jbp_attainment_pct: number;
+}
+
+export interface CustomersData {
   generated_at: string;
-  commodities: Commodity[];
+  customers: Customer[];
+  team_scorecard: CustomerTeamRoll[];
   summary: {
-    total_exposure_usd: number;
-    weighted_hedge_pct: number;
-    net_mtm_unrealized_usd: number;
-    category_at_risk: string;
+    top10_revenue_concentration_pct: number;
+    jbp_attainment_pct: number;
+    chargeback_ytd_usd: number;
+    avg_otif_pct: number;
   };
+}
+
+export interface CarrierLane {
+  origin: string;
+  destination_retailer_dc: string;
+  otd_pct: number;
+  weekly_loads: number;
+}
+
+export interface Carrier {
+  id: string;
+  name: string;
+  mode: string;
+  otd_pct: number;
+  weekly_loads: number;
+  on_time_pickups_pct: number;
+  damage_claims_per_1000: number;
+  key_lanes: CarrierLane[];
+}
+
+export interface CarrierOTDData {
+  generated_at: string;
+  network_otd_pct: number;
+  carriers: Carrier[];
 }
 
 export interface SustainabilityData {

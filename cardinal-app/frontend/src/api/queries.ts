@@ -1,7 +1,7 @@
 // Reads gold-layer JSON snapshots built by dbt and exported to the static site.
 import type {
   Summary, PlantsData, DCNetwork, RetailerCompliance, ForecastData,
-  POSData, TradePromotionData, CommodityData, SustainabilityData,
+  POSData, TradePromotionData, CustomersData, CarrierOTDData, SustainabilityData,
   PipelineData, IcebergData,
 } from '../types';
 
@@ -22,7 +22,8 @@ export const api = {
   getForecast:       () => fetchJson<ForecastData>('/data/forecast.json'),
   getPOS:            () => fetchJson<POSData>('/data/pos_signal.json'),
   getTradePromotion: () => fetchJson<TradePromotionData>('/data/trade_promotion.json'),
-  getCommodity:      () => fetchJson<CommodityData>('/data/commodity.json'),
+  getCustomers:      () => fetchJson<CustomersData>('/data/customers.json'),
+  getCarrierOTD:     () => fetchJson<CarrierOTDData>('/data/carrier_otd.json'),
   getSustainability: () => fetchJson<SustainabilityData>('/data/sustainability.json'),
   getPipeline:       () => fetchJson<PipelineData>('/data/pipeline.json'),
   getIceberg:        () => fetchJson<IcebergData>('/data/iceberg.json'),

@@ -2,10 +2,16 @@ import { useEffect, useState } from 'react';
 import { api, fmtUSD, fmtPct } from '../api/queries';
 import type { RetailerCompliance } from '../types';
 import PageHeader from '../components/PageHeader';
-import AgentCard from '../components/AgentCard';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, BarChart, Bar, XAxis, YAxis, CartesianGrid } from 'recharts';
 
 const REASON_COLORS = ['#b1182b', '#d97706', '#0d6e6e', '#4a4a4a', '#7a7a7a'];
+
+const SCORECARD_RETAILERS: { alias: string; framework: string; grade: string; risk: string; grade_color: string }[] = [
+  { alias: 'MegaMart Stores',       framework: 'MegaMart SQEP grid (MABD)', grade: 'C',  risk: '$4.2M Q3 chargeback exposure',    grade_color: 'var(--red)' },
+  { alias: 'Bullseye Retail',       framework: 'Bullseye Vendor Scorecard', grade: 'B-', risk: 'JBP volume under-attained 7%',    grade_color: 'var(--amber)' },
+  { alias: 'Beacon Club Warehouse', framework: 'Beacon Compliance Grid',    grade: 'A',  risk: 'Pallet integrity within band',    grade_color: 'var(--forest)' },
+  { alias: 'AzureCart (online)',    framework: 'AzureCart Vendor Health',   grade: 'C+', risk: 'ASN 856 mismatch trending up',    grade_color: 'var(--red)' },
+];
 
 export default function RetailersPage() {
   const [data, setData] = useState<RetailerCompliance | null>(null);
@@ -19,8 +25,8 @@ export default function RetailersPage() {
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <PageHeader
         eyebrow="Retailer Compliance"
-        title="OTIF, chargebacks, and the compliance agent"
-        subtitle="Top 30 retailer accounts ranked by volume. The retailer-compliance agent reads outbound orders, OTM tenders, WMS picks, and EDI 824/812 retailer chargeback feeds to flag at-risk shipments 36 to 72 hours before pickup."
+        title="OTIF, chargebacks, and the 72-hour at-risk queue"
+        subtitle="Top 30 retailer accounts ranked by volume. Chargeback dollars by reason — late delivery, short ship, label error, palletization (MABD violations), ASN mismatch, weight discrepancy. The retailer-compliance agent reads outbound orders, OTM tenders, WMS picks, and EDI 824 / 812 retailer chargeback feeds to flag at-risk shipments 36 to 72 hours before pickup with a proposed corrective action."
       />
 
       <section className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
@@ -30,10 +36,64 @@ export default function RetailersPage() {
         <div className="kpi-card"><div className="kpi-label">Top exposure</div><div className="kpi-value num text-[var(--red)]">MegaMart</div><div className="text-[11px] text-[var(--ink-soft)] mt-1">$14.2M YTD, OTIF 92.1%</div></div>
       </section>
 
-      {data?.compliance_agent && (
-        <div className="mb-6">
-          <AgentCard agent={data.compliance_agent} />
+      <section className="surface mb-6">
+        <div className="surface-head">
+          <div className="eyebrow">Retailer compliance frameworks</div>
+          <h2 className="font-serif text-lg font-semibold text-[var(--ink-strong)]">Vendor scorecards by retailer (synthetic, aliased)</h2>
         </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 p-4">
+          {SCORECARD_RETAILERS.map((s) => (
+            <div key={s.alias} className="border border-[var(--hairline)] rounded-sm p-4 bg-white">
+              <div className="eyebrow mb-1">{s.framework}</div>
+              <div className="font-serif text-base font-semibold text-[var(--ink-strong)]">{s.alias}</div>
+              <div className="mt-3 flex items-baseline gap-3">
+                <span className="num text-4xl font-semibold" style={{ color: s.grade_color }}>{s.grade}</span>
+                <span className="text-[11px] text-[var(--ink-soft)] uppercase tracking-wider">grade</span>
+              </div>
+              <div className="text-xs text-[var(--ink-muted)] mt-2 leading-snug">{s.risk}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {data?.compliance_agent && (
+        <section className="surface mb-6">
+          <div className="surface-head">
+            <div className="eyebrow">At-risk shipment queue, next 72 hours</div>
+            <h2 className="font-serif text-lg font-semibold text-[var(--ink-strong)]">Retailer-compliance agent — proposed corrective actions</h2>
+          </div>
+          <div className="p-2 overflow-x-auto">
+            <table className="data">
+              <thead>
+                <tr>
+                  <th>Shipment</th>
+                  <th>Retailer</th>
+                  <th>DC</th>
+                  <th className="num">Pickup in</th>
+                  <th>Risk</th>
+                  <th>Reason</th>
+                  <th>Proposed action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.compliance_agent.at_risk_shipments?.map((s) => (
+                  <tr key={s.id}>
+                    <td className="num">{s.id}</td>
+                    <td className="font-semibold text-[var(--ink-strong)]">{s.retailer}</td>
+                    <td>{s.dc}</td>
+                    <td className="num">{s.pickup_in_hours}h</td>
+                    <td><span className={`pill ${s.risk === 'high' ? 'bad' : s.risk === 'medium' ? 'warn' : 'good'}`}>{s.risk}</span></td>
+                    <td className="text-xs text-[var(--ink-muted)]">{s.reason}</td>
+                    <td className="text-xs">{s.action}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <div className="px-4 pb-4 text-xs text-[var(--ink-soft)]">
+            {data.compliance_agent.summary}
+          </div>
+        </section>
       )}
 
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">

@@ -8,10 +8,12 @@ const SOURCES = [
   { name: 'Manhattan Associates WMS',   provides: 'Warehouse inventory positions, dock-to-stock, pick confirms, putaway' },
   { name: 'Oracle Transportation Mgmt', provides: 'Carrier tenders, accepted shipments, in-transit telemetry, freight cost' },
   { name: 'Salesforce',                 provides: 'Retailer accounts, contracts, promotion calendar, broker hierarchy' },
-  { name: 'Walmart Retail Link',        provides: 'Store-SKU POS weekly, out-of-stock indicators, store traffic' },
-  { name: 'Amazon Vendor Central',      provides: 'Sales diagnostics, inventory health, shipped revenue, chargeback feed' },
+  { name: 'Walmart Retail Link',        provides: 'Store-SKU POS hourly, MABD compliance, SQEP chargebacks, OOS indicators' },
+  { name: 'Amazon Vendor Central',      provides: 'Sales diagnostics, ASN 856 status, inventory health, chargeback feed' },
+  { name: 'Target Partners Online',     provides: 'Bullseye Vendor Scorecard, store-SKU POS, chargeback feed' },
+  { name: 'Kroger Vendor Portal',       provides: 'Store-SKU POS, Compliance Grid, JBP attainment extract' },
   { name: 'Syndicated panel (Nielsen, IRI, Circana style)', provides: 'Weekly category-level scan, ACV, distribution, share' },
-  { name: 'Commodity broker price feed', provides: 'CME-style spot and futures for corn, wheat, sugar, aluminum, resin, palm oil' },
+  { name: 'Carrier portals (10 carriers)', provides: 'Tender acceptance, in-transit GPS, POD, OTD by lane' },
   { name: 'Sustainability data warehouse', provides: 'Scope 1, 2, 3 emissions, water, packaging, EPR filings' },
 ];
 
@@ -32,7 +34,7 @@ export default function ArchitecturePage() {
       <PageHeader
         eyebrow="ODI Reference Architecture"
         title="Snowflake + Iceberg, fed by Fivetran"
-        subtitle="Nine sources, one customer-owned Iceberg lake on S3, dbt-built gold and marts, four compute engines pointed at the same files. Cardinal owns the storage. The compute layer is pluggable."
+        subtitle="Eleven sources spanning ERP, WMS, TMS, CRM, four retailer portals, syndicated panel, carrier feeds, and sustainability — landing in one customer-owned Iceberg lake on S3. dbt builds gold and marts; four compute engines point at the same files. Cardinal owns the storage. The compute layer is pluggable."
       />
 
       <section className="surface p-6 mb-8">

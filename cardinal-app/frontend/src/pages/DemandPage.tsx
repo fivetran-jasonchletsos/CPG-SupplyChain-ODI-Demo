@@ -20,8 +20,8 @@ export default function DemandPage() {
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <PageHeader
         eyebrow="Demand Planning"
-        title="Forecast vs. actual, MAPE, and the demand-sensing agent"
-        subtitle="A 13-week forecast across three categories. The demand-sensing agent rewrites the plan every six hours by reading retailer POS, syndicated panel, the promotion calendar, and short-range weather. Statistical engine + agent + planner work off the same Iceberg tables."
+        title="Forecast vs actual, MAPE, and the demand-sensing agent"
+        subtitle="A 13-week forecast across three categories. The demand-sensing agent reads retailer POS hourly (Walmart Retail Link, Amazon Vendor Central, Target Partners Online, Kroger Vendor Portal), syndicated panel from Nielsen / IRI / Circana, the promotion calendar from Salesforce, weather, and social signals — and rewrites the plan in real time. Statistical engine, agent, and planner all read the same Iceberg tables. Phantom OOS (shelf-presence failure with healthy on-hand) is flagged distinctly from true OOS."
       />
 
       <section className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
@@ -78,6 +78,30 @@ export default function DemandPage() {
               <Line type="monotone" dataKey="mape_pct" stroke="#b1182b" strokeWidth={2.5} dot={{ r: 3 }} />
             </LineChart>
           </ResponsiveContainer>
+        </div>
+      </section>
+
+      <section className="surface mb-6">
+        <div className="surface-head">
+          <div className="eyebrow">Phantom OOS detection</div>
+          <h2 className="font-serif text-lg font-semibold text-[var(--ink-strong)]">Shelf-presence failures vs true out-of-stock</h2>
+        </div>
+        <div className="p-4 grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div className="border-l-4 border-[var(--red)] pl-3">
+            <div className="text-xs font-semibold uppercase tracking-wider text-[var(--ink-soft)]">Phantom OOS this week</div>
+            <div className="num text-2xl font-semibold text-[var(--ink-strong)] mt-1">280 stores</div>
+            <div className="text-xs text-[var(--ink-muted)] mt-1">Morning Field Almond Granola at RiverGrove — POS units fell to 41K vs 122K forecast at healthy on-hand. Replenishment hold released; merchandising notified.</div>
+          </div>
+          <div className="border-l-4 border-[var(--amber)] pl-3">
+            <div className="text-xs font-semibold uppercase tracking-wider text-[var(--ink-soft)]">True OOS this week</div>
+            <div className="num text-2xl font-semibold text-[var(--ink-strong)] mt-1">112 stores</div>
+            <div className="text-xs text-[var(--ink-muted)] mt-1">Lumen Vit-C Serum at Bullseye — viral velocity outran replenishment. Demand-sensing agent re-pulled 80K cases from Cardinal-Mid-Atlantic-DC.</div>
+          </div>
+          <div className="border-l-4 border-[var(--forest)] pl-3">
+            <div className="text-xs font-semibold uppercase tracking-wider text-[var(--ink-soft)]">Resolution SLA</div>
+            <div className="num text-2xl font-semibold text-[var(--ink-strong)] mt-1">18 hours</div>
+            <div className="text-xs text-[var(--ink-muted)] mt-1">From POS-drop detection in Retail Link / Vendor Central feeds to agent-proposed action delivered to the customer-team lead.</div>
+          </div>
         </div>
       </section>
 

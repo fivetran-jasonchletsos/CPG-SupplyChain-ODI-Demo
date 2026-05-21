@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T08:00:00Z",
+  "generated_at": "2026-05-21T08:00:00Z",
   "source": "demo",
   "fiscal_year": "FY26",
   "as_of_week": "2026-W20",
@@ -19,6 +19,11 @@
     "forecast_accuracy_target_mape_pct": 15.0,
     "retailer_chargebacks_ytd_usd": 38400000,
     "retailer_chargebacks_yoy_pct": 22.6,
+    "jbp_attainment_pct": 87.2,
+    "jbp_attainment_target_pct": 92.0,
+    "top10_revenue_concentration_pct": 68.4,
+    "carrier_otd_pct": 92.4,
+    "carrier_otd_target_pct": 95.0,
     "scope3_intensity_kg_per_case": 1.43,
     "scope3_intensity_yoy_pct": -3.1
   },
@@ -29,28 +34,28 @@
   ],
   "top_issues": [
     {
-      "id": "issue-walmart-otif",
+      "id": "issue-megamart-otif",
       "severity": "high",
-      "title": "Walmart OTIF dropped to 92.1% in Q1",
-      "detail": "Chargeback exposure tracking to $14.2M for the quarter against a $9.0M plan. Driver mix: 41% late-delivery, 28% short-ship, 18% paperwork. Retailer-compliance agent has flagged 318 at-risk shipments in the next 14 days.",
-      "owner": "VP Customer Logistics",
-      "link": "/#/retailers"
+      "title": "OTIF at MegaMart dropped to 91% in Q2 — projected $4.2M Q3 chargeback exposure",
+      "detail": "Eight-week slide from 94.6 to 91.0 OTIF driven by late-delivery (44% of charge dollars) and short-ship (24%). MABD misses concentrated on Joliet to Bentonville lane. Retailer-compliance agent has flagged 318 at-risk shipments in the next 14 days; proposed actions include re-routing through Cardinal-Southeast-DC and splitting two orders.",
+      "owner": "Priya Vahid, Customer Team Lead",
+      "link": "/#/customers"
     },
     {
-      "id": "issue-cincy-aerosol",
+      "id": "issue-bullseye-jbp",
       "severity": "high",
-      "title": "Aerosol line at Cincinnati at 96% utilization",
-      "detail": "Sole bottleneck for Household Care aerosols; six-week order book exceeds capacity by 7.4M cases. Production-scheduling agent recommends shifting two SKUs to co-packer COP-104 (Springfield, MO) at a $0.11 per case premium.",
-      "owner": "Plant Director, Cincinnati",
-      "link": "/#/plants"
+      "title": "Bullseye JBP volume commitment under-attained by 7% — top-to-top in 14 days",
+      "detail": "Annual volume commitment 48.0M cases; pacing 44.6M. Endcap support pacing 11 of 14 weeks. Customer team prepping recovery plan: Lumen Vit-C Serum velocity ahead of plan offsets a portion; Marquee Argan needs a fresh feature in Wk22.",
+      "owner": "Priya Vahid, Customer Team Lead",
+      "link": "/#/customers"
     },
     {
-      "id": "issue-palm-oil",
+      "id": "issue-rivergrove-phantom-oos",
       "severity": "medium",
-      "title": "Palm oil spot up 18% over 60 days",
-      "detail": "Indonesian export curbs lifting RBD palm-olein spot. Hedge coverage is 52% through end of Q3. Unrealized mark-to-market on existing positions is +$8.9M but unhedged exposure threatens $22M of Q3 gross margin if spot holds.",
-      "owner": "Director, Commodity Risk",
-      "link": "/#/commodities"
+      "title": "Phantom OOS detected on Morning Field flagship at RiverGrove — 280 stores affected",
+      "detail": "POS units collapsed to 41K vs 122K forecast at the same on-hand inventory; demand-sensing agent flags shelf-presence failure rather than true OOS. Replenishment hold released to RiverGrove DC; merchandising notified.",
+      "owner": "Marcus Beale, Customer Team Lead",
+      "link": "/#/demand"
     }
   ]
 }

@@ -1,0 +1,877 @@
+{
+  "generated_at": "2026-05-21T08:00:00Z",
+  "summary": {
+    "top10_revenue_concentration_pct": 68.4,
+    "jbp_attainment_pct": 87.2,
+    "chargeback_ytd_usd": 38400000,
+    "avg_otif_pct": 93.4
+  },
+  "team_scorecard": [
+    { "lead": "Priya Vahid",       "retailers": ["MegaMart Stores", "Plateau Mart", "Bullseye Retail"],                                            "portfolio_revenue_usd": 5840000000, "portfolio_otif_pct": 92.7, "jbp_attainment_pct": 82.4 },
+    { "lead": "Marcus Beale",      "retailers": ["RiverGrove Grocers", "PineRow Foods", "Linden Markets", "Cobalt Pantry", "Lantern Foods"],     "portfolio_revenue_usd": 2120000000, "portfolio_otif_pct": 94.2, "jbp_attainment_pct": 91.3 },
+    { "lead": "Helena Roque",      "retailers": ["Beacon Club Warehouse", "BoxBin Wholesale", "Brick Lane Wholesale"],                            "portfolio_revenue_usd": 1980000000, "portfolio_otif_pct": 96.1, "jbp_attainment_pct": 93.8 },
+    { "lead": "Daniel Owusu",      "retailers": ["AzureCart (online)"],                                                                            "portfolio_revenue_usd": 1340000000, "portfolio_otif_pct": 91.7, "jbp_attainment_pct": 79.6 },
+    { "lead": "Sina Park",         "retailers": ["Foothill Pharmacy", "Lighthouse Drug", "Harborline Drug"],                                      "portfolio_revenue_usd": 740000000,  "portfolio_otif_pct": 95.1, "jbp_attainment_pct": 90.4 },
+    { "lead": "Eli Wendt",         "retailers": ["ValuePoint", "Penny Lane Stores"],                                                              "portfolio_revenue_usd": 410000000,  "portfolio_otif_pct": 90.9, "jbp_attainment_pct": 76.8 },
+    { "lead": "Aiyana Sharpe",     "retailers": ["GreenLeaf Co-op", "Aspen Pantry"],                                                              "portfolio_revenue_usd": 220000000,  "portfolio_otif_pct": 94.4, "jbp_attainment_pct": 88.9 },
+    { "lead": "Rohan Iyer",        "retailers": ["Harvest Cellar", "PlainsRow Markets", "CoastWay Foods", "SteepleRow Foods", "Quarry Foods", "Glenmark Foods", "TrailRiver Markets", "Hearthstone Markets", "Granite Foods"], "portfolio_revenue_usd": 980000000, "portfolio_otif_pct": 93.6, "jbp_attainment_pct": 86.1 },
+    { "lead": "Theo Marlowe",      "retailers": ["Cordwood Convenience", "Skyway Convenience"],                                                   "portfolio_revenue_usd": 180000000,  "portfolio_otif_pct": 91.0, "jbp_attainment_pct": 81.2 }
+  ],
+  "customers": [
+    {
+      "rank": 1, "id": "RTL-001", "alias": "MegaMart Stores", "channel": "Mass", "banner_type": "Big-box supercenter",
+      "customer_team_lead": "Priya Vahid",
+      "ytd_revenue_usd": 3840000000, "ytd_otif_pct": 92.1, "ytd_chargebacks_usd": 14200000,
+      "jbp_status": "red", "jbp_commitment_attainment_pct": 78.4, "last_week_pos_units": 4820000, "active_promos": 6,
+      "hq_lat": 36.36, "hq_lon": -94.21, "primary_dc": "Bentonville-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 94.6 },
+        { "week": "2026-W14", "label": "Wk14", "otif_pct": 94.1 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 93.4 },
+        { "week": "2026-W16", "label": "Wk16", "otif_pct": 92.8 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 92.2 },
+        { "week": "2026-W18", "label": "Wk18", "otif_pct": 91.8 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 91.3 },
+        { "week": "2026-W20", "label": "Wk20", "otif_pct": 91.0 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery (MABD miss)",       "ytd_usd": 6240000, "pct_of_dollars": 44 },
+        { "reason": "Short ship (units below PO)",     "ytd_usd": 3408000, "pct_of_dollars": 24 },
+        { "reason": "ASN 856 mismatch / paperwork",    "ytd_usd": 1704000, "pct_of_dollars": 12 },
+        { "reason": "Palletization / pallet integrity","ytd_usd": 1278000, "pct_of_dollars": 9 },
+        { "reason": "Label / GTIN error",              "ytd_usd": 994000,  "pct_of_dollars": 7 },
+        { "reason": "Weight discrepancy",              "ytd_usd": 568000,  "pct_of_dollars": 4 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume",       "commitment": "Annual case volume",                "target": 184000000, "actual": 168400000, "unit": "cases", "status": "red" },
+        { "pillar": "Distribution", "commitment": "AeroFresh Linen 8oz, 4,200 stores", "target": 4200,      "actual": 3820,      "unit": "stores","status": "yellow" },
+        { "pillar": "Distribution", "commitment": "Lumen Serum 30ml, 2,800 stores",    "target": 2800,      "actual": 2950,      "unit": "stores","status": "green" },
+        { "pillar": "Promotion",    "commitment": "12 ad features in Q2",              "target": 12,        "actual": 9,         "unit": "features","status": "yellow" },
+        { "pillar": "Promotion",    "commitment": "Trade spend at 6.4% of net sales",  "target": 6.4,       "actual": 6.9,       "unit": "%",     "status": "yellow" }
+      ],
+      "pos_by_sku_last_4wk": [
+        { "sku": "CRH-1042", "brand": "Crunch Hollow", "week_label": "Wk17", "pos_units": 184000, "forecast_units": 176000 },
+        { "sku": "CRH-1042", "brand": "Crunch Hollow", "week_label": "Wk18", "pos_units": 192000, "forecast_units": 178000 },
+        { "sku": "CRH-1042", "brand": "Crunch Hollow", "week_label": "Wk19", "pos_units": 198000, "forecast_units": 180000 },
+        { "sku": "CRH-1042", "brand": "Crunch Hollow", "week_label": "Wk20", "pos_units": 204000, "forecast_units": 182000 },
+        { "sku": "GLM-2210", "brand": "GleamPath",    "week_label": "Wk17", "pos_units": 142000, "forecast_units": 148000 },
+        { "sku": "GLM-2210", "brand": "GleamPath",    "week_label": "Wk18", "pos_units": 138000, "forecast_units": 150000 },
+        { "sku": "GLM-2210", "brand": "GleamPath",    "week_label": "Wk19", "pos_units": 134000, "forecast_units": 152000 },
+        { "sku": "GLM-2210", "brand": "GleamPath",    "week_label": "Wk20", "pos_units": 128000, "forecast_units": 154000 }
+      ],
+      "active_promo_detail": [
+        { "id": "PROMO-2241", "sku": "CST-1900", "brand": "Coastline",     "status": "running", "lift_pct": 142.4, "cannibalization_pct": 9.2, "end_week": "2026-W24" },
+        { "id": "PROMO-2242", "sku": "CRH-1042", "brand": "Crunch Hollow", "status": "running", "lift_pct": 86.1,  "cannibalization_pct": 18.1,"end_week": "2026-W22" }
+      ],
+      "carrier_otd_to_dc_pct": 88.6,
+      "new_item_launches": [
+        { "sku": "EVR-3550", "brand": "EverSoft", "launched_week": "2026-W11", "doors_distributed": 3140, "doors_target": 3600, "weekly_velocity_units": 8800 },
+        { "sku": "TID-3677", "brand": "Tideway",  "launched_week": "2026-W14", "doors_distributed": 1980, "doors_target": 2400, "weekly_velocity_units": 4200 }
+      ]
+    },
+    {
+      "rank": 2, "id": "RTL-002", "alias": "RiverGrove Grocers", "channel": "Grocery", "banner_type": "Regional supermarket",
+      "customer_team_lead": "Marcus Beale",
+      "ytd_revenue_usd": 1480000000, "ytd_otif_pct": 94.6, "ytd_chargebacks_usd": 5800000,
+      "jbp_status": "yellow", "jbp_commitment_attainment_pct": 88.1, "last_week_pos_units": 1820000, "active_promos": 4,
+      "hq_lat": 39.10, "hq_lon": -84.51, "primary_dc": "Cincinnati-Region-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 95.1 },
+        { "week": "2026-W14", "label": "Wk14", "otif_pct": 94.8 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 94.7 },
+        { "week": "2026-W16", "label": "Wk16", "otif_pct": 94.5 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 94.6 },
+        { "week": "2026-W18", "label": "Wk18", "otif_pct": 94.4 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 94.6 },
+        { "week": "2026-W20", "label": "Wk20", "otif_pct": 94.6 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Short ship (units below PO)",     "ytd_usd": 1972000, "pct_of_dollars": 34 },
+        { "reason": "Late delivery (window missed)",   "ytd_usd": 1624000, "pct_of_dollars": 28 },
+        { "reason": "Phantom OOS replenishment fines", "ytd_usd": 928000,  "pct_of_dollars": 16 },
+        { "reason": "ASN 856 mismatch",                "ytd_usd": 696000,  "pct_of_dollars": 12 },
+        { "reason": "Label / GTIN error",              "ytd_usd": 580000,  "pct_of_dollars": 10 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume",       "commitment": "Annual case volume",                  "target": 62000000, "actual": 60100000, "unit": "cases",   "status": "yellow" },
+        { "pillar": "Distribution", "commitment": "Morning Field Granola, 280 stores",   "target": 280,      "actual": 280,      "unit": "stores",  "status": "green" },
+        { "pillar": "Promotion",    "commitment": "8 endcap features in Q2",             "target": 8,        "actual": 8,        "unit": "features","status": "green" },
+        { "pillar": "Promotion",    "commitment": "Phantom OOS resolution under 18 hrs", "target": 18,       "actual": 26,       "unit": "hours",   "status": "red" }
+      ],
+      "pos_by_sku_last_4wk": [
+        { "sku": "MOR-1108", "brand": "Morning Field", "week_label": "Wk17", "pos_units": 118000, "forecast_units": 116000 },
+        { "sku": "MOR-1108", "brand": "Morning Field", "week_label": "Wk18", "pos_units": 124000, "forecast_units": 118000 },
+        { "sku": "MOR-1108", "brand": "Morning Field", "week_label": "Wk19", "pos_units": 122000, "forecast_units": 120000 },
+        { "sku": "MOR-1108", "brand": "Morning Field", "week_label": "Wk20", "pos_units":  41000, "forecast_units": 122000 }
+      ],
+      "active_promo_detail": [
+        { "id": "PROMO-2244", "sku": "GLM-2210", "brand": "GleamPath",     "status": "running", "lift_pct": 26.4,  "cannibalization_pct": 24.1, "end_week": "2026-W22" },
+        { "id": "PROMO-2246", "sku": "MOR-1108", "brand": "Morning Field", "status": "running", "lift_pct": 78.0,  "cannibalization_pct": 12.4, "end_week": "2026-W23" }
+      ],
+      "carrier_otd_to_dc_pct": 93.4,
+      "new_item_launches": [
+        { "sku": "TID-3677", "brand": "Tideway", "launched_week": "2026-W12", "doors_distributed": 248, "doors_target": 260, "weekly_velocity_units": 1840 }
+      ]
+    },
+    {
+      "rank": 3, "id": "RTL-003", "alias": "Beacon Club Warehouse", "channel": "Club", "banner_type": "Warehouse club",
+      "customer_team_lead": "Helena Roque",
+      "ytd_revenue_usd": 1240000000, "ytd_otif_pct": 96.7, "ytd_chargebacks_usd": 1900000,
+      "jbp_status": "green", "jbp_commitment_attainment_pct": 94.2, "last_week_pos_units": 1180000, "active_promos": 2,
+      "hq_lat": 47.61, "hq_lon": -122.34, "primary_dc": "Seattle-Region-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 96.1 },
+        { "week": "2026-W14", "label": "Wk14", "otif_pct": 96.4 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 96.8 },
+        { "week": "2026-W16", "label": "Wk16", "otif_pct": 96.7 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 97.0 },
+        { "week": "2026-W18", "label": "Wk18", "otif_pct": 96.9 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 97.1 },
+        { "week": "2026-W20", "label": "Wk20", "otif_pct": 96.7 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Pallet integrity (Compliance Grid)", "ytd_usd": 760000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",                         "ytd_usd": 456000, "pct_of_dollars": 24 },
+        { "reason": "Late delivery",                      "ytd_usd": 380000, "pct_of_dollars": 20 },
+        { "reason": "ASN mismatch",                       "ytd_usd": 190000, "pct_of_dollars": 10 },
+        { "reason": "Weight discrepancy",                 "ytd_usd": 114000, "pct_of_dollars": 6 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume",       "commitment": "Annual case volume",                "target": 48000000, "actual": 47200000, "unit": "cases",   "status": "green" },
+        { "pillar": "Distribution", "commitment": "Coastline 12pk Club Pack",          "target": 1,        "actual": 1,        "unit": "items",   "status": "green" },
+        { "pillar": "Promotion",    "commitment": "MVM (member-value mailer) features","target": 6,        "actual": 6,        "unit": "features","status": "green" }
+      ],
+      "pos_by_sku_last_4wk": [
+        { "sku": "CST-1900", "brand": "Coastline", "week_label": "Wk17", "pos_units": 286000, "forecast_units": 280000 },
+        { "sku": "CST-1900", "brand": "Coastline", "week_label": "Wk18", "pos_units": 294000, "forecast_units": 282000 },
+        { "sku": "CST-1900", "brand": "Coastline", "week_label": "Wk19", "pos_units": 298000, "forecast_units": 284000 },
+        { "sku": "CST-1900", "brand": "Coastline", "week_label": "Wk20", "pos_units": 304000, "forecast_units": 286000 }
+      ],
+      "active_promo_detail": [
+        { "id": "PROMO-2247", "sku": "WAS-2107", "brand": "WashWorks", "status": "running", "lift_pct": 42.1, "cannibalization_pct": 7.8, "end_week": "2026-W24" }
+      ],
+      "carrier_otd_to_dc_pct": 95.8,
+      "new_item_launches": []
+    },
+    {
+      "rank": 4, "id": "RTL-004", "alias": "Bullseye Retail", "channel": "Mass", "banner_type": "Big-box general merchandise",
+      "customer_team_lead": "Priya Vahid",
+      "ytd_revenue_usd": 1180000000, "ytd_otif_pct": 93.8, "ytd_chargebacks_usd": 4100000,
+      "jbp_status": "yellow", "jbp_commitment_attainment_pct": 84.6, "last_week_pos_units": 1340000, "active_promos": 5,
+      "hq_lat": 44.97, "hq_lon": -93.26, "primary_dc": "Minneapolis-Region-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 94.8 },
+        { "week": "2026-W14", "label": "Wk14", "otif_pct": 94.4 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 94.0 },
+        { "week": "2026-W16", "label": "Wk16", "otif_pct": 93.7 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 93.5 },
+        { "week": "2026-W18", "label": "Wk18", "otif_pct": 93.6 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 93.9 },
+        { "week": "2026-W20", "label": "Wk20", "otif_pct": 93.8 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery (Bullseye Vendor Scorecard)", "ytd_usd": 1640000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",                                "ytd_usd": 1066000, "pct_of_dollars": 26 },
+        { "reason": "Label / planogram mismatch",                "ytd_usd": 574000,  "pct_of_dollars": 14 },
+        { "reason": "ASN 856 mismatch",                          "ytd_usd": 410000,  "pct_of_dollars": 10 },
+        { "reason": "Palletization",                             "ytd_usd": 246000,  "pct_of_dollars": 6 },
+        { "reason": "Weight discrepancy",                        "ytd_usd": 164000,  "pct_of_dollars": 4 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume",       "commitment": "Annual case volume",            "target": 48000000, "actual": 44640000, "unit": "cases",   "status": "yellow" },
+        { "pillar": "Distribution", "commitment": "Lumen Vit-C Serum, 1,400 doors","target": 1400,     "actual": 1480,     "unit": "doors",   "status": "green" },
+        { "pillar": "Promotion",    "commitment": "Endcap support, 14 weeks",      "target": 14,       "actual": 11,       "unit": "weeks",   "status": "yellow" }
+      ],
+      "pos_by_sku_last_4wk": [
+        { "sku": "LUM-3301", "brand": "Lumen",   "week_label": "Wk17", "pos_units": 42000, "forecast_units": 38000 },
+        { "sku": "LUM-3301", "brand": "Lumen",   "week_label": "Wk18", "pos_units": 46000, "forecast_units": 39000 },
+        { "sku": "LUM-3301", "brand": "Lumen",   "week_label": "Wk19", "pos_units": 51000, "forecast_units": 40000 },
+        { "sku": "LUM-3301", "brand": "Lumen",   "week_label": "Wk20", "pos_units": 54000, "forecast_units": 41000 },
+        { "sku": "MAR-3422", "brand": "Marquee", "week_label": "Wk20", "pos_units": 78000, "forecast_units": 76000 }
+      ],
+      "active_promo_detail": [
+        { "id": "PROMO-2243", "sku": "LUM-3301", "brand": "Lumen",   "status": "running", "lift_pct": 184.0, "cannibalization_pct": 11.0, "end_week": "2026-W26" },
+        { "id": "PROMO-2245", "sku": "MAR-3422", "brand": "Marquee", "status": "running", "lift_pct": 62.0,  "cannibalization_pct": 17.2, "end_week": "2026-W22" }
+      ],
+      "carrier_otd_to_dc_pct": 91.2,
+      "new_item_launches": [
+        { "sku": "LUM-3304", "brand": "Lumen", "launched_week": "2026-W15", "doors_distributed": 980, "doors_target": 1100, "weekly_velocity_units": 6400 }
+      ]
+    },
+    {
+      "rank": 5, "id": "RTL-005", "alias": "BoxBin Wholesale", "channel": "Club", "banner_type": "Warehouse club",
+      "customer_team_lead": "Helena Roque",
+      "ytd_revenue_usd": 540000000, "ytd_otif_pct": 95.3, "ytd_chargebacks_usd": 2400000,
+      "jbp_status": "green", "jbp_commitment_attainment_pct": 92.1, "last_week_pos_units": 620000, "active_promos": 2,
+      "hq_lat": 47.61, "hq_lon": -122.20, "primary_dc": "Pacific-Region-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 95.0 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 95.2 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 95.4 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 95.6 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 95.1 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 95.4 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 95.5 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 95.3 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Palletization",       "ytd_usd": 840000, "pct_of_dollars": 35 },
+        { "reason": "Short ship",          "ytd_usd": 600000, "pct_of_dollars": 25 },
+        { "reason": "Late delivery",       "ytd_usd": 480000, "pct_of_dollars": 20 },
+        { "reason": "ASN mismatch",        "ytd_usd": 240000, "pct_of_dollars": 10 },
+        { "reason": "Weight discrepancy",  "ytd_usd": 240000, "pct_of_dollars": 10 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume", "commitment": "Annual case volume",   "target": 22000000, "actual": 21400000, "unit": "cases", "status": "green" },
+        { "pillar": "Promotion", "commitment": "Bulk pack features","target": 4, "actual": 4, "unit": "features", "status": "green" }
+      ],
+      "pos_by_sku_last_4wk": [
+        { "sku": "AER-2018", "brand": "AeroFresh", "week_label": "Wk20", "pos_units": 38000, "forecast_units": 36000 }
+      ],
+      "active_promo_detail": [
+        { "id": "PROMO-2258", "sku": "AER-2018", "brand": "AeroFresh", "status": "running", "lift_pct": 51.2, "cannibalization_pct": 8.4, "end_week": "2026-W23" }
+      ],
+      "carrier_otd_to_dc_pct": 96.1,
+      "new_item_launches": []
+    },
+    {
+      "rank": 6, "id": "RTL-006", "alias": "PineRow Foods", "channel": "Grocery", "banner_type": "Regional supermarket",
+      "customer_team_lead": "Marcus Beale",
+      "ytd_revenue_usd": 430000000, "ytd_otif_pct": 94.9, "ytd_chargebacks_usd": 2100000,
+      "jbp_status": "green", "jbp_commitment_attainment_pct": 90.6, "last_week_pos_units": 540000, "active_promos": 3,
+      "hq_lat": 41.88, "hq_lon": -87.62, "primary_dc": "Chicago-Region-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 94.4 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 94.7 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 94.8 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 95.0 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 95.2 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 95.0 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 94.9 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 94.9 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Short ship",      "ytd_usd": 798000, "pct_of_dollars": 38 },
+        { "reason": "Late delivery",   "ytd_usd": 588000, "pct_of_dollars": 28 },
+        { "reason": "Label error",     "ytd_usd": 294000, "pct_of_dollars": 14 },
+        { "reason": "ASN mismatch",    "ytd_usd": 210000, "pct_of_dollars": 10 },
+        { "reason": "Palletization",   "ytd_usd": 210000, "pct_of_dollars": 10 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume",    "commitment": "Annual case volume",        "target": 18000000, "actual": 16800000, "unit": "cases", "status": "green" },
+        { "pillar": "Promotion", "commitment": "Sunbarrel feature, 6 weeks","target": 6, "actual": 6, "unit": "weeks", "status": "green" }
+      ],
+      "pos_by_sku_last_4wk": [
+        { "sku": "SUN-1502", "brand": "Sunbarrel", "week_label": "Wk20", "pos_units": 124000, "forecast_units": 118000 }
+      ],
+      "active_promo_detail": [
+        { "id": "PROMO-2248", "sku": "SUN-1502", "brand": "Sunbarrel", "status": "running", "lift_pct": 38.4, "cannibalization_pct": 12.0, "end_week": "2026-W24" },
+        { "id": "PROMO-2250", "sku": "BRZ-2333", "brand": "BreezeBox", "status": "running", "lift_pct": 18.2, "cannibalization_pct": 19.4, "end_week": "2026-W21" }
+      ],
+      "carrier_otd_to_dc_pct": 94.2,
+      "new_item_launches": []
+    },
+    {
+      "rank": 7, "id": "RTL-007", "alias": "AzureCart (online)", "channel": "Ecommerce", "banner_type": "Online marketplace",
+      "customer_team_lead": "Daniel Owusu",
+      "ytd_revenue_usd": 1340000000, "ytd_otif_pct": 91.7, "ytd_chargebacks_usd": 3300000,
+      "jbp_status": "red", "jbp_commitment_attainment_pct": 79.6, "last_week_pos_units": 980000, "active_promos": 7,
+      "hq_lat": 47.50, "hq_lon": -122.18, "primary_dc": "Vendor-Central-FC-East",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 93.4 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 92.8 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 92.4 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 92.0 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 91.8 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 91.5 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 91.6 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 91.7 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "ASN 856 / Vendor Central PO mismatch", "ytd_usd": 1188000, "pct_of_dollars": 36 },
+        { "reason": "Late delivery (window missed)",        "ytd_usd": 858000,  "pct_of_dollars": 26 },
+        { "reason": "Carton label error",                   "ytd_usd": 528000,  "pct_of_dollars": 16 },
+        { "reason": "Short ship",                           "ytd_usd": 396000,  "pct_of_dollars": 12 },
+        { "reason": "Weight discrepancy",                   "ytd_usd": 198000,  "pct_of_dollars": 6 },
+        { "reason": "Prep / poly-bag spec",                 "ytd_usd": 132000,  "pct_of_dollars": 4 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume",       "commitment": "Annual case volume",               "target": 28000000, "actual": 23400000, "unit": "cases", "status": "red" },
+        { "pillar": "Distribution", "commitment": "Subscribe-and-Save items, 220",    "target": 220,      "actual": 178,      "unit": "ASINs", "status": "red" },
+        { "pillar": "Promotion",    "commitment": "Coupon spend, 4.2% of revenue",    "target": 4.2,      "actual": 5.1,      "unit": "%",     "status": "yellow" }
+      ],
+      "pos_by_sku_last_4wk": [
+        { "sku": "EVR-3550", "brand": "EverSoft", "week_label": "Wk20", "pos_units": 46000, "forecast_units": 42000 }
+      ],
+      "active_promo_detail": [
+        { "id": "PROMO-2249", "sku": "EVR-3550", "brand": "EverSoft", "status": "running", "lift_pct": 88.0, "cannibalization_pct": 8.0,  "end_week": "2026-W26" },
+        { "id": "PROMO-2257", "sku": "MAR-3429", "brand": "Marquee",  "status": "running", "lift_pct": 41.0, "cannibalization_pct": 12.4, "end_week": "2026-W22" }
+      ],
+      "carrier_otd_to_dc_pct": 89.4,
+      "new_item_launches": [
+        { "sku": "LUM-3304", "brand": "Lumen", "launched_week": "2026-W16", "doors_distributed": 1, "doors_target": 1, "weekly_velocity_units": 3200 }
+      ]
+    },
+    {
+      "rank": 8, "id": "RTL-008", "alias": "Harvest Cellar", "channel": "Grocery", "banner_type": "Regional supermarket",
+      "customer_team_lead": "Rohan Iyer",
+      "ytd_revenue_usd": 320000000, "ytd_otif_pct": 93.4, "ytd_chargebacks_usd": 1600000,
+      "jbp_status": "yellow", "jbp_commitment_attainment_pct": 86.2, "last_week_pos_units": 380000, "active_promos": 2,
+      "hq_lat": 40.44, "hq_lon": -79.99, "primary_dc": "Pittsburgh-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 93.8 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 93.6 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 93.4 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 93.2 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 93.4 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 93.5 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 93.3 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 93.4 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery",  "ytd_usd": 576000, "pct_of_dollars": 36 },
+        { "reason": "Short ship",     "ytd_usd": 432000, "pct_of_dollars": 27 },
+        { "reason": "Damage",         "ytd_usd": 288000, "pct_of_dollars": 18 },
+        { "reason": "ASN mismatch",   "ytd_usd": 192000, "pct_of_dollars": 12 },
+        { "reason": "Label error",    "ytd_usd": 112000, "pct_of_dollars": 7 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume", "commitment": "Annual case volume", "target": 12000000, "actual": 11400000, "unit": "cases", "status": "yellow" }
+      ],
+      "pos_by_sku_last_4wk": [
+        { "sku": "ORC-1611", "brand": "Orchard 23", "week_label": "Wk20", "pos_units": 64000, "forecast_units": 62000 }
+      ],
+      "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 92.8,
+      "new_item_launches": []
+    },
+    {
+      "rank": 9, "id": "RTL-009", "alias": "PlainsRow Markets", "channel": "Grocery", "banner_type": "Regional supermarket",
+      "customer_team_lead": "Rohan Iyer",
+      "ytd_revenue_usd": 240000000, "ytd_otif_pct": 95.1, "ytd_chargebacks_usd": 980000,
+      "jbp_status": "green", "jbp_commitment_attainment_pct": 91.4, "last_week_pos_units": 280000, "active_promos": 1,
+      "hq_lat": 39.74, "hq_lon": -104.99, "primary_dc": "Denver-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 94.8 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 95.0 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 95.2 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 95.0 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 95.3 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 95.1 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 95.0 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 95.1 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Short ship",      "ytd_usd": 294000, "pct_of_dollars": 30 },
+        { "reason": "Late delivery",   "ytd_usd": 274000, "pct_of_dollars": 28 },
+        { "reason": "ASN mismatch",    "ytd_usd": 176000, "pct_of_dollars": 18 },
+        { "reason": "Label error",     "ytd_usd": 137000, "pct_of_dollars": 14 },
+        { "reason": "Palletization",   "ytd_usd": 98000,  "pct_of_dollars": 10 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume", "commitment": "Annual case volume", "target": 9000000, "actual": 8500000, "unit": "cases", "status": "green" }
+      ],
+      "pos_by_sku_last_4wk": [],
+      "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 94.6,
+      "new_item_launches": []
+    },
+    {
+      "rank": 10, "id": "RTL-010", "alias": "CoastWay Foods", "channel": "Grocery", "banner_type": "Regional supermarket",
+      "customer_team_lead": "Rohan Iyer",
+      "ytd_revenue_usd": 220000000, "ytd_otif_pct": 92.9, "ytd_chargebacks_usd": 1400000,
+      "jbp_status": "yellow", "jbp_commitment_attainment_pct": 85.4, "last_week_pos_units": 260000, "active_promos": 2,
+      "hq_lat": 32.78, "hq_lon": -79.93, "primary_dc": "Charleston-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 93.4 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 93.2 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 93.0 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 92.8 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 92.7 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 92.6 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 92.8 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 92.9 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 560000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 420000, "pct_of_dollars": 30 },
+        { "reason": "Damage",        "ytd_usd": 196000, "pct_of_dollars": 14 },
+        { "reason": "ASN mismatch",  "ytd_usd": 140000, "pct_of_dollars": 10 },
+        { "reason": "Label error",   "ytd_usd": 84000,  "pct_of_dollars": 6 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume", "commitment": "Annual case volume", "target": 8000000, "actual": 7400000, "unit": "cases", "status": "yellow" }
+      ],
+      "pos_by_sku_last_4wk": [],
+      "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 90.4,
+      "new_item_launches": []
+    },
+    {
+      "rank": 11, "id": "RTL-011", "alias": "ValuePoint", "channel": "Dollar", "banner_type": "Discount value retailer",
+      "customer_team_lead": "Eli Wendt",
+      "ytd_revenue_usd": 220000000, "ytd_otif_pct": 91.2, "ytd_chargebacks_usd": 1100000,
+      "jbp_status": "red", "jbp_commitment_attainment_pct": 76.4, "last_week_pos_units": 360000, "active_promos": 1,
+      "hq_lat": 36.16, "hq_lon": -86.78, "primary_dc": "Nashville-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 92.4 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 92.0 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 91.6 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 91.2 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 91.0 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 90.8 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 91.0 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 91.2 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery",  "ytd_usd": 462000, "pct_of_dollars": 42 },
+        { "reason": "Short ship",     "ytd_usd": 286000, "pct_of_dollars": 26 },
+        { "reason": "ASN mismatch",   "ytd_usd": 154000, "pct_of_dollars": 14 },
+        { "reason": "Label error",    "ytd_usd": 110000, "pct_of_dollars": 10 },
+        { "reason": "Palletization",  "ytd_usd": 88000,  "pct_of_dollars": 8 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume", "commitment": "Annual case volume", "target": 14000000, "actual": 10700000, "unit": "cases", "status": "red" }
+      ],
+      "pos_by_sku_last_4wk": [],
+      "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 88.1,
+      "new_item_launches": []
+    },
+    {
+      "rank": 12, "id": "RTL-012", "alias": "Penny Lane Stores", "channel": "Dollar", "banner_type": "Discount value retailer",
+      "customer_team_lead": "Eli Wendt",
+      "ytd_revenue_usd": 190000000, "ytd_otif_pct": 90.6, "ytd_chargebacks_usd": 980000,
+      "jbp_status": "red", "jbp_commitment_attainment_pct": 77.2, "last_week_pos_units": 320000, "active_promos": 0,
+      "hq_lat": 33.45, "hq_lon": -86.80, "primary_dc": "Birmingham-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 91.4 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 91.0 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 90.8 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 90.6 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 90.4 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 90.6 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 90.5 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 90.6 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 392000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 274000, "pct_of_dollars": 28 },
+        { "reason": "ASN mismatch",  "ytd_usd": 147000, "pct_of_dollars": 15 },
+        { "reason": "Label error",   "ytd_usd": 98000,  "pct_of_dollars": 10 },
+        { "reason": "Palletization", "ytd_usd": 68000,  "pct_of_dollars": 7 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume", "commitment": "Annual case volume", "target": 12000000, "actual": 9300000, "unit": "cases", "status": "red" }
+      ],
+      "pos_by_sku_last_4wk": [],
+      "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 87.6,
+      "new_item_launches": []
+    },
+    {
+      "rank": 13, "id": "RTL-013", "alias": "GreenLeaf Co-op", "channel": "Natural", "banner_type": "Natural foods co-op",
+      "customer_team_lead": "Aiyana Sharpe",
+      "ytd_revenue_usd": 110000000, "ytd_otif_pct": 94.2, "ytd_chargebacks_usd": 410000,
+      "jbp_status": "green", "jbp_commitment_attainment_pct": 89.4, "last_week_pos_units": 140000, "active_promos": 1,
+      "hq_lat": 30.27, "hq_lon": -97.74, "primary_dc": "Austin-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 94.0 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 94.2 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 94.4 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 94.1 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 94.3 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 94.2 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 94.1 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 94.2 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Short ship",    "ytd_usd": 144000, "pct_of_dollars": 35 },
+        { "reason": "Late delivery", "ytd_usd": 123000, "pct_of_dollars": 30 },
+        { "reason": "Label error",   "ytd_usd": 82000,  "pct_of_dollars": 20 },
+        { "reason": "ASN mismatch",  "ytd_usd": 61000,  "pct_of_dollars": 15 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume", "commitment": "Annual case volume", "target": 4500000, "actual": 4200000, "unit": "cases", "status": "green" }
+      ],
+      "pos_by_sku_last_4wk": [],
+      "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 93.8,
+      "new_item_launches": []
+    },
+    {
+      "rank": 14, "id": "RTL-014", "alias": "Foothill Pharmacy", "channel": "Drug", "banner_type": "Drug chain",
+      "customer_team_lead": "Sina Park",
+      "ytd_revenue_usd": 280000000, "ytd_otif_pct": 95.6, "ytd_chargebacks_usd": 620000,
+      "jbp_status": "green", "jbp_commitment_attainment_pct": 91.8, "last_week_pos_units": 320000, "active_promos": 1,
+      "hq_lat": 41.49, "hq_lon": -81.69, "primary_dc": "Cleveland-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 95.4 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 95.6 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 95.8 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 95.5 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 95.7 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 95.6 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 95.5 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 95.6 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 248000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 186000, "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 93000,  "pct_of_dollars": 15 },
+        { "reason": "Label error",   "ytd_usd": 62000,  "pct_of_dollars": 10 },
+        { "reason": "Palletization", "ytd_usd": 31000,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume", "commitment": "Annual case volume", "target": 11000000, "actual": 10300000, "unit": "cases", "status": "green" }
+      ],
+      "pos_by_sku_last_4wk": [],
+      "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 95.0,
+      "new_item_launches": []
+    },
+    {
+      "rank": 15, "id": "RTL-015", "alias": "Lighthouse Drug", "channel": "Drug", "banner_type": "Drug chain",
+      "customer_team_lead": "Sina Park",
+      "ytd_revenue_usd": 260000000, "ytd_otif_pct": 94.8, "ytd_chargebacks_usd": 540000,
+      "jbp_status": "green", "jbp_commitment_attainment_pct": 90.2, "last_week_pos_units": 300000, "active_promos": 1,
+      "hq_lat": 38.90, "hq_lon": -77.04, "primary_dc": "DC-Metro-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 94.6 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 94.8 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 95.0 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 94.7 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 94.9 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 94.8 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 94.7 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 94.8 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 216000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 162000, "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 81000,  "pct_of_dollars": 15 },
+        { "reason": "Label error",   "ytd_usd": 54000,  "pct_of_dollars": 10 },
+        { "reason": "Palletization", "ytd_usd": 27000,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [
+        { "pillar": "Volume", "commitment": "Annual case volume", "target": 10000000, "actual": 9400000, "unit": "cases", "status": "green" }
+      ],
+      "pos_by_sku_last_4wk": [],
+      "active_promo_detail": [
+        { "id": "PROMO-2253", "sku": "TID-3677", "brand": "Tideway", "status": "running", "lift_pct": 34.0, "cannibalization_pct": 4.2, "end_week": "2026-W26" }
+      ],
+      "carrier_otd_to_dc_pct": 94.4,
+      "new_item_launches": []
+    },
+    {
+      "rank": 16, "id": "RTL-016", "alias": "Linden Markets", "channel": "Grocery", "banner_type": "Regional supermarket",
+      "customer_team_lead": "Marcus Beale",
+      "ytd_revenue_usd": 140000000, "ytd_otif_pct": 93.0, "ytd_chargebacks_usd": 820000, "jbp_status": "yellow",
+      "jbp_commitment_attainment_pct": 84.7, "last_week_pos_units": 180000, "active_promos": 1,
+      "hq_lat": 42.36, "hq_lon": -71.06, "primary_dc": "Boston-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 93.4 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 93.2 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 93.0 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 92.8 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 92.9 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 93.0 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 93.1 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 93.0 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 328000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 246000, "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 123000, "pct_of_dollars": 15 },
+        { "reason": "Damage",        "ytd_usd": 82000,  "pct_of_dollars": 10 },
+        { "reason": "Label error",   "ytd_usd": 41000,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 5500000, "actual": 4900000, "unit": "cases", "status": "yellow" }],
+      "pos_by_sku_last_4wk": [],
+      "active_promo_detail": [{ "id": "PROMO-2252", "sku": "MTN-1840", "brand": "Mountain Mill", "status": "running", "lift_pct": 22.0, "cannibalization_pct": 14.2, "end_week": "2026-W22" }],
+      "carrier_otd_to_dc_pct": 92.0,
+      "new_item_launches": []
+    },
+    {
+      "rank": 17, "id": "RTL-017", "alias": "Cobalt Pantry", "channel": "Grocery", "banner_type": "Regional supermarket",
+      "customer_team_lead": "Marcus Beale",
+      "ytd_revenue_usd": 130000000, "ytd_otif_pct": 94.4, "ytd_chargebacks_usd": 700000, "jbp_status": "green",
+      "jbp_commitment_attainment_pct": 88.4, "last_week_pos_units": 160000, "active_promos": 0,
+      "hq_lat": 35.78, "hq_lon": -78.64, "primary_dc": "Raleigh-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 94.2 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 94.4 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 94.6 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 94.4 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 94.3 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 94.4 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 94.5 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 94.4 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 280000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 210000, "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 105000, "pct_of_dollars": 15 },
+        { "reason": "Damage",        "ytd_usd": 70000,  "pct_of_dollars": 10 },
+        { "reason": "Label error",   "ytd_usd": 35000,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 5000000, "actual": 4750000, "unit": "cases", "status": "green" }],
+      "pos_by_sku_last_4wk": [],
+      "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 93.5,
+      "new_item_launches": []
+    },
+    {
+      "rank": 18, "id": "RTL-018", "alias": "SteepleRow Foods", "channel": "Grocery", "banner_type": "Regional supermarket",
+      "customer_team_lead": "Rohan Iyer",
+      "ytd_revenue_usd": 120000000, "ytd_otif_pct": 92.2, "ytd_chargebacks_usd": 760000, "jbp_status": "yellow",
+      "jbp_commitment_attainment_pct": 83.6, "last_week_pos_units": 150000, "active_promos": 0,
+      "hq_lat": 40.71, "hq_lon": -74.01, "primary_dc": "NJ-Metro-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 92.6 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 92.4 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 92.2 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 92.0 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 92.1 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 92.2 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 92.3 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 92.2 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 304000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 228000, "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 114000, "pct_of_dollars": 15 },
+        { "reason": "Damage",        "ytd_usd": 76000,  "pct_of_dollars": 10 },
+        { "reason": "Label error",   "ytd_usd": 38000,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 4500000, "actual": 4100000, "unit": "cases", "status": "yellow" }],
+      "pos_by_sku_last_4wk": [],
+      "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 90.6,
+      "new_item_launches": []
+    },
+    {
+      "rank": 19, "id": "RTL-019", "alias": "Plateau Mart", "channel": "Mass", "banner_type": "Big-box general merchandise",
+      "customer_team_lead": "Priya Vahid",
+      "ytd_revenue_usd": 240000000, "ytd_otif_pct": 93.6, "ytd_chargebacks_usd": 1200000, "jbp_status": "yellow",
+      "jbp_commitment_attainment_pct": 85.0, "last_week_pos_units": 280000, "active_promos": 1,
+      "hq_lat": 32.78, "hq_lon": -96.80, "primary_dc": "Dallas-Region-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 93.8 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 93.6 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 93.4 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 93.5 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 93.6 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 93.7 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 93.6 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 93.6 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 480000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 360000, "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 180000, "pct_of_dollars": 15 },
+        { "reason": "Palletization", "ytd_usd": 120000, "pct_of_dollars": 10 },
+        { "reason": "Label error",   "ytd_usd": 60000,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 11000000, "actual": 9700000, "unit": "cases", "status": "yellow" }],
+      "pos_by_sku_last_4wk": [],
+      "active_promo_detail": [{ "id": "PROMO-2260", "sku": "BRZ-2333", "brand": "BreezeBox", "status": "ended", "lift_pct": 18.0, "cannibalization_pct": 14.0, "end_week": "2026-W18" }],
+      "carrier_otd_to_dc_pct": 91.8,
+      "new_item_launches": []
+    },
+    {
+      "rank": 20, "id": "RTL-020", "alias": "Quarry Foods", "channel": "Grocery", "banner_type": "Regional supermarket",
+      "customer_team_lead": "Rohan Iyer",
+      "ytd_revenue_usd": 100000000, "ytd_otif_pct": 94.1, "ytd_chargebacks_usd": 530000, "jbp_status": "green",
+      "jbp_commitment_attainment_pct": 89.0, "last_week_pos_units": 120000, "active_promos": 1,
+      "hq_lat": 39.96, "hq_lon": -82.99, "primary_dc": "Columbus-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 93.8 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 94.0 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 94.2 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 94.0 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 94.2 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 94.1 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 94.0 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 94.1 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 212000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 159000, "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 79000,  "pct_of_dollars": 15 },
+        { "reason": "Damage",        "ytd_usd": 53000,  "pct_of_dollars": 10 },
+        { "reason": "Label error",   "ytd_usd": 27000,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 3800000, "actual": 3650000, "unit": "cases", "status": "green" }],
+      "pos_by_sku_last_4wk": [],
+      "active_promo_detail": [{ "id": "PROMO-2259", "sku": "WAS-2110", "brand": "WashWorks", "status": "running", "lift_pct": 12.0, "cannibalization_pct": 16.0, "end_week": "2026-W22" }],
+      "carrier_otd_to_dc_pct": 93.0,
+      "new_item_launches": []
+    },
+    {
+      "rank": 21, "id": "RTL-021", "alias": "Glenmark Foods", "channel": "Grocery", "banner_type": "Regional supermarket",
+      "customer_team_lead": "Rohan Iyer",
+      "ytd_revenue_usd": 90000000, "ytd_otif_pct": 93.7, "ytd_chargebacks_usd": 480000, "jbp_status": "yellow",
+      "jbp_commitment_attainment_pct": 85.8, "last_week_pos_units": 110000, "active_promos": 0,
+      "hq_lat": 45.52, "hq_lon": -122.68, "primary_dc": "Portland-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 93.8 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 93.6 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 93.7 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 93.5 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 93.7 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 93.6 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 93.7 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 93.7 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 192000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 144000, "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 72000,  "pct_of_dollars": 15 },
+        { "reason": "Damage",        "ytd_usd": 48000,  "pct_of_dollars": 10 },
+        { "reason": "Label error",   "ytd_usd": 24000,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 3400000, "actual": 3160000, "unit": "cases", "status": "yellow" }],
+      "pos_by_sku_last_4wk": [], "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 92.4, "new_item_launches": []
+    },
+    {
+      "rank": 22, "id": "RTL-022", "alias": "Aspen Pantry", "channel": "Natural", "banner_type": "Natural foods chain",
+      "customer_team_lead": "Aiyana Sharpe",
+      "ytd_revenue_usd": 110000000, "ytd_otif_pct": 94.5, "ytd_chargebacks_usd": 320000, "jbp_status": "green",
+      "jbp_commitment_attainment_pct": 88.4, "last_week_pos_units": 140000, "active_promos": 0,
+      "hq_lat": 39.74, "hq_lon": -104.99, "primary_dc": "Denver-Natural-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 94.4 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 94.6 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 94.5 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 94.4 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 94.6 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 94.5 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 94.4 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 94.5 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Short ship",    "ytd_usd": 112000, "pct_of_dollars": 35 },
+        { "reason": "Late delivery", "ytd_usd": 96000,  "pct_of_dollars": 30 },
+        { "reason": "Label error",   "ytd_usd": 64000,  "pct_of_dollars": 20 },
+        { "reason": "ASN mismatch",  "ytd_usd": 48000,  "pct_of_dollars": 15 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 4200000, "actual": 3980000, "unit": "cases", "status": "green" }],
+      "pos_by_sku_last_4wk": [], "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 94.4, "new_item_launches": []
+    },
+    {
+      "rank": 23, "id": "RTL-023", "alias": "Harborline Drug", "channel": "Drug", "banner_type": "Drug chain",
+      "customer_team_lead": "Sina Park",
+      "ytd_revenue_usd": 200000000, "ytd_otif_pct": 95.0, "ytd_chargebacks_usd": 380000, "jbp_status": "green",
+      "jbp_commitment_attainment_pct": 89.2, "last_week_pos_units": 220000, "active_promos": 0,
+      "hq_lat": 42.36, "hq_lon": -71.06, "primary_dc": "New-England-Drug-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 94.8 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 95.0 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 95.2 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 95.0 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 95.0 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 94.9 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 95.1 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 95.0 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 152000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 114000, "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 57000,  "pct_of_dollars": 15 },
+        { "reason": "Label error",   "ytd_usd": 38000,  "pct_of_dollars": 10 },
+        { "reason": "Palletization", "ytd_usd": 19000,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 7500000, "actual": 7100000, "unit": "cases", "status": "green" }],
+      "pos_by_sku_last_4wk": [], "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 94.0, "new_item_launches": []
+    },
+    {
+      "rank": 24, "id": "RTL-024", "alias": "TrailRiver Markets", "channel": "Grocery", "banner_type": "Regional supermarket",
+      "customer_team_lead": "Rohan Iyer",
+      "ytd_revenue_usd": 80000000, "ytd_otif_pct": 92.5, "ytd_chargebacks_usd": 460000, "jbp_status": "yellow",
+      "jbp_commitment_attainment_pct": 83.0, "last_week_pos_units": 100000, "active_promos": 0,
+      "hq_lat": 33.75, "hq_lon": -84.39, "primary_dc": "Atlanta-Region-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 92.8 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 92.6 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 92.4 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 92.2 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 92.5 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 92.4 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 92.5 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 92.5 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 184000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 138000, "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 69000,  "pct_of_dollars": 15 },
+        { "reason": "Damage",        "ytd_usd": 46000,  "pct_of_dollars": 10 },
+        { "reason": "Label error",   "ytd_usd": 23000,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 3200000, "actual": 2920000, "unit": "cases", "status": "yellow" }],
+      "pos_by_sku_last_4wk": [], "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 90.8, "new_item_launches": []
+    },
+    {
+      "rank": 25, "id": "RTL-025", "alias": "Lantern Foods", "channel": "Grocery", "banner_type": "Regional supermarket",
+      "customer_team_lead": "Marcus Beale",
+      "ytd_revenue_usd": 90000000, "ytd_otif_pct": 93.9, "ytd_chargebacks_usd": 420000, "jbp_status": "green",
+      "jbp_commitment_attainment_pct": 87.5, "last_week_pos_units": 110000, "active_promos": 0,
+      "hq_lat": 38.63, "hq_lon": -90.20, "primary_dc": "St-Louis-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 93.6 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 93.8 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 94.0 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 93.9 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 93.8 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 93.9 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 94.0 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 93.9 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 168000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 126000, "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 63000,  "pct_of_dollars": 15 },
+        { "reason": "Damage",        "ytd_usd": 42000,  "pct_of_dollars": 10 },
+        { "reason": "Label error",   "ytd_usd": 21000,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 3000000, "actual": 2840000, "unit": "cases", "status": "green" }],
+      "pos_by_sku_last_4wk": [], "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 92.6, "new_item_launches": []
+    },
+    {
+      "rank": 26, "id": "RTL-026", "alias": "Cordwood Convenience", "channel": "Convenience", "banner_type": "C-store chain",
+      "customer_team_lead": "Theo Marlowe",
+      "ytd_revenue_usd": 100000000, "ytd_otif_pct": 91.1, "ytd_chargebacks_usd": 290000, "jbp_status": "yellow",
+      "jbp_commitment_attainment_pct": 81.4, "last_week_pos_units": 130000, "active_promos": 0,
+      "hq_lat": 36.16, "hq_lon": -115.14, "primary_dc": "Las-Vegas-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 91.6 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 91.4 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 91.2 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 91.0 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 91.1 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 91.0 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 91.2 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 91.1 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 116000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 87000,  "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 43500,  "pct_of_dollars": 15 },
+        { "reason": "Label error",   "ytd_usd": 29000,  "pct_of_dollars": 10 },
+        { "reason": "Palletization", "ytd_usd": 14500,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 3800000, "actual": 3090000, "unit": "cases", "status": "yellow" }],
+      "pos_by_sku_last_4wk": [], "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 89.2, "new_item_launches": []
+    },
+    {
+      "rank": 27, "id": "RTL-027", "alias": "Skyway Convenience", "channel": "Convenience", "banner_type": "C-store chain",
+      "customer_team_lead": "Theo Marlowe",
+      "ytd_revenue_usd": 80000000, "ytd_otif_pct": 90.8, "ytd_chargebacks_usd": 260000, "jbp_status": "yellow",
+      "jbp_commitment_attainment_pct": 80.9, "last_week_pos_units": 100000, "active_promos": 0,
+      "hq_lat": 39.10, "hq_lon": -94.58, "primary_dc": "Kansas-City-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 91.2 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 91.0 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 90.8 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 90.6 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 90.8 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 90.7 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 90.9 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 90.8 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 104000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 78000,  "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 39000,  "pct_of_dollars": 15 },
+        { "reason": "Label error",   "ytd_usd": 26000,  "pct_of_dollars": 10 },
+        { "reason": "Palletization", "ytd_usd": 13000,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 3000000, "actual": 2440000, "unit": "cases", "status": "yellow" }],
+      "pos_by_sku_last_4wk": [], "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 88.8, "new_item_launches": []
+    },
+    {
+      "rank": 28, "id": "RTL-028", "alias": "Hearthstone Markets", "channel": "Grocery", "banner_type": "Regional supermarket",
+      "customer_team_lead": "Rohan Iyer",
+      "ytd_revenue_usd": 80000000, "ytd_otif_pct": 93.3, "ytd_chargebacks_usd": 360000, "jbp_status": "green",
+      "jbp_commitment_attainment_pct": 87.0, "last_week_pos_units": 100000, "active_promos": 0,
+      "hq_lat": 35.22, "hq_lon": -97.45, "primary_dc": "OKC-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 93.0 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 93.2 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 93.4 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 93.3 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 93.2 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 93.3 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 93.4 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 93.3 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 144000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 108000, "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 54000,  "pct_of_dollars": 15 },
+        { "reason": "Damage",        "ytd_usd": 36000,  "pct_of_dollars": 10 },
+        { "reason": "Label error",   "ytd_usd": 18000,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 2800000, "actual": 2640000, "unit": "cases", "status": "green" }],
+      "pos_by_sku_last_4wk": [], "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 92.0, "new_item_launches": []
+    },
+    {
+      "rank": 29, "id": "RTL-029", "alias": "Brick Lane Wholesale", "channel": "Club", "banner_type": "Warehouse club",
+      "customer_team_lead": "Helena Roque",
+      "ytd_revenue_usd": 200000000, "ytd_otif_pct": 95.8, "ytd_chargebacks_usd": 240000, "jbp_status": "green",
+      "jbp_commitment_attainment_pct": 93.0, "last_week_pos_units": 240000, "active_promos": 0,
+      "hq_lat": 39.95, "hq_lon": -75.16, "primary_dc": "Philly-Club-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 95.6 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 95.8 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 96.0 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 95.8 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 95.9 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 95.7 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 95.9 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 95.8 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Palletization", "ytd_usd": 96000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 72000, "pct_of_dollars": 30 },
+        { "reason": "Late delivery", "ytd_usd": 36000, "pct_of_dollars": 15 },
+        { "reason": "ASN mismatch",  "ytd_usd": 24000, "pct_of_dollars": 10 },
+        { "reason": "Weight discrepancy","ytd_usd": 12000, "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 8000000, "actual": 7800000, "unit": "cases", "status": "green" }],
+      "pos_by_sku_last_4wk": [], "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 95.4, "new_item_launches": []
+    },
+    {
+      "rank": 30, "id": "RTL-030", "alias": "Granite Foods", "channel": "Grocery", "banner_type": "Regional supermarket",
+      "customer_team_lead": "Rohan Iyer",
+      "ytd_revenue_usd": 70000000, "ytd_otif_pct": 93.5, "ytd_chargebacks_usd": 330000, "jbp_status": "yellow",
+      "jbp_commitment_attainment_pct": 85.6, "last_week_pos_units": 90000, "active_promos": 0,
+      "hq_lat": 43.66, "hq_lon": -70.26, "primary_dc": "Maine-DC",
+      "otif_trend_8wk": [
+        { "week": "2026-W13", "label": "Wk13", "otif_pct": 93.4 }, { "week": "2026-W14", "label": "Wk14", "otif_pct": 93.6 },
+        { "week": "2026-W15", "label": "Wk15", "otif_pct": 93.5 }, { "week": "2026-W16", "label": "Wk16", "otif_pct": 93.4 },
+        { "week": "2026-W17", "label": "Wk17", "otif_pct": 93.6 }, { "week": "2026-W18", "label": "Wk18", "otif_pct": 93.5 },
+        { "week": "2026-W19", "label": "Wk19", "otif_pct": 93.4 }, { "week": "2026-W20", "label": "Wk20", "otif_pct": 93.5 }
+      ],
+      "chargeback_breakdown": [
+        { "reason": "Late delivery", "ytd_usd": 132000, "pct_of_dollars": 40 },
+        { "reason": "Short ship",    "ytd_usd": 99000,  "pct_of_dollars": 30 },
+        { "reason": "ASN mismatch",  "ytd_usd": 49000,  "pct_of_dollars": 15 },
+        { "reason": "Damage",        "ytd_usd": 33000,  "pct_of_dollars": 10 },
+        { "reason": "Label error",   "ytd_usd": 17000,  "pct_of_dollars": 5 }
+      ],
+      "jbp_commitments": [{ "pillar": "Volume", "commitment": "Annual case volume", "target": 2400000, "actual": 2200000, "unit": "cases", "status": "yellow" }],
+      "pos_by_sku_last_4wk": [], "active_promo_detail": [],
+      "carrier_otd_to_dc_pct": 91.6, "new_item_launches": []
+    }
+  ]
+}

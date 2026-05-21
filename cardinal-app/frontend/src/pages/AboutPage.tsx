@@ -29,9 +29,14 @@ export default function AboutPage() {
         <h1 className="font-serif text-3xl font-semibold tracking-tight text-[var(--ink-strong)]">About Cardinal Provisions</h1>
         <p className="mt-3 text-[var(--ink-muted)] leading-relaxed">
           Cardinal Provisions is a fictional Fortune-200 consumer packaged goods manufacturer used to
-          demonstrate how an integrated supply-chain control tower runs on Fivetran's Open Data Infrastructure.
+          demonstrate the manufacturer-to-retailer supply chain on Fivetran's Open Data Infrastructure.
           Three categories, 24 brands, 11 owned plants, 18 co-pack contract manufacturers, 9 regional
-          distribution centers, 280K retail doors plus Amazon. Roughly $32B in annual revenue and 38K employees.
+          distribution centers, 30 top retail customers, 280K retail doors plus Amazon. Roughly $32B in annual revenue and 38K employees.
+        </p>
+        <p className="mt-3 text-[var(--ink-muted)] leading-relaxed">
+          Cardinal supplies 280K retail doors. Every box on every shelf is a fresh negotiation with the
+          retailer's compliance grid. This demo is what a CSCO at Cardinal sees on Monday morning:
+          OTIF, chargebacks, JBP attainment, retailer POS, carrier OTD, and the agents that act on all of it.
         </p>
       </header>
 
@@ -53,11 +58,12 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="surface p-5">
             <div className="eyebrow mb-2">Chief Supply Chain Officer</div>
-            <h3 className="font-serif text-lg font-semibold text-[var(--ink-strong)]">One view of the network</h3>
+            <h3 className="font-serif text-lg font-semibold text-[var(--ink-strong)]">One view of every customer relationship</h3>
             <p className="mt-2 text-sm text-[var(--ink-muted)] leading-relaxed">
-              Plant capacity, co-pack load, DC inventory, retailer OTIF, chargeback exposure,
-              commodity hedges, and Scope 3 intensity. One governed lake, one set of definitions,
-              every engine. No screen-shopping across five vendor consoles.
+              Retailer OTIF, chargeback exposure by reason, JBP commitment attainment, last-week POS by SKU,
+              carrier OTD into each retailer's DC, and new-item launch velocity. One governed lake, one set
+              of definitions, every engine. No screen-shopping across Retail Link, Vendor Central, Partners Online,
+              the Kroger portal, OTM, and a thousand JBP spreadsheets.
             </p>
           </div>
           <div className="surface p-5">
@@ -121,12 +127,12 @@ const PILLARS = [
 ];
 
 const STACK = [
-  { layer: 'Ingest',     name: 'Fivetran connectors',          note: 'SAP S/4HANA, Manhattan WMS, Oracle TMS, Salesforce, Retail Link, Vendor Central, syndicated panel, commodity feed, sustainability DW' },
+  { layer: 'Ingest',     name: 'Fivetran connectors',          note: 'SAP S/4HANA, Manhattan WMS, Oracle TMS, Salesforce, Walmart Retail Link, Amazon Vendor Central, Target Partners Online, Kroger Vendor Portal, syndicated panel, carrier portals, sustainability DW' },
   { layer: 'Storage',    name: 'Amazon S3',                    note: 'cardinal-odi-lake bucket holds bronze, silver, gold prefixes' },
   { layer: 'Format',     name: 'Apache Iceberg v2',            note: 'Parquet files, ZSTD-compressed, Glue REST catalog' },
   { layer: 'Catalog',    name: 'AWS Glue Data Catalog',        note: 'Iceberg REST and table-level access control' },
   { layer: 'Transform',  name: 'dbt',                          note: 'Iceberg-native materializations across bronze, silver, gold, marts' },
   { layer: 'Query',      name: 'Snowflake, Athena, Trino, DuckDB', note: 'Four engines on the same files' },
   { layer: 'Frontend',   name: 'React 19, Vite, Tailwind v4',  note: 'Static SPA on GitHub Pages, reads JSON snapshot' },
-  { layer: 'Charts',     name: 'Recharts',                     note: 'Composable charts for forecast, OTIF, commodity time-series' },
+  { layer: 'Charts',     name: 'Recharts',                     note: 'Composable charts for forecast, OTIF, chargeback decomposition, JBP attainment' },
 ];

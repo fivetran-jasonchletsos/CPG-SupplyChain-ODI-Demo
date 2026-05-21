@@ -4,11 +4,11 @@ import { api } from '../api/queries';
 
 const NAV_ITEMS: [string, string][] = [
   ['/', 'Home'],
-  ['/plants', 'Plants and Co-pack'],
+  ['/customers', 'Customers'],
   ['/retailers', 'Retailer OTIF'],
   ['/demand', 'Demand Sensing'],
   ['/trade', 'Trade Promotion'],
-  ['/commodities', 'Commodities'],
+  ['/plants', 'Plants and Co-pack'],
   ['/esg', 'ESG'],
   ['/architecture', 'ODI Architecture'],
   ['/pipeline', 'Pipeline'],
@@ -148,9 +148,9 @@ export default function Layout() {
           <div>
             <div className="eyebrow-light mb-2">Data Pipeline</div>
             <p className="leading-relaxed text-white/75">
-              SAP S/4HANA, Manhattan WMS, Oracle TMS, Salesforce, Retail Link, Vendor Central,
-              syndicated panel, commodity feed, sustainability DW into Fivetran connectors,
-              landed in Apache Iceberg on S3, transformed by dbt across bronze, silver, gold.
+              SAP S/4HANA, Manhattan WMS, Oracle TMS, Salesforce, Walmart Retail Link, Amazon Vendor
+              Central, Target Partners Online, Kroger Vendor Portal, syndicated panel, carrier portals,
+              sustainability DW into Fivetran connectors, landed in Apache Iceberg on S3, transformed by dbt across bronze, silver, gold.
             </p>
           </div>
           <div>

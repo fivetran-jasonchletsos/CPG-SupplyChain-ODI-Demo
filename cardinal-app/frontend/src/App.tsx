@@ -9,7 +9,7 @@ import PlantsPage from './pages/PlantsPage';
 import RetailersPage from './pages/RetailersPage';
 import DemandPage from './pages/DemandPage';
 import TradePromoPage from './pages/TradePromoPage';
-import CommoditiesPage from './pages/CommoditiesPage';
+import CustomersPage from './pages/CustomersPage';
 import ESGPage from './pages/ESGPage';
 import PolicyPage from './pages/PolicyPage';
 import NotFoundPage from './pages/NotFoundPage';
@@ -31,7 +31,7 @@ export default function App() {
             <Route path="/retailers" element={<RetailersPage />} />
             <Route path="/demand" element={<DemandPage />} />
             <Route path="/trade" element={<TradePromoPage />} />
-            <Route path="/commodities" element={<CommoditiesPage />} />
+            <Route path="/customers" element={<CustomersPage />} />
             <Route path="/esg" element={<ESGPage />} />
             <Route path="/architecture" element={<ArchitecturePage />} />
             <Route path="/pipeline" element={<PipelinePage />} />

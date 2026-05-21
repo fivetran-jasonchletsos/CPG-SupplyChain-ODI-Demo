@@ -1,0 +1,85 @@
+{
+  "generated_at": "2026-05-21T08:00:00Z",
+  "network_otd_pct": 92.4,
+  "carriers": [
+    {
+      "id": "CAR-001", "name": "Ironline Freight", "mode": "Truckload",
+      "otd_pct": 94.2, "weekly_loads": 1840, "on_time_pickups_pct": 96.1, "damage_claims_per_1000": 0.42,
+      "key_lanes": [
+        { "origin": "Cardinal-Atlanta-DC",      "destination_retailer_dc": "MegaMart-Bentonville-DC",   "otd_pct": 92.8, "weekly_loads": 420 },
+        { "origin": "Cardinal-Atlanta-DC",      "destination_retailer_dc": "Bullseye-Minneapolis-DC",   "otd_pct": 95.4, "weekly_loads": 180 },
+        { "origin": "Cardinal-Southeast-DC",    "destination_retailer_dc": "RiverGrove-Cincinnati-DC",  "otd_pct": 96.0, "weekly_loads": 240 }
+      ]
+    },
+    {
+      "id": "CAR-002", "name": "Pinegate Logistics", "mode": "Truckload",
+      "otd_pct": 93.6, "weekly_loads": 1620, "on_time_pickups_pct": 94.8, "damage_claims_per_1000": 0.51,
+      "key_lanes": [
+        { "origin": "Cardinal-Joliet-DC",       "destination_retailer_dc": "MegaMart-Bentonville-DC",   "otd_pct": 91.2, "weekly_loads": 380 },
+        { "origin": "Cardinal-Midwest-DC",      "destination_retailer_dc": "Beacon-Pacific-DC",         "otd_pct": 95.8, "weekly_loads": 220 }
+      ]
+    },
+    {
+      "id": "CAR-003", "name": "Halyard Carriers", "mode": "Truckload + Intermodal",
+      "otd_pct": 92.8, "weekly_loads": 1480, "on_time_pickups_pct": 93.4, "damage_claims_per_1000": 0.62,
+      "key_lanes": [
+        { "origin": "Cardinal-Southwest-DC",    "destination_retailer_dc": "AzureCart-Phoenix-FC",      "otd_pct": 89.4, "weekly_loads": 310 },
+        { "origin": "Cardinal-Atlanta-DC",      "destination_retailer_dc": "BoxBin-Pacific-DC",         "otd_pct": 96.1, "weekly_loads": 140 }
+      ]
+    },
+    {
+      "id": "CAR-004", "name": "Sentinel Transport", "mode": "Truckload",
+      "otd_pct": 91.8, "weekly_loads": 1340, "on_time_pickups_pct": 93.1, "damage_claims_per_1000": 0.78,
+      "key_lanes": [
+        { "origin": "Cardinal-Northeast-DC",    "destination_retailer_dc": "AzureCart-NJ-FC",           "otd_pct": 88.4, "weekly_loads": 280 },
+        { "origin": "Cardinal-Mid-Atlantic-DC", "destination_retailer_dc": "Lighthouse-DC-Metro-DC",    "otd_pct": 94.0, "weekly_loads": 120 }
+      ]
+    },
+    {
+      "id": "CAR-005", "name": "Crestwood Lines", "mode": "LTL + Truckload",
+      "otd_pct": 91.2, "weekly_loads": 1180, "on_time_pickups_pct": 92.6, "damage_claims_per_1000": 0.84,
+      "key_lanes": [
+        { "origin": "Cardinal-Midwest-DC",      "destination_retailer_dc": "ValuePoint-Nashville-DC",   "otd_pct": 88.1, "weekly_loads": 220 },
+        { "origin": "Cardinal-Southeast-DC",    "destination_retailer_dc": "Penny-Lane-Birmingham-DC",  "otd_pct": 87.6, "weekly_loads": 180 }
+      ]
+    },
+    {
+      "id": "CAR-006", "name": "Northvale Trucking", "mode": "Truckload",
+      "otd_pct": 93.4, "weekly_loads": 980, "on_time_pickups_pct": 95.0, "damage_claims_per_1000": 0.46,
+      "key_lanes": [
+        { "origin": "Cardinal-Pacific-DC",      "destination_retailer_dc": "Beacon-Pacific-DC",         "otd_pct": 95.8, "weekly_loads": 220 },
+        { "origin": "Cardinal-Pacific-DC",      "destination_retailer_dc": "BoxBin-Pacific-DC",         "otd_pct": 96.1, "weekly_loads": 160 }
+      ]
+    },
+    {
+      "id": "CAR-007", "name": "Greenmark Freight", "mode": "Truckload",
+      "otd_pct": 92.1, "weekly_loads": 860, "on_time_pickups_pct": 93.8, "damage_claims_per_1000": 0.59,
+      "key_lanes": [
+        { "origin": "Cardinal-Atlanta-DC",      "destination_retailer_dc": "CoastWay-Charleston-DC",    "otd_pct": 90.4, "weekly_loads": 140 },
+        { "origin": "Cardinal-Mid-Atlantic-DC", "destination_retailer_dc": "Harborline-NE-Drug-DC",     "otd_pct": 94.0, "weekly_loads": 100 }
+      ]
+    },
+    {
+      "id": "CAR-008", "name": "Quarrystone Carriers", "mode": "Truckload",
+      "otd_pct": 90.6, "weekly_loads": 720, "on_time_pickups_pct": 91.2, "damage_claims_per_1000": 0.88,
+      "key_lanes": [
+        { "origin": "Cardinal-Midwest-DC",      "destination_retailer_dc": "Penny-Lane-Birmingham-DC",  "otd_pct": 87.6, "weekly_loads": 140 }
+      ]
+    },
+    {
+      "id": "CAR-009", "name": "Linden Logistics", "mode": "LTL",
+      "otd_pct": 90.2, "weekly_loads": 580, "on_time_pickups_pct": 90.4, "damage_claims_per_1000": 1.04,
+      "key_lanes": [
+        { "origin": "Cardinal-Northeast-DC",    "destination_retailer_dc": "Linden-Boston-DC",          "otd_pct": 92.0, "weekly_loads": 120 }
+      ]
+    },
+    {
+      "id": "CAR-010", "name": "Coalfield Express", "mode": "Truckload",
+      "otd_pct": 89.4, "weekly_loads": 460, "on_time_pickups_pct": 88.9, "damage_claims_per_1000": 1.18,
+      "key_lanes": [
+        { "origin": "Cardinal-Midwest-DC",      "destination_retailer_dc": "Cordwood-Las-Vegas-DC",     "otd_pct": 89.2, "weekly_loads": 80 },
+        { "origin": "Cardinal-Midwest-DC",      "destination_retailer_dc": "Skyway-Kansas-City-DC",     "otd_pct": 88.8, "weekly_loads": 60 }
+      ]
+    }
+  ]
+}

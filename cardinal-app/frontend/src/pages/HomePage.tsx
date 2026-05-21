@@ -48,18 +48,19 @@ export default function HomePage() {
                 Every agent.
               </h1>
               <p className="mt-6 text-base sm:text-lg text-white/80 max-w-2xl leading-relaxed">
-                A CPG supply-chain control tower built on Fivetran's Open Data Infrastructure.
-                SAP S/4HANA, Manhattan WMS, Oracle TMS, Salesforce, retailer POS, syndicated panel,
-                commodities, and sustainability all land in customer-owned Apache Iceberg.
-                dbt builds the governed gold layer. Planners and agents read the same fresh tables.
+                A CPG manufacturer-to-retailer control tower built on Fivetran's Open Data Infrastructure.
+                SAP S/4HANA, Manhattan WMS, Oracle TMS, Salesforce, Walmart Retail Link, Amazon Vendor
+                Central, Target Partners Online, Kroger Vendor Portal, syndicated panel, and carrier
+                feeds all land in customer-owned Apache Iceberg. dbt builds the governed gold layer.
+                Customer-team planners and agents read the same fresh tables.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <button
-                  onClick={() => navigate('/plants')}
+                  onClick={() => navigate('/customers')}
                   className="inline-flex items-center gap-2 rounded-sm font-semibold text-sm text-white px-5 py-3 shadow-lg hover:opacity-95 transition-opacity"
                   style={{ background: 'var(--crimson)' }}
                 >
-                  Open the control tower <span aria-hidden>→</span>
+                  Open the customer scorecard <span aria-hidden>→</span>
                 </button>
                 <button
                   onClick={() => navigate('/architecture')}
@@ -85,14 +86,14 @@ export default function HomePage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-3">
           {summary && (
             <>
-              <KpiTile label="Net sales YTD"      value={fmtUSD(summary.kpis.net_sales_ytd_usd)}              delta={signedPct(summary.kpis.net_sales_ytd_yoy_pct) + ' YoY'}            deltaKind={summary.kpis.net_sales_ytd_yoy_pct >= 0 ? 'up' : 'down'} />
-              <KpiTile label="Gross margin"       value={fmtPct(summary.kpis.gross_margin_pct)}               delta={signedPct(summary.kpis.gross_margin_yoy_pct_pts, 1) + ' pts'}    deltaKind={summary.kpis.gross_margin_yoy_pct_pts >= 0 ? 'up' : 'down'} />
-              <KpiTile label="OTIF"               value={fmtPct(summary.kpis.otif_score_pct)}                 delta={signedPct(summary.kpis.otif_yoy_pct_pts, 1) + ' pts'}            deltaKind="warn" hint={`target ${fmtPct(summary.kpis.otif_target_pct)}`} />
-              <KpiTile label="Fill rate"          value={fmtPct(summary.kpis.fill_rate_pct)}                  hint={`target ${fmtPct(summary.kpis.fill_rate_target_pct)}`} />
-              <KpiTile label="Days of supply"     value={`${summary.kpis.days_of_supply}d`}                   delta={`target ${summary.kpis.days_of_supply_target}d`} deltaKind="warn" />
-              <KpiTile label="Forecast MAPE"      value={fmtPct(summary.kpis.forecast_accuracy_mape_pct)}     delta={`target ${fmtPct(summary.kpis.forecast_accuracy_target_mape_pct)}`} deltaKind="warn" />
-              <KpiTile label="Chargebacks YTD"    value={fmtUSD(summary.kpis.retailer_chargebacks_ytd_usd)}   delta={signedPct(summary.kpis.retailer_chargebacks_yoy_pct) + ' YoY'} deltaKind="down" />
-              <KpiTile label="Scope 3 intensity"  value={`${summary.kpis.scope3_intensity_kg_per_case.toFixed(2)} kg/case`} delta={signedPct(summary.kpis.scope3_intensity_yoy_pct) + ' YoY'} deltaKind={summary.kpis.scope3_intensity_yoy_pct <= 0 ? 'up' : 'down'} />
+              <KpiTile label="Net sales YTD"        value={fmtUSD(summary.kpis.net_sales_ytd_usd)}              delta={signedPct(summary.kpis.net_sales_ytd_yoy_pct) + ' YoY'} deltaKind={summary.kpis.net_sales_ytd_yoy_pct >= 0 ? 'up' : 'down'} />
+              <KpiTile label="OTIF"                 value={fmtPct(summary.kpis.otif_score_pct)}                 delta={signedPct(summary.kpis.otif_yoy_pct_pts, 1) + ' pts'} deltaKind="warn" hint={`target ${fmtPct(summary.kpis.otif_target_pct)}`} />
+              <KpiTile label="Fill rate"            value={fmtPct(summary.kpis.fill_rate_pct)}                  hint={`target ${fmtPct(summary.kpis.fill_rate_target_pct)}`} />
+              <KpiTile label="Chargebacks YTD"      value={fmtUSD(summary.kpis.retailer_chargebacks_ytd_usd)}   delta={signedPct(summary.kpis.retailer_chargebacks_yoy_pct) + ' YoY'} deltaKind="down" />
+              <KpiTile label="JBP attainment"       value={fmtPct(summary.kpis.jbp_attainment_pct)}             hint={`target ${fmtPct(summary.kpis.jbp_attainment_target_pct)}`} deltaKind="warn" />
+              <KpiTile label="Top-10 customer mix"  value={fmtPct(summary.kpis.top10_revenue_concentration_pct)} hint="of net sales YTD" />
+              <KpiTile label="Carrier OTD"          value={fmtPct(summary.kpis.carrier_otd_pct)}                hint={`target ${fmtPct(summary.kpis.carrier_otd_target_pct)}`} deltaKind="warn" />
+              <KpiTile label="Forecast MAPE"        value={fmtPct(summary.kpis.forecast_accuracy_mape_pct)}     delta={`target ${fmtPct(summary.kpis.forecast_accuracy_target_mape_pct)}`} deltaKind="warn" />
             </>
           )}
         </div>
