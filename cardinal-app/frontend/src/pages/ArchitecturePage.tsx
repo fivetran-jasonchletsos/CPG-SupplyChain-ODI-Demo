@@ -68,7 +68,7 @@ export default function ArchitecturePage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           {STAGES.map((s) => (
             <div key={s.layer} className="surface p-5">
-              <div className={`layer-chip ${s.layer === 'gold' ? 'gold' : s.layer === 'silver' ? 'silver' : s.layer === 'bronze' ? 'bronze' : 'crimson'} inline-flex mb-2`}>{s.title}</div>
+              <div className="eyebrow mb-2">{s.title}</div>
               <p className="text-sm text-[var(--ink-muted)] leading-relaxed">{s.detail}</p>
             </div>
           ))}

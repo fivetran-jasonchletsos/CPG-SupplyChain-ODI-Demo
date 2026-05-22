@@ -321,6 +321,7 @@ export interface SustainabilityData {
 
 export interface Connector {
   id: string;
+  fivetran_id: string;
   name: string;
   category: string;
   status: 'healthy' | 'degraded' | 'failed';

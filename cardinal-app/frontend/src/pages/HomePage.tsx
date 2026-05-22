@@ -35,12 +35,16 @@ export default function HomePage() {
   return (
     <>
       <section className="bg-[var(--graphite)] text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-[0.07] pointer-events-none" aria-hidden style={{
-          backgroundImage: 'repeating-linear-gradient(135deg, transparent 0 28px, rgba(255,199,204,0.5) 28px 29px)',
+        {/* Shelf-tag grid background — rows of horizontal rules like a price tag register */}
+        <div className="absolute inset-0 pointer-events-none" aria-hidden style={{
+          backgroundImage: [
+            'repeating-linear-gradient(0deg, transparent 0px, transparent 47px, rgba(255,255,255,0.035) 47px, rgba(255,255,255,0.035) 48px)',
+            'repeating-linear-gradient(90deg, transparent 0px, transparent 119px, rgba(255,255,255,0.025) 119px, rgba(255,255,255,0.025) 120px)',
+          ].join(', '),
         }} />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 sm:py-20 relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-end">
-            <div className="lg:col-span-7">
+            <div className="lg:col-span-7 animate-in">
               <div className="eyebrow-light mb-4">Cardinal Provisions, Open Data Infrastructure</div>
               <h1 className="font-serif text-4xl sm:text-6xl font-semibold text-white leading-[0.98] tracking-tight">
                 One lake.<br />
@@ -51,7 +55,7 @@ export default function HomePage() {
                 A CPG manufacturer-to-retailer control tower built on Fivetran's Open Data Infrastructure.
                 SAP S/4HANA, Manhattan WMS, Oracle TMS, Salesforce, Walmart Retail Link, Amazon Vendor
                 Central, Target Partners Online, Kroger Vendor Portal, syndicated panel, and carrier
-                feeds all land in customer-owned Apache Iceberg. dbt builds the governed gold layer.
+                feeds all land in customer-owned Apache Iceberg. dbt builds the governed layer.
                 Customer-team planners and agents read the same fresh tables.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -70,7 +74,7 @@ export default function HomePage() {
                 </button>
               </div>
             </div>
-            <div className="lg:col-span-5">
+            <div className="lg:col-span-5 animate-in delay-2">
               <div className="grid grid-cols-2 gap-3">
                 <HeroStat label="Net sales YTD" value={summary ? fmtUSD(summary.kpis.net_sales_ytd_usd) : '—'} sub={summary ? signedPct(summary.kpis.net_sales_ytd_yoy_pct) + ' YoY' : ''} />
                 <HeroStat label="OTIF" value={summary ? fmtPct(summary.kpis.otif_score_pct) : '—'} sub={summary ? `target ${fmtPct(summary.kpis.otif_target_pct)}` : ''} warn />

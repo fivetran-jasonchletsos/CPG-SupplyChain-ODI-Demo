@@ -6,7 +6,7 @@
  * Serif headers carry the boardroom S&OP register; mono for plant numerics.
  */
 
-@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap');
 
 :root {
   /* Brand */
@@ -56,15 +56,15 @@
   --color-crimson-600: #921321;
   --color-crimson-700: #74101b;
 
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-serif: "Spectral", Georgia, "Times New Roman", serif;
-  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 html, body {
   background-color: var(--cream);
   color: var(--ink);
-  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -104,9 +104,9 @@ h1 { color: var(--ink-strong); }
   font-variant-numeric: tabular-nums;
 }
 .kpi-delta {
-  font-family: "JetBrains Mono", monospace;
+  font-family: "DM Mono", monospace;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 500;
   margin-top: 0.375rem;
   font-variant-numeric: tabular-nums;
 }
@@ -167,10 +167,10 @@ h1 { color: var(--ink-strong); }
   padding: 0.1875rem 0.625rem;
   border-radius: 0.25rem;
   font-size: 0.625rem;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  font-family: "JetBrains Mono", monospace;
+  font-family: "DM Mono", monospace;
 }
 .layer-chip.bronze { background: var(--bronze-bg); color: var(--bronze); border: 1px solid #fed7aa; }
 .layer-chip.silver { background: var(--silver-bg); color: var(--silver); border: 1px solid #e2e2dc; }
@@ -178,7 +178,7 @@ h1 { color: var(--ink-strong); }
 .layer-chip.crimson{ background: var(--crimson-tint); color: var(--crimson-dark); border: 1px solid #f6c8ce; }
 
 .tabular { font-variant-numeric: tabular-nums; }
-.num     { font-family: "JetBrains Mono", monospace; font-variant-numeric: tabular-nums; }
+.num     { font-family: "DM Mono", monospace; font-variant-numeric: tabular-nums; }
 
 .agent-card {
   background: linear-gradient(180deg, var(--paper) 0%, var(--cream) 100%);
@@ -222,4 +222,54 @@ table.data td {
   color: var(--ink);
 }
 table.data tr:hover td { background: var(--cream); }
-table.data td.num, table.data th.num { text-align: right; font-family: "JetBrains Mono", monospace; font-variant-numeric: tabular-nums; }
+table.data td.num, table.data th.num { text-align: right; font-family: "DM Mono", monospace; font-variant-numeric: tabular-nums; }
+
+/* ── Page-load animation system ─────────────────────────────────────── */
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fade-up 0.4s ease both;
+}
+.delay-1 { animation-delay: 0.06s; }
+.delay-2 { animation-delay: 0.12s; }
+.delay-3 { animation-delay: 0.18s; }
+.delay-4 { animation-delay: 0.24s; }
+.delay-5 { animation-delay: 0.30s; }
+
+/* ── Fivetran CTA button ─────────────────────────────────────────────── */
+
+.btn-fivetran {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem 0.875rem;
+  background: var(--crimson);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: 3px;
+  border: 1px solid var(--crimson-dark);
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+.btn-fivetran:hover {
+  background: var(--crimson-dark);
+  border-color: var(--crimson-dark);
+}
+
+/* ── Connector ID code pill ──────────────────────────────────────────── */
+.connector-id {
+  font-family: "DM Mono", monospace;
+  font-size: 0.6875rem;
+  background: var(--cream-deep);
+  color: var(--ink-muted);
+  padding: 0.125rem 0.4375rem;
+  border-radius: 3px;
+  border: 1px solid var(--hairline);
+}

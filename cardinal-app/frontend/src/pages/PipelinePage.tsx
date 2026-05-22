@@ -3,6 +3,8 @@ import { api, fmtNum } from '../api/queries';
 import type { PipelineData } from '../types';
 import PageHeader from '../components/PageHeader';
 
+const FIVETRAN_BASE = 'https://fivetran.com/dashboard/connectors';
+
 export default function PipelinePage() {
   const [data, setData] = useState<PipelineData | null>(null);
   const [simulateFailure, setSimulateFailure] = useState(false);
@@ -20,7 +22,7 @@ export default function PipelinePage() {
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
         {data?.layers.map((l) => (
           <div key={l.layer} className="surface p-4">
-            <div className={`layer-chip ${l.layer === 'gold' ? 'gold' : l.layer === 'silver' ? 'silver' : l.layer === 'bronze' ? 'bronze' : 'crimson'} inline-flex mb-2`}>{l.layer}</div>
+            <div className="eyebrow mb-2">{l.layer}</div>
             <div className="num text-2xl font-semibold text-[var(--ink-strong)]">{l.table_count}</div>
             <div className="text-xs text-[var(--ink-muted)] mt-1">tables, {l.row_count_billions.toFixed(1)}B rows, {l.size_tb.toFixed(1)} TB</div>
             <div className="text-[11px] text-[var(--ink-soft)] mt-1">freshness {l.freshness_minutes} min</div>
@@ -29,34 +31,48 @@ export default function PipelinePage() {
       </section>
 
       <section className="surface mb-8">
-        <div className="surface-head flex items-center justify-between">
+        <div className="surface-head flex items-center justify-between flex-wrap gap-3">
           <div>
             <div className="eyebrow">Connectors</div>
             <h2 className="font-serif text-xl font-semibold text-[var(--ink-strong)]">All flowing through Fivetran</h2>
           </div>
-          <button
-            onClick={() => setSimulateFailure((s) => !s)}
-            className={`text-xs font-semibold px-3 py-1.5 rounded-sm border ${
-              simulateFailure
-                ? 'bg-[var(--red-bg)] text-[var(--red)] border-[var(--red)]/30'
-                : 'bg-white text-[var(--ink-muted)] border-[var(--hairline)] hover:bg-[var(--cream)]'
-            }`}
-          >
-            {simulateFailure ? 'Simulating Retail Link failure' : 'Simulate Retail Link failure'}
-          </button>
+          <div className="flex items-center gap-2 flex-wrap">
+            <a
+              href="https://fivetran.com/dashboard"
+              target="_blank"
+              rel="noreferrer"
+              className="btn-fivetran"
+            >
+              Open in Fivetran
+              <svg viewBox="0 0 16 16" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </a>
+            <button
+              onClick={() => setSimulateFailure((s) => !s)}
+              className={`text-xs font-semibold px-3 py-1.5 rounded-sm border ${
+                simulateFailure
+                  ? 'bg-[var(--red-bg)] text-[var(--red)] border-[var(--red)]/30'
+                  : 'bg-white text-[var(--ink-muted)] border-[var(--hairline)] hover:bg-[var(--cream)]'
+              }`}
+            >
+              {simulateFailure ? 'Simulating Retail Link failure' : 'Simulate Retail Link failure'}
+            </button>
+          </div>
         </div>
         <div className="p-4 overflow-x-auto">
           <table className="data">
             <thead>
               <tr>
                 <th>Connector</th>
+                <th>Connector ID</th>
                 <th>Category</th>
                 <th>Status</th>
                 <th className="num">Sync freq</th>
                 <th className="num">Rows 24h</th>
                 <th className="num">Lag</th>
-                <th>Lineage label</th>
                 <th>Notes</th>
+                <th>Open</th>
               </tr>
             </thead>
             <tbody>
@@ -66,6 +82,7 @@ export default function PipelinePage() {
                 return (
                   <tr key={c.id}>
                     <td className="font-semibold text-[var(--ink-strong)]">{c.name}</td>
+                    <td><span className="connector-id">{c.fivetran_id}</span></td>
                     <td>{c.category}</td>
                     <td>
                       <span className={`pill ${status === 'healthy' ? 'good' : status === 'degraded' ? 'warn' : 'bad'}`}>{status}</span>
@@ -73,8 +90,17 @@ export default function PipelinePage() {
                     <td className="num">{c.sync_freq_minutes}m</td>
                     <td className="num">{fmtNum(c.rows_24h)}</td>
                     <td className="num">{c.lag_seconds}s</td>
-                    <td><span className="layer-chip crimson">{c.lineage_label}</span></td>
                     <td className="text-xs text-[var(--ink-muted)]">{c.notes}</td>
+                    <td>
+                      <a
+                        href={`${FIVETRAN_BASE}/${c.fivetran_id}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-[11px] font-semibold text-[var(--crimson-dark)] hover:underline whitespace-nowrap"
+                      >
+                        Open →
+                      </a>
+                    </td>
                   </tr>
                 );
               })}
