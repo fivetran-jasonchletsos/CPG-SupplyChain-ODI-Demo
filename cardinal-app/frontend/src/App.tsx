@@ -13,6 +13,9 @@ import CustomersPage from './pages/CustomersPage';
 import ESGPage from './pages/ESGPage';
 import PolicyPage from './pages/PolicyPage';
 import NotFoundPage from './pages/NotFoundPage';
+import WizardScenarioPage from './pages/WizardScenarioPage';
+import WizardLivePage from './pages/WizardLivePage';
+import WizardOutcomePage from './pages/WizardOutcomePage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -37,6 +40,9 @@ export default function App() {
             <Route path="/pipeline" element={<PipelinePage />} />
             <Route path="/policy" element={<PolicyPage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/wizard" element={<WizardScenarioPage />} />
+            <Route path="/wizard-live" element={<WizardLivePage />} />
+            <Route path="/wizard-outcome" element={<WizardOutcomePage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>

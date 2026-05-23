@@ -72,6 +72,13 @@ export default function HomePage() {
                 >
                   ODI architecture
                 </button>
+                <button
+                  onClick={() => navigate('/wizard')}
+                  className="inline-flex items-center gap-2 rounded-sm font-semibold text-sm px-5 py-3 border border-white/25 hover:bg-white/10"
+                  style={{ color: '#ffc7cc' }}
+                >
+                  dbt-wizard — VP question in 90s
+                </button>
               </div>
             </div>
             <div className="lg:col-span-5 animate-in delay-2">

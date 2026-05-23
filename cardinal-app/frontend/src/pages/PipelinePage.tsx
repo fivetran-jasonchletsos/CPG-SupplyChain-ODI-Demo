@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { api, fmtNum } from '../api/queries';
 import type { PipelineData } from '../types';
 import PageHeader from '../components/PageHeader';
 
 const FIVETRAN_BASE = 'https://fivetran.com/dashboard/connectors';
+const FIVETRAN_DASHBOARD_URL = 'https://fivetran.com/dashboard/connections';
 
 export default function PipelinePage() {
   const [data, setData] = useState<PipelineData | null>(null);
@@ -151,6 +153,53 @@ export default function PipelinePage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      {/* Open in Fivetran CTA */}
+      <section className="surface p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <div>
+          <div className="eyebrow mb-1">Fivetran Dashboard</div>
+          <div className="font-serif text-lg font-semibold text-[var(--ink-strong)]">Inspect connectors live</div>
+          <p className="text-sm text-[var(--ink-muted)] mt-0.5">
+            View sync history, schema changes, re-sync controls, and column-level observability in Fivetran.
+          </p>
+        </div>
+        <div className="flex items-center gap-3 shrink-0">
+          <a
+            href={FIVETRAN_DASHBOARD_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-fivetran text-sm py-2.5 px-5"
+          >
+            <svg viewBox="0 0 14 14" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M2 7h10M7 2l5 5-5 5" />
+            </svg>
+            Open in Fivetran
+          </a>
+        </div>
+      </section>
+
+      {/* dbt-wizard callout */}
+      <section className="surface p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4" style={{ borderLeft: '4px solid var(--teal)' }}>
+        <div>
+          <div className="eyebrow mb-1" style={{ color: 'var(--teal)' }}>dbt-wizard</div>
+          <div className="font-serif text-lg font-semibold text-[var(--ink-strong)]">Missing gold models authored on demand</div>
+          <p className="text-sm text-[var(--ink-muted)] mt-0.5 max-w-2xl">
+            When a planning question has no gold model to answer it — like the Mid-Atlantic BTS promo lift miss —
+            dbt-wizard's four sub-agents author, test, and materialize one in under 90 seconds against the same Iceberg lake.
+            No backlog. Root cause in hand for the CSCO standup.
+          </p>
+        </div>
+        <Link
+          to="/wizard"
+          className="btn-fivetran text-sm py-2.5 px-5 shrink-0"
+          style={{ background: 'var(--teal)', borderColor: 'var(--teal)' }}
+        >
+          <svg viewBox="0 0 14 14" className="h-3.5 w-3.5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+            <path d="M2 7h10M7 2l5 5-5 5" />
+          </svg>
+          Open the scenario
+        </Link>
       </section>
     </div>
   );

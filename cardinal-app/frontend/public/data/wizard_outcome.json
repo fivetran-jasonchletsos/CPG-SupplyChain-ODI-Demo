@@ -1,0 +1,106 @@
+{
+  "materialized_model": "gold.fct_lift_by_sku_promo_region_week",
+  "row_count": 312,
+  "tests_passed": 9,
+  "tests_written": "7 column-level + 1 combination uniqueness + 1 not-null on actual_lift_pct",
+  "build_seconds": 90,
+  "before": {
+    "nodes": [
+      { "id": "int_pos",    "name": "silver.int_pos_signals",       "layer": "intermediate" },
+      { "id": "int_promo",  "name": "silver.int_promo_calendar",    "layer": "intermediate" },
+      { "id": "int_exec",   "name": "silver.int_store_execution",   "layer": "intermediate" },
+      { "id": "int_sku",    "name": "silver.int_sku_master",        "layer": "intermediate" },
+      { "id": "gap",        "name": "gold.fct_lift_by_sku_promo_region_week", "layer": "gap", "built": false }
+    ],
+    "edges": [
+      { "from": "int_pos",   "to": "gap" },
+      { "from": "int_promo", "to": "gap" },
+      { "from": "int_exec",  "to": "gap" },
+      { "from": "int_sku",   "to": "gap" }
+    ]
+  },
+  "after": {
+    "nodes": [
+      { "id": "int_pos",    "name": "silver.int_pos_signals",       "layer": "intermediate" },
+      { "id": "int_promo",  "name": "silver.int_promo_calendar",    "layer": "intermediate" },
+      { "id": "int_exec",   "name": "silver.int_store_execution",   "layer": "intermediate" },
+      { "id": "int_sku",    "name": "silver.int_sku_master",        "layer": "intermediate" },
+      { "id": "new_gold",   "name": "gold.fct_lift_by_sku_promo_region_week", "layer": "gold", "built": true, "new": true },
+      { "id": "tp_dash",    "name": "Trade Promo Dashboard",        "layer": "consumer" },
+      { "id": "sop_layer",  "name": "S&OP Reporting Layer",         "layer": "consumer" }
+    ],
+    "edges": [
+      { "from": "int_pos",   "to": "new_gold" },
+      { "from": "int_promo", "to": "new_gold" },
+      { "from": "int_exec",  "to": "new_gold" },
+      { "from": "int_sku",   "to": "new_gold" },
+      { "from": "new_gold",  "to": "tp_dash" },
+      { "from": "new_gold",  "to": "sop_layer" }
+    ]
+  },
+  "root_cause": {
+    "headline": "Three Mid-Atlantic retailers share a promo-execution gap — endcap displays mounted 4 days late at 47 stores; promo signage did not go live during peak BTS shopping.",
+    "detail": "47 of 52 Mid-Atlantic stores with low lift share a single execution signature: endcap displays were received and mounted an average of 4.1 days after promo start, and digital promo signage went live 3.8 days late. The BTS high-velocity window is the first 5 days of the promo period. Late display placement meant Cardinal snack bars were not at eye level during the peak impulse-buy window. Midwest stores averaged 0.2-day endcap lag and 0.1-day signage lag — execution, not promo design, drove the regional split.",
+    "affected_cohort": "47 Mid-Atlantic stores across three retail banners — MegaMart, RiverGrove, and BoxBin",
+    "fallout_count": 47,
+    "total_reviewed": 52
+  },
+  "without_wizard": {
+    "label": "Without dbt-wizard",
+    "summary": "Question enters the analytics backlog. CSCO standup proceeds without the root-cause answer.",
+    "metrics": [
+      { "label": "Time to model",         "value": "3 to 5 days" },
+      { "label": "Engineer hours",        "value": "8 to 14h" },
+      { "label": "Tests written",         "value": "ad-hoc" },
+      { "label": "Lineage entries",       "value": "manual" },
+      { "label": "Documentation",         "value": "PR-time only" },
+      { "label": "CSCO standup status",   "value": "no answer" },
+      { "label": "Trade-spend at risk",   "value": "$1.6M this cycle" }
+    ],
+    "narrative": [
+      "VP Demand Planning files the request. It enters the analytics backlog at priority B.",
+      "Data engineer scopes the work Monday morning — three days after the standup.",
+      "Engineer writes SQL from scratch, joining four silver tables by hand.",
+      "Tests, YAML, and schema contract get bolted on at PR time. Sometimes.",
+      "Trade planning team cannot isolate root cause before the CSCO standup.",
+      "$1.6M in BTS trade spend remains unattributed. Next cycle repeats the miss."
+    ]
+  },
+  "with_wizard": {
+    "label": "With dbt-wizard",
+    "summary": "Four sub-agents surface the upstreams, author the SQL, write the tests, and materialize the asset in 90 seconds.",
+    "metrics": [
+      { "label": "Time to model",         "value": "90 seconds" },
+      { "label": "Engineer hours",        "value": "0.0h authored" },
+      { "label": "Tests written",         "value": "7 column + 1 combination + 1 not-null" },
+      { "label": "Lineage entries",       "value": "auto, 4 upstream" },
+      { "label": "Documentation",         "value": "in YAML on materialize" },
+      { "label": "CSCO standup status",   "value": "root cause in hand" },
+      { "label": "Trade-spend at risk",   "value": "execution fix scoped" }
+    ],
+    "narrative": [
+      "Explorer runs status and search. Returns the four silver upstream candidates.",
+      "Summary runs describe and lineage. Confirms join path and names the new grain.",
+      "Worker runs dbt_show on a 6-week BTS slice. Validates the proposed grain.",
+      "Worker authors fct_lift_by_sku_promo_region_week.sql with CTEs and final SELECT.",
+      "Verification writes the YAML — description, schema contract, 9 tests, ownership.",
+      "Worker materializes the table to Iceberg. Verification confirms downstream lineage.",
+      "VP Demand Planning presents execution root cause at the CSCO standup with data."
+    ]
+  },
+  "governance": [
+    { "label": "Tests written",           "value": "7 column-level + 1 combination + 1 not-null" },
+    { "label": "Schema contract",         "value": "enforced on materialize" },
+    { "label": "Lineage upstreams",       "value": "4 declared, 4 validated" },
+    { "label": "Documentation",           "value": "auto-written in YAML" },
+    { "label": "Ownership",              "value": "demand_planning" },
+    { "label": "Tag",                     "value": "ai_built · trade_promo" },
+    { "label": "Iceberg table format",    "value": "v2 · Parquet · ZSTD" },
+    { "label": "Open Catalog entry",      "value": "complete" }
+  ],
+  "hero": {
+    "label": "Root cause identified 10 hours before the CSCO standup — execution audit, not a promo redesign",
+    "value": "90 seconds",
+    "note": "From VP question to materialized Iceberg gold table — versioned, tested, documented, lineage-tracked. The demand planning team now knows the endcap setup lag and signage timing are the gap. The fix is a retailer execution protocol change, not a trade investment redesign."
+  }
+}

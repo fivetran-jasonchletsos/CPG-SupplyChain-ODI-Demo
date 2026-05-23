@@ -1,0 +1,116 @@
+{
+  "events": [
+    {
+      "from": "explorer",
+      "step": 1,
+      "step_label": "Discovery",
+      "body": "Running status against the dbt project. Project parses clean — 28 models, 96 tests, last refresh 06:45 CST.",
+      "side_effect": "tool:status returned ok · 28 models · 96 tests"
+    },
+    {
+      "from": "explorer",
+      "step": 1,
+      "step_label": "Discovery",
+      "body": "Running search for 'promo lift', 'back-to-school', 'SKU mix', 'Mid-Atlantic', 'execution audit', 'endcap', 'signage', 'POS velocity'. Four upstream models surface: int_pos_signals, int_promo_calendar, int_store_execution, int_sku_master.",
+      "side_effect": "tool:search matched int_pos_signals, int_promo_calendar, int_store_execution, int_sku_master"
+    },
+    {
+      "from": "summary",
+      "step": 2,
+      "step_label": "Schema Understanding",
+      "body": "Running describe on each candidate. int_pos_signals is store-sku-day grain with units_sold, baseline_units, and promo_flag. int_promo_calendar carries planned_lift_pct, display_type, and signage_confirmed keyed on promo_id and sku_id. int_store_execution has endcap_setup_date, signage_live_date, and store_region — the execution audit we need for the Mid-Atlantic gap.",
+      "side_effect": "tool:describe returned grain=store_id·sku_id·day on int_pos_signals · grain=promo_id·sku_id·week on int_promo_calendar · grain=store_id·promo_id on int_store_execution"
+    },
+    {
+      "from": "summary",
+      "step": 2,
+      "step_label": "Schema Understanding",
+      "body": "Running lineage. Join path is clean: POS signals join promo calendar on sku_id and week, execution audit attaches via store_id and promo_id, SKU master joins on sku_id. Gap is confirmed — no gold model rolls up actual versus planned lift by (sku_id, promo_id, region, week). That is exactly what gold.fct_lift_by_sku_promo_region_week needs to be.",
+      "side_effect": "tool:lineage validated join path · gap confirmed at weekly region-sku grain"
+    },
+    {
+      "from": "worker",
+      "step": 3,
+      "step_label": "Data Inspection",
+      "body": "Spinning up an XS warehouse and running dbt_show on a 6-week slice filtered to the BTS promo window (weeks ending 2026-08-25 through 2026-09-29). Mid-Atlantic actual lift averages 3.1% vs planned 17.1% — a 14-point miss. Midwest shows 16.8% vs planned 17.1%. The regional gap is real and the grain is viable.",
+      "side_effect": "tool:warehouse start XS · tool:dbt_show 6-week BTS promo slice · Mid-Atlantic lift 3.1% vs planned 17.1% confirmed"
+    },
+    {
+      "from": "worker",
+      "step": 4,
+      "step_label": "Model Creation",
+      "body": "Authoring models/gold/fct_lift_by_sku_promo_region_week.sql. Writing the config block first — table materialization, gold schema, tags trade_promo and ai_built.",
+      "code_target": "sql",
+      "code_append": "{{ config(materialized='table', schema='gold', tags=['trade_promo', 'ai_built']) }}\n\n"
+    },
+    {
+      "from": "worker",
+      "step": 4,
+      "step_label": "Model Creation",
+      "body": "Writing the header docblock so downstream readers know what this model is and who built it.",
+      "code_target": "sql",
+      "code_append": "-- gold.fct_lift_by_sku_promo_region_week\n-- Promotional lift actuals vs plan by (sku_id, promo_id, region, week_start_date)\n-- Built live by dbt-wizard sub-agents in response to CSCO standup escalation\n-- Sources: int_pos_signals + int_promo_calendar + int_store_execution + int_sku_master\n\n"
+    },
+    {
+      "from": "worker",
+      "step": 4,
+      "step_label": "Model Creation",
+      "body": "Anchoring the POS velocity CTE to promo-active store-sku-week combinations and rolling up to region-week grain.",
+      "code_target": "sql",
+      "code_append": "with pos_weekly as (\n    select\n        p.sku_id,\n        p.store_id,\n        date_trunc('week', p.sale_date) as week_start_date,\n        sum(p.units_sold)     as actual_units,\n        sum(p.baseline_units) as baseline_units\n    from {{ ref('int_pos_signals') }} p\n    where p.promo_flag = true\n    group by 1, 2, 3\n),\n\n"
+    },
+    {
+      "from": "worker",
+      "step": 4,
+      "step_label": "Model Creation",
+      "body": "Joining execution audit data to tag each store-week with region, endcap setup status, and signage live date relative to the promo start.",
+      "code_target": "sql",
+      "code_append": "execution_tagged as (\n    select\n        pw.sku_id,\n        pw.week_start_date,\n        ex.store_region     as region,\n        pc.promo_id,\n        pc.planned_lift_pct,\n        pc.display_type,\n        ex.endcap_setup_date,\n        ex.signage_live_date,\n        datediff('day', pc.promo_start_date, ex.endcap_setup_date)   as endcap_setup_lag_days,\n        datediff('day', pc.promo_start_date, ex.signage_live_date)    as signage_lag_days,\n        pw.actual_units,\n        pw.baseline_units\n    from pos_weekly pw\n    join {{ ref('int_store_execution') }} ex  on ex.store_id = pw.store_id\n    join {{ ref('int_promo_calendar') }}  pc  on pc.sku_id   = pw.sku_id\n                                             and pc.promo_week = pw.week_start_date\n    join {{ ref('int_sku_master') }}      sk  on sk.sku_id   = pw.sku_id\n)\n\n"
+    },
+    {
+      "from": "worker",
+      "step": 4,
+      "step_label": "Model Creation",
+      "body": "Final SELECT — one row per (sku_id, promo_id, region, week_start_date). Store count, unit totals, planned and actual lift, and execution gap flags.",
+      "code_target": "sql",
+      "code_append": "select\n    sku_id,\n    promo_id,\n    region,\n    week_start_date,\n    count(distinct store_id)                                     as store_count,\n    sum(actual_units)                                            as actual_units,\n    sum(baseline_units)                                          as baseline_units,\n    avg(planned_lift_pct)                                        as planned_lift_pct,\n    (sum(actual_units) - sum(baseline_units))\n        / nullif(sum(baseline_units), 0)                         as actual_lift_pct,\n    avg(endcap_setup_lag_days)                                   as avg_endcap_setup_lag_days,\n    avg(signage_lag_days)                                        as avg_signage_lag_days,\n    sum(case when endcap_setup_lag_days > 0 then 1 else 0 end)   as stores_with_late_endcap,\n    sum(case when signage_lag_days > 0 then 1 else 0 end)        as stores_with_late_signage\nfrom execution_tagged\ngroup by 1, 2, 3, 4\norder by week_start_date desc, region, sku_id\n"
+    },
+    {
+      "from": "verification",
+      "step": 5,
+      "step_label": "Test Authoring",
+      "body": "Writing the YAML companion. Description first, then the schema contract — every column gets a type so downstream trade-promo dashboards and the demand planning agent can resolve it without ambiguity.",
+      "code_target": "yaml",
+      "code_append": "version: 2\n\nmodels:\n  - name: fct_lift_by_sku_promo_region_week\n    description: |\n      Promotional lift actuals vs plan aggregated to\n      (sku_id, promo_id, region, week_start_date). Denominator is\n      baseline units from the same store-sku in non-promo weeks.\n      Includes execution audit metrics: endcap setup lag and signage\n      live lag relative to promo start. Built by dbt-wizard sub-agents\n      on 2026-05-23 in response to the CSCO standup escalation on the\n      Mid-Atlantic BTS promo miss.\n    config:\n      contract:\n        enforced: true\n      tags: [trade_promo, ai_built]\n      meta:\n        owner: demand_planning\n        built_by: dbt-wizard\n        consumes: [int_pos_signals, int_promo_calendar, int_store_execution, int_sku_master]\n\n"
+    },
+    {
+      "from": "verification",
+      "step": 5,
+      "step_label": "Test Authoring",
+      "body": "Adding column-level tests. Uniqueness on the composite key (sku_id, promo_id, region, week_start_date). Not-null on actual_lift_pct and store_count. Accepted values on region to catch territory taxonomy drift.",
+      "code_target": "yaml",
+      "code_append": "    columns:\n      - name: sku_id\n        data_type: varchar\n        tests:\n          - not_null\n      - name: promo_id\n        data_type: varchar\n        tests:\n          - not_null\n      - name: region\n        data_type: varchar\n        tests:\n          - not_null\n          - accepted_values:\n              values: ['Mid-Atlantic', 'Midwest', 'Southeast', 'Northeast', 'Southwest', 'West', 'Pacific']\n      - name: week_start_date\n        data_type: date\n        tests:\n          - not_null\n      - name: store_count\n        data_type: number\n        tests:\n          - not_null\n      - name: planned_lift_pct\n        data_type: float\n      - name: actual_lift_pct\n        data_type: float\n        tests:\n          - not_null\n      - name: avg_endcap_setup_lag_days\n        data_type: float\n      - name: stores_with_late_endcap\n        data_type: number\n      - name: stores_with_late_signage\n        data_type: number\n\n    tests:\n      - dbt_utils.unique_combination_of_columns:\n          combination_of_columns: [sku_id, promo_id, region, week_start_date]\n"
+    },
+    {
+      "from": "verification",
+      "step": 5,
+      "step_label": "Test Authoring",
+      "body": "Running dbt_show on the compiled model against the 6-week BTS window. All column tests resolve clean. Schema contract enforces. Mid-Atlantic avg_endcap_setup_lag_days is 4.1 — stores received and mounted endcap displays 4 days after promo start, missing peak BTS traffic. Midwest lag is 0.2 days.",
+      "side_effect": "tool:dbt_show compiled · tests:passed · contract:enforced · Mid-Atlantic endcap lag 4.1d vs Midwest 0.2d confirmed"
+    },
+    {
+      "from": "worker",
+      "step": 6,
+      "step_label": "Materialization",
+      "body": "Materializing gold.fct_lift_by_sku_promo_region_week to Iceberg on S3 via the Snowflake dbt adapter. Writing Parquet files to the gold S3 prefix. Registering with the Open Catalog.",
+      "side_effect": "tool:dbt_run materialized 1 model · 312 rows · 0.03 GB · 8.4s"
+    },
+    {
+      "from": "verification",
+      "step": 6,
+      "step_label": "Materialization",
+      "body": "Running lineage one more time. Four upstreams attached. Downstream consumers — trade promo dashboard, demand planning agent, S&OP reporting layer — can now resolve the new gold table on their next pass. Sarah Osei has a production asset to bring to the CSCO standup in 10 hours.",
+      "side_effect": "tool:lineage updated · downstream consumers notified · 28 models → 29 models"
+    }
+  ]
+}

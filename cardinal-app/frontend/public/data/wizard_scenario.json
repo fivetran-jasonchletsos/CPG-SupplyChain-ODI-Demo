@@ -1,0 +1,46 @@
+{
+  "company": "Cardinal Provisions",
+  "request_id": "BLD-2026-05-23-0014",
+  "requested_by": "Sarah Osei, VP Demand Planning",
+  "requested_at": "2026-05-23T07:12:00-05:00",
+  "timezone_label": "Friday 07:12 CST",
+  "question": "Why did our snack-bar SKU mix drop 14% of expected lift during the back-to-school promo in the Mid-Atlantic, while the Midwest hit target?",
+  "metric_label": "Promo lift by SKU, region, and week",
+  "metric_code": "gold.fct_lift_by_sku_promo_region_week",
+  "sop_meeting_at": "2026-05-23T17:00:00-05:00",
+  "sop_meeting_label": "Friday 17:00 CST — CSCO standup",
+  "target_schema": "gold",
+  "target_model": "fct_lift_by_sku_promo_region_week",
+  "target_grain": "one row per (sku_id, promo_id, region, week_start_date)",
+  "prior_crisis_id": "INC-2026-05-19-0044",
+  "region_focus": "Mid-Atlantic",
+  "category": "Snack Bars",
+  "upstream_models": [
+    {
+      "model": "silver.int_pos_signals",
+      "layer": "intermediate",
+      "grain": "store_id · sku_id · day",
+      "description": "Point-of-sale velocity from Walmart Retail Link, Target Partners Online, and Kroger Vendor Portal via Fivetran. Includes units_sold, baseline_units, and promo_flag by store-sku-day."
+    },
+    {
+      "model": "silver.int_promo_calendar",
+      "layer": "intermediate",
+      "grain": "promo_id · sku_id · week",
+      "description": "Unified promotional calendar from SAP TPM and retailer confirmation portals. Carries planned_lift_pct, display_type, signage_confirmed, and execution_window dates."
+    },
+    {
+      "model": "silver.int_store_execution",
+      "layer": "intermediate",
+      "grain": "store_id · promo_id",
+      "description": "Retailer execution audit data — endcap compliance, display setup date, signage_live_date, and store_region. Sourced from Syndicated Panel and retailer portals via Fivetran."
+    },
+    {
+      "model": "silver.int_sku_master",
+      "layer": "intermediate",
+      "grain": "sku_id",
+      "description": "SKU master with category, subcategory, brand, and pack configuration. Sourced from SAP S/4HANA product master via Fivetran connector."
+    }
+  ],
+  "manual_time_days": "3 to 5 days",
+  "build_room_seconds": 90
+}

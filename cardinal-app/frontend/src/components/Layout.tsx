@@ -12,6 +12,7 @@ const NAV_ITEMS: [string, string][] = [
   ['/esg', 'ESG'],
   ['/architecture', 'ODI Architecture'],
   ['/pipeline', 'Pipeline'],
+  ['/wizard', 'dbt-wizard'],
   ['/policy', 'Policy Brief'],
   ['/about', 'About'],
 ];
@@ -162,8 +163,18 @@ export default function Layout() {
           </div>
         </div>
         <div className="border-t border-white/10">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 text-[11px] text-white/55 flex flex-col sm:flex-row gap-1 sm:items-center sm:justify-between">
-            <div>© 2026 Cardinal Provisions ODI Demo, Fivetran Open Data Infrastructure</div>
+          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 text-[11px] text-white/55 flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between">
+            <div className="flex items-center gap-3 flex-wrap">
+              <span>© 2026 Cardinal Provisions ODI Demo, Fivetran Open Data Infrastructure</span>
+              <a
+                href={`${(import.meta.env.BASE_URL ?? '/').replace(/\/$/, '')}/Cardinal-Provisions-3min-Demo-Runbook.pdf`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-sm border text-[10px] font-semibold uppercase tracking-wider text-white/70 border-white/20 hover:bg-white/10 transition-colors"
+              >
+                3-min Runbook PDF
+              </a>
+            </div>
             <div>Snapshot {snapshotAt ? new Date(snapshotAt).toLocaleString() : '—'}</div>
           </div>
         </div>
