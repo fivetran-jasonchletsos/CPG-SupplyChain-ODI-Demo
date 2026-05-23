@@ -1,27 +1,204 @@
 {
   "generated_at": "2026-05-20T08:00:00Z",
   "connectors": [
-    { "id": "sap_s4hana",           "fivetran_id": "sap_s4hana_cpg_prod",        "name": "SAP S/4HANA",                "category": "ERP",            "status": "healthy", "last_sync": "2026-05-20T07:45:00Z", "sync_freq_minutes": 15, "rows_24h": 4820000, "lag_seconds": 92,  "lineage_label": "Fivetran", "notes": "Production orders, sales orders, deliveries, material master" },
-    { "id": "manhattan_wms",        "fivetran_id": "manhattan_wms_cpg_prod",     "name": "Manhattan Associates WMS",   "category": "Warehouse",      "status": "healthy", "last_sync": "2026-05-20T07:48:00Z", "sync_freq_minutes": 5,  "rows_24h": 9200000, "lag_seconds": 41,  "lineage_label": "Fivetran", "notes": "Inventory positions, dock-to-stock events, putaway, picks" },
-    { "id": "oracle_tms",           "fivetran_id": "oracle_tms_cpg_prod",        "name": "Oracle Transportation Mgmt", "category": "Transportation", "status": "healthy", "last_sync": "2026-05-20T07:50:00Z", "sync_freq_minutes": 5,  "rows_24h": 1800000, "lag_seconds": 33,  "lineage_label": "Fivetran", "notes": "Carrier tenders, accepted shipments, in-transit telemetry" },
-    { "id": "salesforce_accounts",  "fivetran_id": "salesforce_accounts_cpg",    "name": "Salesforce — Retailer Accts","category": "CRM",            "status": "healthy", "last_sync": "2026-05-20T07:30:00Z", "sync_freq_minutes": 30, "rows_24h": 86000,   "lag_seconds": 184, "lineage_label": "Fivetran", "notes": "Retailer master, promotion calendar, contracts" },
-    { "id": "walmart_retail_link",  "fivetran_id": "walmart_retail_link_cpg",    "name": "Retail Link (POS feed)",     "category": "POS",            "status": "degraded","last_sync": "2026-05-20T05:00:00Z", "sync_freq_minutes": 60, "rows_24h": 12400000,"lag_seconds": 9420, "lineage_label": "Fivetran", "notes": "Weekly POS by store-SKU; daily store-traffic and OOS feeds — schema drift on Wk-19 ASN extension, auto-handled" },
-    { "id": "amazon_vendor_central","fivetran_id": "amazon_vc_cpg_prod",         "name": "Amazon Vendor Central",      "category": "POS",            "status": "healthy", "last_sync": "2026-05-20T07:00:00Z", "sync_freq_minutes": 60, "rows_24h": 2800000, "lag_seconds": 1740,"lineage_label": "Fivetran", "notes": "Sales diagnostics, inventory health, shipped revenue" },
-    { "id": "syndicated_panel",     "fivetran_id": "syndicated_panel_cpg",       "name": "Syndicated panel (Nielsen/IRI/Circana style)", "category": "Syndicated", "status": "healthy", "last_sync": "2026-05-20T06:00:00Z", "sync_freq_minutes": 1440, "rows_24h": 24000000, "lag_seconds": 7200, "lineage_label": "Fivetran", "notes": "Weekly category-level scan: $ sales, units, ACV, distribution" },
-    { "id": "target_partners_online","fivetran_id": "target_partners_online_cpg","name": "Target Partners Online",     "category": "POS",            "status": "healthy", "last_sync": "2026-05-21T06:30:00Z", "sync_freq_minutes": 60, "rows_24h": 3800000, "lag_seconds": 1240,"lineage_label": "Fivetran", "notes": "Bullseye Vendor Scorecard, store-SKU POS, chargeback feed" },
-    { "id": "kroger_vendor_portal", "fivetran_id": "kroger_vendor_portal_cpg",  "name": "Kroger Vendor Portal",       "category": "POS",            "status": "healthy", "last_sync": "2026-05-21T06:15:00Z", "sync_freq_minutes": 60, "rows_24h": 2400000, "lag_seconds": 1820,"lineage_label": "Fivetran", "notes": "Store-SKU POS, Compliance Grid, JBP attainment extract" },
-    { "id": "carrier_portals",      "fivetran_id": "carrier_portals_cpg_prod",  "name": "Carrier portals (10 carriers)","category": "Transportation","status": "healthy", "last_sync": "2026-05-21T07:30:00Z", "sync_freq_minutes": 15, "rows_24h": 220000,  "lag_seconds": 64,  "lineage_label": "Fivetran", "notes": "Tender acceptance, in-transit GPS, POD, OTD by lane" },
-    { "id": "sustainability_dw",    "fivetran_id": "sustainability_dw_cpg",     "name": "Sustainability data warehouse","category": "ESG",          "status": "healthy", "last_sync": "2026-05-20T03:00:00Z", "sync_freq_minutes": 1440, "rows_24h": 142000, "lag_seconds": 18000,"lineage_label": "Fivetran", "notes": "Scope 1 / 2 / 3 emissions, water, packaging, EPR filings" }
+    {
+      "id": "sap_s4hana",
+      "fivetran_id": "lamina_bare",
+      "name": "SAP S/4HANA",
+      "category": "ERP",
+      "status": "healthy",
+      "last_sync": "2026-05-20T07:45:00Z",
+      "sync_freq_minutes": 15,
+      "rows_24h": 4820000,
+      "lag_seconds": 92,
+      "lineage_label": "Fivetran",
+      "notes": "Production orders, sales orders, deliveries, material master"
+    },
+    {
+      "id": "manhattan_wms",
+      "fivetran_id": "radioactive_assistance",
+      "name": "Manhattan Associates WMS",
+      "category": "Warehouse",
+      "status": "healthy",
+      "last_sync": "2026-05-20T07:48:00Z",
+      "sync_freq_minutes": 5,
+      "rows_24h": 9200000,
+      "lag_seconds": 41,
+      "lineage_label": "Fivetran",
+      "notes": "Inventory positions, dock-to-stock events, putaway, picks"
+    },
+    {
+      "id": "oracle_tms",
+      "fivetran_id": "individually_creativity",
+      "name": "Oracle Transportation Mgmt",
+      "category": "Transportation",
+      "status": "healthy",
+      "last_sync": "2026-05-20T07:50:00Z",
+      "sync_freq_minutes": 5,
+      "rows_24h": 1800000,
+      "lag_seconds": 33,
+      "lineage_label": "Fivetran",
+      "notes": "Carrier tenders, accepted shipments, in-transit telemetry"
+    },
+    {
+      "id": "salesforce_accounts",
+      "fivetran_id": "poorly_manic",
+      "name": "Salesforce \u2014 Retailer Accts",
+      "category": "CRM",
+      "status": "healthy",
+      "last_sync": "2026-05-20T07:30:00Z",
+      "sync_freq_minutes": 30,
+      "rows_24h": 86000,
+      "lag_seconds": 184,
+      "lineage_label": "Fivetran",
+      "notes": "Retailer master, promotion calendar, contracts"
+    },
+    {
+      "id": "walmart_retail_link",
+      "fivetran_id": "diverging_reed",
+      "name": "Retail Link (POS feed)",
+      "category": "POS",
+      "status": "degraded",
+      "last_sync": "2026-05-20T05:00:00Z",
+      "sync_freq_minutes": 60,
+      "rows_24h": 12400000,
+      "lag_seconds": 9420,
+      "lineage_label": "Fivetran",
+      "notes": "Weekly POS by store-SKU; daily store-traffic and OOS feeds \u2014 schema drift on Wk-19 ASN extension, auto-handled"
+    },
+    {
+      "id": "amazon_vendor_central",
+      "fivetran_id": "crop_taxi",
+      "name": "Amazon Vendor Central",
+      "category": "POS",
+      "status": "healthy",
+      "last_sync": "2026-05-20T07:00:00Z",
+      "sync_freq_minutes": 60,
+      "rows_24h": 2800000,
+      "lag_seconds": 1740,
+      "lineage_label": "Fivetran",
+      "notes": "Sales diagnostics, inventory health, shipped revenue"
+    },
+    {
+      "id": "syndicated_panel",
+      "fivetran_id": "pack_chiefly",
+      "name": "Syndicated panel (Nielsen/IRI/Circana style)",
+      "category": "Syndicated",
+      "status": "healthy",
+      "last_sync": "2026-05-20T06:00:00Z",
+      "sync_freq_minutes": 1440,
+      "rows_24h": 24000000,
+      "lag_seconds": 7200,
+      "lineage_label": "Fivetran",
+      "notes": "Weekly category-level scan: $ sales, units, ACV, distribution"
+    },
+    {
+      "id": "target_partners_online",
+      "fivetran_id": "hedging_publishing",
+      "name": "Target Partners Online",
+      "category": "POS",
+      "status": "healthy",
+      "last_sync": "2026-05-21T06:30:00Z",
+      "sync_freq_minutes": 60,
+      "rows_24h": 3800000,
+      "lag_seconds": 1240,
+      "lineage_label": "Fivetran",
+      "notes": "Bullseye Vendor Scorecard, store-SKU POS, chargeback feed"
+    },
+    {
+      "id": "kroger_vendor_portal",
+      "fivetran_id": "helix_reconstructed",
+      "name": "Kroger Vendor Portal",
+      "category": "POS",
+      "status": "healthy",
+      "last_sync": "2026-05-21T06:15:00Z",
+      "sync_freq_minutes": 60,
+      "rows_24h": 2400000,
+      "lag_seconds": 1820,
+      "lineage_label": "Fivetran",
+      "notes": "Store-SKU POS, Compliance Grid, JBP attainment extract"
+    },
+    {
+      "id": "carrier_portals",
+      "fivetran_id": "fortunate_star",
+      "name": "Carrier portals (10 carriers)",
+      "category": "Transportation",
+      "status": "healthy",
+      "last_sync": "2026-05-21T07:30:00Z",
+      "sync_freq_minutes": 15,
+      "rows_24h": 220000,
+      "lag_seconds": 64,
+      "lineage_label": "Fivetran",
+      "notes": "Tender acceptance, in-transit GPS, POD, OTD by lane"
+    },
+    {
+      "id": "sustainability_dw",
+      "fivetran_id": "rubble_weighty",
+      "name": "Sustainability data warehouse",
+      "category": "ESG",
+      "status": "healthy",
+      "last_sync": "2026-05-20T03:00:00Z",
+      "sync_freq_minutes": 1440,
+      "rows_24h": 142000,
+      "lag_seconds": 18000,
+      "lineage_label": "Fivetran",
+      "notes": "Scope 1 / 2 / 3 emissions, water, packaging, EPR filings"
+    }
   ],
   "layers": [
-    { "layer": "bronze", "table_count": 87,  "row_count_billions": 41.2, "size_tb": 12.4, "freshness_minutes": 22 },
-    { "layer": "silver", "table_count": 54,  "row_count_billions": 22.6, "size_tb": 6.8,  "freshness_minutes": 38 },
-    { "layer": "gold",   "table_count": 38,  "row_count_billions": 3.4,  "size_tb": 1.2,  "freshness_minutes": 55 },
-    { "layer": "marts",  "table_count": 22,  "row_count_billions": 0.6,  "size_tb": 0.3,  "freshness_minutes": 75 }
+    {
+      "layer": "bronze",
+      "table_count": 87,
+      "row_count_billions": 41.2,
+      "size_tb": 12.4,
+      "freshness_minutes": 22
+    },
+    {
+      "layer": "silver",
+      "table_count": 54,
+      "row_count_billions": 22.6,
+      "size_tb": 6.8,
+      "freshness_minutes": 38
+    },
+    {
+      "layer": "gold",
+      "table_count": 38,
+      "row_count_billions": 3.4,
+      "size_tb": 1.2,
+      "freshness_minutes": 55
+    },
+    {
+      "layer": "marts",
+      "table_count": 22,
+      "row_count_billions": 0.6,
+      "size_tb": 0.3,
+      "freshness_minutes": 75
+    }
   ],
   "failures": [
-    { "id": "FAIL-001", "title": "Retail Link CSV column added (ASN extension)",       "detected_at": "2026-05-19T04:12:00Z", "resolved_at": "2026-05-19T04:14:00Z", "resolution": "Fivetran schema-evolution promoted new column to bronze, dbt staging unaffected", "lineage_label": "Fivetran" },
-    { "id": "FAIL-002", "title": "OTM authentication token rotated by source system","detected_at": "2026-05-12T09:08:00Z", "resolved_at": "2026-05-12T09:14:00Z", "resolution": "Token refresh via Fivetran connector self-heal; zero rows missed",        "lineage_label": "Fivetran" },
-    { "id": "FAIL-003", "title": "Salesforce API rate-limit spike",                    "detected_at": "2026-05-08T22:31:00Z", "resolved_at": "2026-05-08T22:53:00Z", "resolution": "Fivetran backoff escalated and resumed; promotion calendar refresh delayed 22 min", "lineage_label": "Fivetran" }
+    {
+      "id": "FAIL-001",
+      "title": "Retail Link CSV column added (ASN extension)",
+      "detected_at": "2026-05-19T04:12:00Z",
+      "resolved_at": "2026-05-19T04:14:00Z",
+      "resolution": "Fivetran schema-evolution promoted new column to bronze, dbt staging unaffected",
+      "lineage_label": "Fivetran"
+    },
+    {
+      "id": "FAIL-002",
+      "title": "OTM authentication token rotated by source system",
+      "detected_at": "2026-05-12T09:08:00Z",
+      "resolved_at": "2026-05-12T09:14:00Z",
+      "resolution": "Token refresh via Fivetran connector self-heal; zero rows missed",
+      "lineage_label": "Fivetran"
+    },
+    {
+      "id": "FAIL-003",
+      "title": "Salesforce API rate-limit spike",
+      "detected_at": "2026-05-08T22:31:00Z",
+      "resolved_at": "2026-05-08T22:53:00Z",
+      "resolution": "Fivetran backoff escalated and resumed; promotion calendar refresh delayed 22 min",
+      "lineage_label": "Fivetran"
+    }
   ]
 }
