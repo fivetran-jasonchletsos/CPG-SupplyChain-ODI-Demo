@@ -17,9 +17,44 @@ export default function PipelinePage() {
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       <PageHeader
         eyebrow="Data Pipeline"
-        title="Nine Fivetran connectors, four dbt layers, one lineage label"
-        subtitle="Every row in the lake has Fivetran as its source-of-truth ingestion lineage. Schema evolution, token rotation, and rate-limit handling are connector responsibilities, not dbt responsibilities."
+        title="SAP, WMS, retailer POS, panel &rarr; Iceberg &rarr; multi-engine, end-to-end"
+        subtitle="Fivetran lands every CDC row into Iceberg (MDLS) on S3. Snowflake, Athena, and Trino read the same Iceberg bytes via external catalogs &mdash; no copies, no extracts. Fivetran Transformations triggers dbt Labs the moment the source sync finishes; bronze, silver, and gold all stay in Iceberg."
       />
+
+      {/* Canonical flow: Source -> Fivetran -> Iceberg (MDLS) -> Compute -> dbt -> React */}
+      <section className="surface p-5 mb-8">
+        <div className="eyebrow mb-3">Canonical flow</div>
+        <ol className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6 gap-3 text-xs">
+          {[
+            { stage: '01', label: 'Source', sub: 'SAP, WMS, OMS, POS, panel' },
+            { stage: '02', label: 'Fivetran', sub: 'CDC + batch connectors' },
+            { stage: '03', label: 'Iceberg (MDLS)', sub: 'Open table format on S3 — one copy of the bytes' },
+            { stage: '04', label: 'Snowflake / Athena / Trino', sub: 'External Iceberg reads' },
+            { stage: '05', label: 'dbt Labs', sub: 'Triggered by Fivetran — bronze, silver, gold in Iceberg' },
+            { stage: '06', label: 'React', sub: 'Planner workbench + CSCO console' },
+          ].map((s, i, arr) => (
+            <li
+              key={s.stage}
+              className="relative border border-[var(--hairline)] rounded-sm p-3 bg-white"
+              style={i === 2 ? { borderLeft: '3px solid var(--crimson)' } : undefined}
+            >
+              <div className="text-[10px] uppercase tracking-wider text-[var(--ink-soft)] num">{s.stage}</div>
+              <div className="font-serif text-sm font-semibold text-[var(--ink-strong)] mt-0.5 leading-tight">
+                {s.label}
+              </div>
+              <div className="text-[11px] text-[var(--ink-muted)] mt-1 leading-snug">{s.sub}</div>
+              {i < arr.length - 1 && (
+                <span
+                  aria-hidden
+                  className="hidden lg:block absolute -right-2.5 top-1/2 -translate-y-1/2 text-[var(--ink-soft)]"
+                >
+                  &rarr;
+                </span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </section>
 
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
         {data?.layers.map((l) => (

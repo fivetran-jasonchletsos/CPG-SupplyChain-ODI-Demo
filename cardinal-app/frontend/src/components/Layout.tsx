@@ -250,16 +250,16 @@ export default function Layout() {
           <div>
             <div className="eyebrow-light mb-2">Data Pipeline</div>
             <p className="leading-relaxed text-white/75">
-              SAP S/4HANA, Manhattan WMS, Oracle TMS, Salesforce, Walmart Retail Link, Amazon Vendor
-              Central, Target Partners Online, Kroger Vendor Portal, syndicated panel, carrier portals,
-              sustainability DW into Fivetran connectors, landed in Apache Iceberg on S3, transformed by dbt across bronze, silver, gold.
+              Source &rarr; Fivetran &rarr; Iceberg (MDLS) &rarr; Snowflake / Athena / Trino &rarr; dbt Labs &rarr; React.
+              SAP, WMS, retailer POS, and syndicated panel land in Iceberg on S3; dbt Labs runs the moment Fivetran
+              finishes syncing.
             </p>
           </div>
           <div>
             <div className="eyebrow-light mb-2">Open Standards</div>
             <p className="leading-relaxed text-white/75">
               Apache Iceberg, AWS Glue Data Catalog, ANSI SQL, dbt semantic layer.
-              Snowflake, Athena, Trino, DuckDB on the same files. No lock-in.
+              Snowflake, Athena, and Trino read the same bytes via external catalogs &mdash; no copies, no extracts.
             </p>
           </div>
         </div>

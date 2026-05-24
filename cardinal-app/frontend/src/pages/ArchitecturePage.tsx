@@ -13,7 +13,7 @@ import { AliveMedallion, type SourceNode, type EngineNode } from '../components/
 
 const CPG_SOURCES: SourceNode[] = [
   { id: 'sap',     label: 'SAP ECC Orders',         sub: 'SQL Server log-CDC',     logo: 'sqlserver', freshness: '41s lag',  status: 'healthy' },
-  { id: 'wms',     label: 'Manhattan WMS',          sub: 'Oracle LogMiner',         logo: 'oracle',    freshness: '2 min lag', status: 'healthy' },
+  { id: 'wms',     label: 'Manhattan WMS',          sub: 'Oracle Binary Log Reader', logo: 'oracle',    freshness: '2 min lag', status: 'healthy' },
   { id: 'pos',     label: 'Retailer POS Feed',      sub: 'Daily syndicated stream', logo: 'hl7',       freshness: 'live',      status: 'healthy', streaming: true },
   { id: 'nielsen', label: 'Nielsen Consumption',    sub: 'Weekly market data',      logo: 'cms',       freshness: '5d lag',    status: 'healthy' },
 ];
@@ -171,9 +171,15 @@ export default function ArchitecturePage() {
       {/* ── Data Flow diagram (AliveMedallion) ─────────────────────────── */}
       <section className="surface p-6 sm:p-8 mb-10">
         <div className="eyebrow mb-1">Data Flow</div>
-        <h2 className="font-serif text-2xl font-semibold text-[var(--ink-strong)] mb-6">
-          From SAP, WMS, retailer POS, and syndicated panel to one governed gold layer
+        <h2 className="font-serif text-2xl font-semibold text-[var(--ink-strong)] mb-2">
+          Source &rarr; Fivetran &rarr; Iceberg (MDLS) &rarr; Snowflake / Athena / Trino &rarr; dbt Labs &rarr; React
         </h2>
+        <p className="text-sm text-[var(--ink-muted)] leading-relaxed mb-6 max-w-4xl">
+          Fivetran lands every CDC row into Iceberg (MDLS) on S3 in open Apache Iceberg format &mdash; one copy of
+          the bytes. Snowflake, Athena, and Trino read the same Iceberg bytes via external catalogs, no copies and
+          no extracts. Fivetran Transformations triggers dbt Labs the moment the source sync finishes, and bronze
+          &rarr; silver &rarr; gold stays in Iceberg the whole way.
+        </p>
 
         <AliveMedallion
           sources={CPG_SOURCES}

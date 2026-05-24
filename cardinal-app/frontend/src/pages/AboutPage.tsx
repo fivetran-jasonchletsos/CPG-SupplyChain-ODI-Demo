@@ -79,6 +79,35 @@ export default function AboutPage() {
       </section>
 
       <section className="mt-10">
+        <h2 className="font-serif text-2xl font-semibold text-[var(--ink-strong)] border-b border-[var(--hairline)] pb-2 mb-4">Canonical data flow</h2>
+        <div className="surface p-5">
+          <ol className="grid grid-cols-1 sm:grid-cols-5 gap-3 text-xs">
+            {[
+              { n: '01', label: 'Source',                    sub: 'SAP, WMS, OMS, POS, panel, carriers' },
+              { n: '02', label: 'Fivetran',                  sub: 'CDC + batch ingestion' },
+              { n: '03', label: 'Iceberg (MDLS)',            sub: 'Open table format on S3' },
+              { n: '04', label: 'Snowflake / Athena / Trino', sub: 'External Iceberg reads' },
+              { n: '05', label: 'dbt Labs &rarr; React',     sub: 'Fivetran-triggered transforms' },
+            ].map((s) => (
+              <li key={s.n} className="border border-[var(--hairline)] rounded-sm p-3 bg-white">
+                <div className="text-[10px] uppercase tracking-wider text-[var(--ink-soft)] num">{s.n}</div>
+                <div className="font-serif text-sm font-semibold text-[var(--ink-strong)] mt-0.5 leading-tight">{s.label}</div>
+                <div
+                  className="text-[11px] text-[var(--ink-muted)] mt-1 leading-snug"
+                  dangerouslySetInnerHTML={{ __html: s.sub }}
+                />
+              </li>
+            ))}
+          </ol>
+          <p className="text-xs text-[var(--ink-muted)] mt-3 leading-relaxed">
+            One copy of the bytes in Apache Iceberg. Snowflake, Athena, and Trino all read the same files via
+            external catalogs. Fivetran Transformations triggers dbt Labs the moment the source sync finishes; bronze
+            &rarr; silver &rarr; gold stays in Iceberg.
+          </p>
+        </div>
+      </section>
+
+      <section className="mt-10">
         <h2 className="font-serif text-2xl font-semibold text-[var(--ink-strong)] border-b border-[var(--hairline)] pb-2 mb-4">Tech stack</h2>
         <div className="surface p-5">
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 text-sm">
@@ -128,11 +157,12 @@ const PILLARS = [
 
 const STACK = [
   { layer: 'Ingest',     name: 'Fivetran connectors',          note: 'SAP S/4HANA, Manhattan WMS, Oracle TMS, Salesforce, Walmart Retail Link, Amazon Vendor Central, Target Partners Online, Kroger Vendor Portal, syndicated panel, carrier portals, sustainability DW' },
+  { layer: 'Lake',       name: 'Iceberg (MDLS) on S3',         note: 'Fivetran Managed Data Lake Service lands every CDC row in open Apache Iceberg format — one copy of the bytes' },
   { layer: 'Storage',    name: 'Amazon S3',                    note: 'cardinal-odi-lake bucket holds bronze, silver, gold prefixes' },
   { layer: 'Format',     name: 'Apache Iceberg v2',            note: 'Parquet files, ZSTD-compressed, Glue REST catalog' },
   { layer: 'Catalog',    name: 'AWS Glue Data Catalog',        note: 'Iceberg REST and table-level access control' },
-  { layer: 'Transform',  name: 'dbt',                          note: 'Iceberg-native materializations across bronze, silver, gold, marts' },
-  { layer: 'Query',      name: 'Snowflake, Athena, Trino, DuckDB', note: 'Four engines on the same files' },
+  { layer: 'Transform',  name: 'dbt Labs',                     note: 'Triggered by Fivetran Transformations the moment a source sync finishes; Iceberg-native materializations across bronze, silver, gold, marts' },
+  { layer: 'Query',      name: 'Snowflake / Athena / Trino',   note: 'External Iceberg reads — same bytes, no copies, no extracts (DuckDB at the desk for ad-hoc)' },
   { layer: 'Frontend',   name: 'React 19, Vite, Tailwind v4',  note: 'Static SPA on GitHub Pages, reads JSON snapshot' },
   { layer: 'Charts',     name: 'Recharts',                     note: 'Composable charts for forecast, OTIF, chargeback decomposition, JBP attainment' },
 ];

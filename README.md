@@ -26,7 +26,13 @@ https://fivetran-jasonchletsos.github.io/CPG-SupplyChain-ODI-Demo/
 - CME style commodity-broker price feeds
 - Sustainability data warehouse — Scope 1, 2, 3 emissions
 
-All sources land in customer-owned Apache Iceberg on S3 via Fivetran connectors. dbt builds bronze, silver, gold layers. Any compute engine reads the same files.
+## Canonical data flow
+
+```
+Source -> Fivetran -> Iceberg (MDLS) -> Snowflake / Athena / Trino -> dbt Labs -> React
+```
+
+Fivetran lands every CDC row into Iceberg (MDLS) on S3 in open Apache Iceberg format — one copy of the bytes. Snowflake, Athena, and Trino read the same Iceberg bytes via external catalogs (no copies, no extracts). Fivetran Transformations triggers dbt Labs the moment the source sync finishes, and bronze -> silver -> gold stays in Iceberg the whole way.
 
 ## Local development
 
