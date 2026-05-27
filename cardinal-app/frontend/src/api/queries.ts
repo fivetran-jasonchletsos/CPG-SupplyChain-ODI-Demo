@@ -1,4 +1,4 @@
-// Reads gold-layer JSON snapshots built by dbt and exported to the static site.
+// Reads gold-layer gold-layer files built by dbt and exported to the static site.
 import type {
   Summary, PlantsData, DCNetwork, RetailerCompliance, ForecastData,
   POSData, TradePromotionData, CustomersData, CarrierOTDData, SustainabilityData,
@@ -9,7 +9,7 @@ const BASE = import.meta.env.BASE_URL.replace(/\/$/, '');
 
 async function fetchJson<T>(path: string): Promise<T> {
   const url = `${BASE}${path}`;
-  const res = await fetch(url, { cache: 'no-cache' });
+  const res = await fetch(url);
   if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
   return (await res.json()) as T;
 }
