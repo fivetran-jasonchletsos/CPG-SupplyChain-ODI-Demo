@@ -81,8 +81,9 @@ export default function WizardOutcomePage() {
 
   useEffect(() => {
     fetch(wizardDataUrl('wizard_outcome.json'))
-      .then(r => r.json())
-      .then(setO);
+      .then(r => { if (!r.ok) throw new Error(`Failed to fetch outcome: ${r.status}`); return r.json(); })
+      .then(setO)
+      .catch(() => {});
   }, []);
 
   if (!o) {
