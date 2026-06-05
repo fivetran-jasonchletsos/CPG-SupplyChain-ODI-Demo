@@ -12,8 +12,8 @@ import PageHeader from '../components/PageHeader';
 import { AliveMedallion, type SourceNode, type EngineNode } from '../components/AliveMedallion';
 
 const CPG_SOURCES: SourceNode[] = [
-  { id: 'sap',     label: 'SAP ECC Orders',         sub: 'SQL Server log-CDC',     logo: 'sqlserver', freshness: '41s lag',  status: 'healthy' },
-  { id: 'wms',     label: 'Manhattan WMS',          sub: 'Oracle Binary Log Reader', logo: 'oracle',    freshness: '2 min lag', status: 'healthy' },
+  { id: 'sap',     label: 'SAP ECC Orders',         sub: 'SQL Server log-CDC',     logo: 'sqlserver', freshness: '41s lag',  status: 'healthy', pipelineUrl: 'https://fivetran.com/dashboard/connectors/nor_acidity' },
+  { id: 'wms',     label: 'Manhattan WMS',          sub: 'Oracle Binary Log Reader', logo: 'oracle',    freshness: '2 min lag', status: 'healthy', pipelineUrl: 'https://fivetran.com/dashboard/connectors/restrain_doomed' },
   { id: 'pos',     label: 'Retailer POS Feed',      sub: 'Daily syndicated stream', logo: 'hl7',       freshness: 'live',      status: 'healthy', streaming: true },
   { id: 'nielsen', label: 'Nielsen Consumption',    sub: 'Weekly market data',      logo: 'cms',       freshness: '5d lag',    status: 'healthy' },
 ];
@@ -39,7 +39,7 @@ const ENGINES: QueryEngine[] = [
   {
     name: 'Snowflake',
     status: 'active',
-    description: 'Primary engine for the Cardinal gold layer. Reads Iceberg externals through Polaris catalog; auto-suspends between queries. Where the planner workbench and Cortex Analyst land.',
+    description: 'Primary engine for the Cardinal gold layer. Reads Iceberg externals through Polaris catalog; auto-suspends between queries. Where the planner workbench and the dbt-wizard run-time agents land. Humans and agents read the same gold layer.',
     sample_query: `SELECT
   r.retailer_name, s.sku_id, s.brand,
   k.otif_pct_30d, k.chargebacks_usd_30d,

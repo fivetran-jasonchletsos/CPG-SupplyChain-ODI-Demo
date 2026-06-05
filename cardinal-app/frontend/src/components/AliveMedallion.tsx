@@ -21,6 +21,7 @@ export interface SourceNode {
   status?: NodeStatus;
   streaming?: boolean;
   lagP99?: string;
+  pipelineUrl?: string;   // when set, source card renders an "Open in Fivetran" chip
 }
 
 export interface LayerStat {
@@ -115,6 +116,18 @@ export function AliveMedallion({
                         <span className="am-source-fresh">{s.freshness}</span>
                         {s.lagP99 && <span className="am-source-lag">p99 {s.lagP99}</span>}
                       </div>
+                    )}
+                    {s.pipelineUrl && (
+                      <a
+                        className="am-source-pipeline"
+                        href={s.pipelineUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <VendorMark kind="fivetran" size={12} />
+                        <span>Open in Fivetran</span>
+                        <span aria-hidden>↗</span>
+                      </a>
                     )}
                   </div>
                 </article>
@@ -532,6 +545,22 @@ const CSS = `
   color: var(--am-ink);
 }
 .am-source-lag { color: var(--am-ink-3); margin-left: auto; }
+.am-source-pipeline {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--am-rule-2);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--am-ink);
+  text-decoration: none;
+}
+.am-source-pipeline:hover {
+  color: var(--am-ink);
+  text-decoration: underline;
+}
 .am-live-dot {
   width: 6px; height: 6px; border-radius: 50%;
   animation: am-pulse 1.6s ease-in-out infinite;

@@ -250,7 +250,7 @@ export default function Layout() {
           <div>
             <div className="eyebrow-light mb-2">Data Pipeline</div>
             <p className="leading-relaxed text-white/75">
-              Source &rarr; Fivetran &rarr; Iceberg (MDLS) &rarr; dbt &rarr; Great Expectations &rarr; Snowflake / Athena / Trino &rarr; Cortex &rarr; React.
+              Source &rarr; Fivetran &rarr; Iceberg (MDLS) &rarr; dbt labs + dbt-wizard &rarr; Great Expectations &rarr; Snowflake / Athena / Trino &rarr; run-time agents &rarr; React.
               SAP, WMS, retailer POS, and syndicated panel land in Iceberg on S3; dbt Labs runs the moment Fivetran
               finishes syncing.
             </p>

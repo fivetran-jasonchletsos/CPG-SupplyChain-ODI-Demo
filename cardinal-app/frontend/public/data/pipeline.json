@@ -2,6 +2,32 @@
   "generated_at": "2026-05-20T08:00:00Z",
   "connectors": [
     {
+      "id": "nor_acidity",
+      "fivetran_id": "nor_acidity",
+      "name": "SAP ECC Orders (SQL Server)",
+      "category": "ERP",
+      "status": "healthy",
+      "last_sync": "2026-05-24T06:00:00Z",
+      "sync_freq_minutes": 15,
+      "rows_24h": 4820000,
+      "lag_seconds": 92,
+      "lineage_label": "Fivetran",
+      "notes": "Production orders, sales orders, deliveries, material master"
+    },
+    {
+      "id": "restrain_doomed",
+      "fivetran_id": "restrain_doomed",
+      "name": "Manhattan WMS (Oracle)",
+      "category": "ERP",
+      "status": "healthy",
+      "last_sync": "2026-05-24T06:00:00Z",
+      "sync_freq_minutes": 15,
+      "rows_24h": 4820000,
+      "lag_seconds": 92,
+      "lineage_label": "Fivetran",
+      "notes": "Production orders, sales orders, deliveries, material master"
+    },
+    {
       "id": "sap_s4hana",
       "fivetran_id": "lamina_bare",
       "name": "SAP S/4HANA",
