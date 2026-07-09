@@ -16,6 +16,7 @@ import NotFoundPage from './pages/NotFoundPage';
 import WizardScenarioPage from './pages/WizardScenarioPage';
 import WizardLivePage from './pages/WizardLivePage';
 import WizardOutcomePage from './pages/WizardOutcomePage';
+import ActivationLivePage from './pages/ActivationLivePage';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -43,6 +44,7 @@ export default function App() {
             <Route path="/wizard" element={<WizardScenarioPage />} />
             <Route path="/wizard-live" element={<WizardLivePage />} />
             <Route path="/wizard-outcome" element={<WizardOutcomePage />} />
+            <Route path="/activations-live" element={<ActivationLivePage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>

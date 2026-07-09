@@ -34,11 +34,12 @@ const NAV: NavEntry[] = [
     kind: 'group',
     label: 'ODI',
     rootTo: '/architecture',
-    matchPrefixes: ['/architecture', '/pipeline', '/about'],
+    matchPrefixes: ['/architecture', '/pipeline', '/about', '/activations-live'],
     children: [
-      { to: '/architecture', label: 'Architecture' },
-      { to: '/pipeline',     label: 'Pipeline' },
-      { to: '/about',        label: 'About' },
+      { to: '/architecture',     label: 'Architecture' },
+      { to: '/pipeline',         label: 'Pipeline' },
+      { to: '/about',            label: 'About' },
+      { to: '/activations-live', label: 'Activations' },
     ],
   },
 ];
@@ -250,10 +251,21 @@ export default function Layout() {
           <div>
             <div className="eyebrow-light mb-2">Data Pipeline</div>
             <p className="leading-relaxed text-white/75">
-              Source &rarr; Fivetran &rarr; Iceberg (MDLS) &rarr; dbt labs + dbt-wizard &rarr; Great Expectations &rarr; Snowflake / Athena / Trino &rarr; run-time agents &rarr; React.
+              Source &rarr; Fivetran &rarr; Iceberg (MDLS) &rarr; dbt labs + dbt-wizard &rarr; Great Expectations &rarr; Snowflake / Athena / Trino &rarr; run-time agents &rarr; NewCo Activations &rarr; Uber Freight.
               SAP, WMS, retailer POS, and syndicated panel land in Iceberg on S3; dbt Labs runs the moment Fivetran
               finishes syncing.
             </p>
+            <div className="flex items-center gap-2 text-[11px] mt-3">
+              <span className="inline-flex items-center gap-1.5 rounded-md border border-white/20 bg-white/5 px-2 py-1">
+                <span className="inline-flex items-center justify-center h-4 px-1 rounded text-[9px] font-bold text-white" style={{ background: '#0073FF' }}>N</span>
+                <span className="font-semibold text-white">NewCo</span>
+              </span>
+              <span className="text-white/40">+</span>
+              <span className="inline-flex items-center gap-1.5 rounded-md border border-white/20 bg-white/5 px-2 py-1">
+                <span className="inline-flex items-center justify-center h-4 px-1 rounded text-[9px] font-bold text-white" style={{ background: '#29B5E8' }}>❄</span>
+                <span className="font-semibold text-white">Snowflake</span>
+              </span>
+            </div>
           </div>
           <div>
             <div className="eyebrow-light mb-2">Open Standards</div>

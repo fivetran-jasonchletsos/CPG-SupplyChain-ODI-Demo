@@ -6,10 +6,12 @@
 // and Spark stay listed as the same open-lake reads.
 
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { api } from '../api/queries';
 import type { IcebergData } from '../types';
 import PageHeader from '../components/PageHeader';
 import { AliveMedallion, type SourceNode, type EngineNode } from '../components/AliveMedallion';
+import ProductStageRail from '../components/ProductStageRail';
 
 const CPG_SOURCES: SourceNode[] = [
   { id: 'sap',     label: 'SAP ECC Orders',         sub: 'SQL Server log-CDC',     logo: 'sqlserver', freshness: '41s lag',  status: 'healthy', pipelineUrl: 'https://fivetran.com/dashboard/connectors/nor_acidity' },
@@ -181,6 +183,8 @@ export default function ArchitecturePage() {
           &rarr; silver &rarr; gold stays in Iceberg the whole way.
         </p>
 
+        <ProductStageRail accent="#0d6e6e" />
+
         <AliveMedallion
           sources={CPG_SOURCES}
           bronze={layerStats('bronze')}
@@ -221,6 +225,9 @@ export default function ArchitecturePage() {
           ))}
         </div>
       </section>
+
+      {/* ── Activations — Fivetran native reverse-ETL, right after Transformations ── */}
+      <ActivationsPanel />
 
       {/* ── Multi-engine showcase ──────────────────────────────────────── */}
       <section className="surface overflow-hidden mb-10">
@@ -304,5 +311,64 @@ export default function ArchitecturePage() {
         </div>
       </section>
     </div>
+  );
+}
+
+// =============================================================================
+// ActivationsPanel — Fivetran Activations (branded NewCo Activations), the
+// native reverse-ETL stage that sits directly after Transformations. TRIGGER /
+// DESTINATION / OUTCOME below are vertical-specific to Cardinal Provisions'
+// MegaMart zero-accepted-tender re-tender workflow.
+// =============================================================================
+function ActivationsPanel() {
+  // TRIGGER — the gold-layer condition that fires the sync
+  const TRIGGER = "gold.mart_shipment_risk flips a shipment's risk_tier to high the moment hours_to_pickup is 30 or fewer, Oracle TMS shows zero accepted carrier tenders, and chargeback_exposure_usd is $25,000 or more (hours_to_pickup <= 30 AND accepted_tender_count = 0 AND chargeback_exposure_usd >= 25000)";
+  // DESTINATION — the downstream system Fivetran Activations pushes into
+  const DESTINATION = 'Uber Freight · Spot Tender Request';
+  // OUTCOME — the business payoff the SE narrates
+  const OUTCOME = "Re-tendering fires in under 4 minutes of the zero-accepted-tender condition, versus sitting until a coordinator manually scans the OTM exception queue — protecting the $48K chargeback estimate already sized for SHP-22841 (MegaMart Stores, Joliet to Bentonville) and cutting directly into the $4.2M Q3 chargeback exposure the compliance agent is tracking across 318 at-risk MegaMart shipments.";
+
+  return (
+    <section className="mb-10 surface overflow-hidden">
+      <header className="p-5 border-b border-[var(--hairline-soft)] flex items-start justify-between gap-4">
+        <div>
+          <div className="eyebrow" style={{ color: '#0d6e6e' }}>Activations · NewCo</div>
+          <h2 className="font-serif text-xl font-semibold text-[var(--ink-strong)] mt-0.5">
+            The gold layer doesn't just get queried. It gets acted on.
+          </h2>
+          <p className="text-sm text-[var(--ink-muted)] mt-1 max-w-3xl">
+            Activations is the fourth native stage in Fivetran, immediately after Transformations. It
+            reads straight from the same Iceberg gold tables dbt just built and syncs the result to
+            an operational system of record &mdash; no separate reverse-ETL vendor, no second copy of the
+            data, no second connector to maintain.
+          </p>
+        </div>
+        <div className="inline-flex items-center gap-1.5 rounded-sm px-2.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-white shrink-0" style={{ background: '#0d6e6e' }}>
+          Activations
+        </div>
+      </header>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[var(--hairline-soft)]">
+        <div className="p-5">
+          <div className="text-[10px] uppercase tracking-[0.16em] text-[var(--ink-soft)] font-semibold mb-2">Trigger · gold layer</div>
+          <p className="text-sm text-[var(--ink)] leading-relaxed">{TRIGGER}</p>
+        </div>
+        <div className="p-5">
+          <div className="text-[10px] uppercase tracking-[0.16em] text-[var(--ink-soft)] font-semibold mb-2">Destination</div>
+          <p className="text-sm text-[var(--ink)] leading-relaxed num">{DESTINATION}</p>
+        </div>
+        <div className="p-5">
+          <div className="text-[10px] uppercase tracking-[0.16em] text-[var(--ink-soft)] font-semibold mb-2">Outcome</div>
+          <p className="text-sm text-[var(--ink)] leading-relaxed">{OUTCOME}</p>
+        </div>
+      </div>
+
+      <div className="px-5 py-3 border-t border-[var(--hairline-soft)] flex items-center justify-between text-[11px] text-[var(--ink-soft)]" style={{ background: 'var(--cream-deep)' }}>
+        <span>Connections &rarr; Destinations &rarr; Transformations &rarr; <strong style={{ color: '#0d6e6e' }}>Activations</strong> &middot; one platform, one lineage graph</span>
+        <Link to="/activations-live" className="uppercase tracking-wider font-semibold hover:underline" style={{ color: '#0d6e6e' }}>
+          Watch it sync &rarr;
+        </Link>
+      </div>
+    </section>
   );
 }
